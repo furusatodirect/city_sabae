@@ -126,8 +126,12 @@ section {
   --font-size-h5: calc(18px + 2 * ((100vw - 320px) / 1120));
   --font-size-h6: calc(16px + 2 * ((100vw - 320px) / 1120));
   --font-size-h7: calc(14px + 2 * ((100vw - 320px) / 1120));
-  --font-size-p: 16px;
+  --font-size-h8: calc(12px + 2 * ((100vw - 320px) / 1120));
+  --font-size-h9: calc(10px + 2 * ((100vw - 320px) / 1120));
+   --font-size-p: 16px;
   --font-size-s: 14px;
+  --font-size-ss: 12px;
+  --font-size-sss: 10px;
   --font-size-menu: calc(12px + 2 * ((100vw - 320px) / 1120));
   --font-size-btns: calc(12px + 2 * ((100vw - 320px) / 1120));
   --font-size-btn: calc(14px + 2 * ((100vw - 320px) / 1120));
