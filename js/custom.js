@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
+  const heroSection = document.querySelector(".hero-section");
 
   // 特定のページを配列で定義
   const specificPages = ["/help/agreement", "/help/tradelaw", "/help/privacy", "/help/about", "/contactmenu"];
@@ -8,13 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // 特定のページかどうかを判定
   const isSpecificPage = specificPages.includes(currentPath);
 
+  const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+
   // 特定のページであれば .scrolled を常に付与
   if (navbar && isSpecificPage) {
     navbar.classList.add("scrolled");
   } else if (navbar) {
     // 特定のページ以外ではスクロールイベントでクラスを操作
     window.addEventListener("scroll", function () {
-      if (window.scrollY > 0) {
+      if (window.scrollY > heroHeight) {
         navbar.classList.add("scrolled");
       } else {
         navbar.classList.remove("scrolled");

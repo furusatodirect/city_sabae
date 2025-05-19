@@ -423,12 +423,12 @@ strong {
   background: transparent;
   border-bottom: 1px solid linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   z-index: 9;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .navbar.scrolled {
   background-color: var(--color-white);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   box-shadow: var(--shadow);
   pointer-events: auto;
 }
