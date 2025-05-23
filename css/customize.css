@@ -147,6 +147,10 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.btn {
+  border-radius: initial;
+}
+
 /*---------------------------------------
   SOCIAL ICON
 -----------------------------------------*/
@@ -830,7 +834,7 @@ img.sitelogo-f {
   width: 100%;
 }
 
-.toppic{
+.toppic {
   opacity: 0;
   animation: fadeIn .5s ease-out .5s forwards;
 }
@@ -845,6 +849,7 @@ img.sitelogo-f {
     display: inline-block;
     margin: 0 10px;
   }
+
   .topprodlist .btn {
     display: inline-block;
     width: 80%;
@@ -857,9 +862,7 @@ img.sitelogo-f {
 .section-map {
   display: flex;
   justify-content: center;
-  /* 横中央 */
   align-items: center;
-  /* 縦中央 */
   flex-direction: column;
   position: relative;
   background-color: #fffef7;
@@ -969,6 +972,7 @@ img.sitelogo-f {
     position: static;
     width: 100%;
   }
+
   .map-sub {
     font-size: var(--font-size-sss);
   }
@@ -985,11 +989,15 @@ img.sitelogo-f {
   background-color: #fffef7;
   height: 100vh;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
 }
+
 
 .intro-layout {
   display: flex;
-  height: 100vh;
 }
 
 .intro-img-left-top,
@@ -1001,7 +1009,7 @@ img.sitelogo-f {
   margin: 0;
 }
 
-.intro-img-left-top{
+.intro-img-left-top {
   border-radius: 0 1rem 1rem 0;
   width: 600px;
   height: 800px;
@@ -1009,7 +1017,7 @@ img.sitelogo-f {
   animation: fadeIn .5s ease-out .5s forwards;
 }
 
-.intro-img-right-top{
+.intro-img-right-top {
   border-radius: 1rem;
   width: 400px;
   height: 600px;
@@ -1037,30 +1045,36 @@ img.sitelogo-f {
 }
 
 @media screen and (max-width: 767.98px) {
-  .section-intro,.intro-layout {
-    height:initial;
+
+  .section-intro,
+  .intro-layout {
+    height: initial;
   }
-  .intro-img-left-top{
+
+  .intro-img-left-top {
     border-radius: 0 1rem 1rem 0;
     width: 300px;
     height: 150px;
   }
-  
-  .intro-img-right-top{
+
+  .intro-img-right-top {
     border-radius: 1rem 0 0 1rem;
     width: 300px;
     height: 150px;
-    margin-left: auto; /* ← これで右寄せに */
+    margin-left: auto;
+    /* ← これで右寄せに */
     display: block;
   }
-  
+
   .intro-img-right-bottom {
     border-radius: 0;
     height: 200px;
   }
+
   .intro-text {
     padding: 1rem;
   }
+
   .intro-read {
     line-height: 2rem;
     letter-spacing: .2rem;
@@ -1088,6 +1102,7 @@ img.sitelogo-f {
   justify-content: center;
   overflow: hidden;
   background-color: #fff;
+  border: 2px solid var(--color-black);
 }
 
 .service-img img {
@@ -1110,15 +1125,36 @@ img.sitelogo-f {
   z-index: 2;
   border: 2px solid #000;
   background-color: #fff;
-  padding: 1rem 0.5rem;
   animation: fadeIn 0.5s ease-out 0.5s forwards;
 }
 
 .products-ttl-inner {
+  display: inline-block;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   letter-spacing: 1rem;
+  padding: 1rem .5rem 0rem;
   font-size: var(--font-size-h3);
+  font-weight: bold;
+}
+
+.product-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+}
+
+.product-label-inner {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: .5rem;
+  padding: .8rem .3rem 0rem;
+  font-size: var(--font-size-h5);
   font-weight: bold;
 }
 
@@ -1129,33 +1165,43 @@ img.sitelogo-f {
 .products-wrapper .col-md-4:nth-child(3) {
   margin-left: 25%;
 }
+
 .products-more {
   display: flex;
   justify-content: flex-end;
   margin-top: 2rem;
-padding-right: 9%;
+  padding-right: 9%;
 }
 
 @media screen and (max-width: 767.98px) {
   .products-ttl {
     position: static;
-    transform: none;
     margin: 1rem auto;
-    border: none;
-    background: transparent;
     display: flex;
+    /* ← 中央寄せ用にflexに変更 */
     justify-content: center;
+    /* ← 中央揃え */
+    align-items: center;
+    /* 縦方向の中央も揃えるなら */
+    padding: .5rem;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: fit-content;
   }
 
   .products-ttl-inner {
     writing-mode: horizontal-tb;
     letter-spacing: 0.2rem;
     font-size: var(--font-size-h4);
+    text-align: center;
+    padding: 0 .5rem;
   }
+
+
   .products-wrapper .col-md-4:nth-child(1) {
     margin-left: 0;
   }
-  
+
   .products-wrapper .col-md-4:nth-child(3) {
     margin-left: 0;
   }
@@ -1166,7 +1212,7 @@ padding-right: 9%;
   }
 
   .products-wrapper .col-6 {
-row-gap: 
+    row-gap:
 
   }
 
@@ -1177,18 +1223,23 @@ row-gap:
   section-feature
 -----------------------------------------*/
 
-.section-feature{
+.section-feature {
   display: flex;
   position: relative;
   background-color: #fffef7;
+  height: 100vh;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .feature-layout {
   display: flex;
 }
 
-.feature-img-left-top{
+.feature-img-left-top {
   object-fit: cover;
   display: block;
   padding: 0;
@@ -1198,13 +1249,11 @@ row-gap:
   animation: fadeIn .5s ease-out .5s forwards;
 }
 
-.feature-wrap{
+.feature-wrap {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  
 }
-
 
 .feature-ttl {
   margin-bottom: 3rem;
@@ -1212,40 +1261,22 @@ row-gap:
 
 .feature-ttl-inner {
   display: inline-block;
-  padding: 1rem; /* ← 上下1rem、左右2remの余白 */
+  padding: .5rem 0 .5rem 1rem;
   border: 2px solid #000;
-  font-size: var(--font-size-h3); /* サイズ調整 */
-  font-weight: bold;
-  letter-spacing: 1rem;
-  background-color: #fff;
-}
-
-/*
-.feature-ttl {
-  display: flex;
-  margin-bottom: 5rem;
-}
-
-.feature-ttl-inner {
-  display: inline-block;
-  padding: .5rem 1rem;
-  border: 2px solid #000;
-  background-color: #fff;
   font-size: var(--font-size-h3);
   font-weight: bold;
   letter-spacing: 1rem;
+  background-color: #fff;
 }
-  */
 
 .feature-ttlp {
   letter-spacing: 1rem;
   font-size: var(--font-size-h3);
   font-weight: bold;
 }
-  
 
 .feature-text {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .feature-read {
@@ -1261,10 +1292,13 @@ row-gap:
 }
 
 @media screen and (max-width: 767.98px) {
-  .section-feature,.intro-layout {
-    height:initial;
+
+  .section-feature,
+  .intro-layout {
+    height: initial;
   }
-  .feature-img-left-top{
+
+  .feature-img-left-top {
     border-radius: 0 1rem 1rem 0;
     width: 300px;
     height: 150px;
@@ -1284,18 +1318,456 @@ row-gap:
     writing-mode: horizontal-tb;
     letter-spacing: 0.2rem;
     font-size: var(--font-size-h4);
+    padding: .5rem;
   }
-  
+
   .feature-text {
     padding: 1rem;
   }
+
   .feature-read {
     line-height: 2rem;
     letter-spacing: .2rem;
   }
+
+
+  .feature-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
 }
 
 
+/*---------------------------------------
+  section-linkbnr
+-----------------------------------------*/
+
+.section-linkbnr {
+  display: flex;
+  position: relative;
+  background-color: #fffef7;
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.linkbnr-border-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #000;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .linkbnr-border-frame {
+    display: none;
+  }
+
+  .linkbnr-ttl-inner {
+    writing-mode: horizontal-tb;
+    letter-spacing: 0.2rem;
+    font-size: var(--font-size-h4);
+    text-align: center;
+    padding: 0 .5rem;
+  }
+
+  .linkbnr-ttl {
+    position: static;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: fit-content;
+  }
+
+}
+
+.linkbnr-ttl {
+  position: absolute;
+  top: -2rem;
+  left: 81.5%;
+  transform: translateY(0%);
+  z-index: 2;
+  border: 2px solid #000;
+  background-color: #fff;
+  animation: fadeIn 0.5s ease-out 0.5s forwards;
+}
+
+.linkbnr-ttl-inner {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 1rem;
+  padding: 1rem .5rem 0rem;
+  font-size: var(--font-size-h3);
+  font-weight: bold;
+}
+
+#linkbnr {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 0;
+}
+
+.linkbnr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.linkbnr.space-between {
+  justify-content: space-between;
+}
+
+.linkbnr li {
+  width: calc(50% - .5rem);
+  background-color: var(--color-white);
+}
+
+@media screen and (max-width: 768px) {
+
+  .section-linkbnr {
+    height: initial;
+    padding: 2rem 0;
+  }
+
+  .linkbnr {
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .linkbnr li {
+    width: calc(50% - .5rem);
+  }
+
+  .linkbnr-ttl {
+    position: static;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: fit-content;
+  }
+
+  .linkbnr-ttl-inner {
+    writing-mode: horizontal-tb;
+    letter-spacing: 0.2rem;
+    font-size: var(--font-size-h4);
+    text-align: center;
+    padding: 0 .5rem;
+  }
+
+}
+
+
+
+
+#linkbnr .linkbnr a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+#linkbnr .linkbnr a:hover {
+  opacity: .7;
+}
+
+
+
+
+
+/*---------------------------------------
+  section-use
+-----------------------------------------*/
+
+.section-use {
+  display: flex;
+  position: relative;
+  background-color: #fffef7;
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* .use-wrap を右寄せにする */
+.col-lg-6 .use-wrap {
+  margin-left: auto;
+  margin-top: 15%;
+}
+
+/* 画像を左寄せにする */
+.col-lg-6 img.use-img-right-top {
+  margin-right: auto;
+  top: -15%;
+  right: 15%;
+}
+
+/* テキストエリア背景と枠線 */
+.use-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 2rem 2rem 2rem;
+  background-color: #fff;
+  border: 2px solid #000;
+  position: relative;
+  z-index: 1;
+  width: 80%;
+}
+
+/* タイトル：左上配置 */
+.use-ttl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.use-ttl-inner {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+  font-size: var(--font-size-h3);
+  font-weight: bold;
+  letter-spacing: 1rem;
+}
+
+/* 写真を斜め右上に重ねる */
+.use-img-right-top {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  max-width: 800px;
+  z-index: 2;
+}
+
+/* レイアウト調整：デスクトップ */
+.use-layout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.use-ttlp {
+  letter-spacing: .5rem;
+  font-size: var(--font-size-h6);
+  font-weight: bold;
+}
+
+.use-text {
+  padding: 1rem 0;
+}
+
+.use-read {
+  font-size: var(--font-size-h5);
+  line-height: 3rem;
+  padding: 1rem 0;
+  font-weight: bold;
+}
+
+
+/* スマホ時の順序変更 */
+@media screen and (max-width: 767.98px) {
+
+  .col-lg-6 .use-wrap {
+    margin-left: initial;
+    margin-top: initial;
+  }
+
+  .use-layout {
+    flex-direction: column;
+  }
+
+  .use-ttl {
+    position: static;
+    margin: 1rem auto;
+    z-index: auto;
+  }
+
+  .use-ttl-inner {
+    writing-mode: horizontal-tb;
+    font-size: var(--font-size-h4);
+    letter-spacing: 0.2rem;
+    padding: .5rem 1rem;
+    border: 2px solid #000;
+  }
+
+  .use-img-right-top {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .use-wrap {
+    order: 3;
+    padding: 1rem;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .use-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+}
+
+
+/*---------------------------------------
+  section-qapu
+-----------------------------------------*/
+.section-qapu {
+  background-color: #fff;
+}
+
+.qapu-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.qapu-ttl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border: 2px solid #000;
+  background: #fff;
+  padding: 1rem 0.5rem;
+  margin-right: 2rem;
+  font-weight: bold;
+  font-size: var(--font-size-h3);
+}
+
+.qapu-ttl-inner {
+  display: inline-block;
+  letter-spacing: 1rem;
+}
+
+.qapu-wrap {
+  flex: 1;
+  background-color: #fff;
+  z-index: 1;
+  position: relative
+}
+
+.qapu-text {}
+
+.qapu-ttlp {
+  letter-spacing: .2rem;
+  font-size: var(--font-size-h5);
+}
+
+.qapu-read {
+  font-size: var(--font-size-h4);
+  line-height: 5rem;
+  font-weight: var(--font-weight-bold);
+  padding: 2rem 0;
+}
+
+.tx-r {
+  color: #ED161B;
+}
+
+.qapu-img-wrapper {
+  position: relative;
+  height: 1000px; /* 表示したい高さに応じて調整 */
+  background-image: url('/img/sabae/bg-qa.png'); /* 画像パスを正確に */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* これがパララックス効果の肝 */
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.qapu-img-wrapper img {
+  display: none; /* <img>は非表示。背景画像に置き換えるため */
+}
+
+
+.qapu-img-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.97) 15%,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    rgba(255, 255, 255, 0.15) 90%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+/*
+.qapu-img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+*/
+.qapu-more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+@media screen and (max-width: 768px) {
+  .qapu-layout {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .col-lg-6 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qapu-ttl {
+    writing-mode: horizontal-tb;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-h4);
+  }
+}
 
 
 
