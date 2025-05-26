@@ -1758,7 +1758,7 @@ img.sitelogo-f {
   position: relative;
   height: 1000px;
   /* 表示したい高さに応じて調整 */
-  background-image: url('/img/sabae/bg-qa.png');
+  background-image: url('../img/sabae/bg-qa.png');
   /* 画像パスを正確に */
   background-size: cover;
   background-position: center;
