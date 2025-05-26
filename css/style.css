@@ -118,7 +118,7 @@ section {
   --color-p: #000;
   --color-border: #7fffd4;
   --color-link-hover: #808080;
-  --font-family-base: "Zen Old Mincho", serif;
+  --font-family-base: 'Karla', 'Shippori Mincho', serif;
   --font-size-h1: calc(32px + 6 * ((100vw - 320px) / 1120));
   --font-size-h2: calc(28px + 5 * ((100vw - 320px) / 1120));
   --font-size-h3: calc(24px + 4 * ((100vw - 320px) / 1120));
