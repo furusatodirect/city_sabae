@@ -1868,7 +1868,7 @@ font-size: var(--font-size-h8);
 .footer-wrap2-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* 均等配置 */
+  justify-content: flex-start;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1893,6 +1893,7 @@ font-size: var(--font-size-h8);
   position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
+  text-align: center;
 }
 
 .footer-wrap2-links .nav-link {
@@ -2004,6 +2005,7 @@ font-size: var(--font-size-h8);
   .footer-wrap1 {
     display: flex;
     flex-direction: column !important; /* 明示的に上書き */
+    padding-bottom:1rem;
   }
 
   .footer-wrap1 > .topmenu-wrap,
@@ -2028,6 +2030,32 @@ font-size: var(--font-size-h8);
     width: 100%;
     margin-top: 1rem;
   }
+
+  .f-linkbnr li {
+    width: calc(49% - .5rem);
+  }
+
+  .footer-wrap2 {
+    padding-bottom:1rem;
+  }
+  .footer-wrap2-links {
+    justify-content: space-around; /* 中央寄せ */
+    gap: 0;
+  }
+
+  .footer-wrap2-links li {
+    margin-right: 0; /* モバイル時と共通化のためリセット */
+  }
+
+  .footer-wrap2-links li {
+    flex: 0 0 45%; /* 横2つ並びに */
+    text-align: center;
+  }
+
+  .footer-wrap2-links .nav-link {
+    padding: 10px 0;
+  }
+
 }
 
 
