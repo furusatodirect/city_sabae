@@ -2655,10 +2655,27 @@ textarea {
   RESPONSIVE STYLES
 -----------------------------------------*/
 @media screen and (max-width: 991px) {
-  .navbar {
-    background-color: var(--color-black);
+
+  .header-wrap{
+    margin: 0 .5rem;
   }
 
+  .sitelogo{
+    opacity:1;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background: var(--color-black);
+}
+
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  background: var(--color-black);
+}
+
+.navbar:not(.scrolled) .navbar-toggler {
+  pointer-events: auto;
+}
   .navbar-nav .dropdown-menu {
     position: relative;
     left: 10px;
