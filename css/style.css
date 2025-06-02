@@ -147,6 +147,35 @@ section {
   --font-weight-bold: 700;
   --shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
   --shadow-top: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+/*tsugi size*/
+--fspt10: calc(13.33px + 2 * ((100vw - 320px) / 1600));
+--fspt11: calc(14.66px + 2 * ((100vw - 320px) / 1600));
+--fspt12: calc(16.00px + 2 * ((100vw - 320px) / 1600));
+--fspt13: calc(17.33px + 2 * ((100vw - 320px) / 1600));
+--fspt14: calc(18.66px + 2 * ((100vw - 320px) / 1600));
+--fspt15: calc(20.00px + 2 * ((100vw - 320px) / 1600));
+--fspt16: calc(21.33px + 2 * ((100vw - 320px) / 1600));
+--fspt17: calc(22.67px + 2 * ((100vw - 320px) / 1600));
+--fspt18: calc(24.00px + 2 * ((100vw - 320px) / 1600));
+--fspt19: calc(25.33px + 2 * ((100vw - 320px) / 1600));
+--fspt20: calc(26.67px + 2 * ((100vw - 320px) / 1600));
+--fspt21: calc(28.00px + 2 * ((100vw - 320px) / 1600));
+--fspt22: calc(29.33px + 2 * ((100vw - 320px) / 1600));
+--fspt23: calc(30.67px + 2 * ((100vw - 320px) / 1600));
+--fspt24: calc(32.00px + 2 * ((100vw - 320px) / 1600));
+--fspt25: calc(33.33px + 2 * ((100vw - 320px) / 1600));
+--fspt26: calc(34.67px + 2 * ((100vw - 320px) / 1600));
+--fspt27: calc(36.00px + 2 * ((100vw - 320px) / 1600));
+--fspt28: calc(37.33px + 2 * ((100vw - 320px) / 1600));
+--fspt29: calc(38.67px + 2 * ((100vw - 320px) / 1600));
+--fspt30: calc(40.00px + 2 * ((100vw - 320px) / 1600));
+--fspt31: calc(41.33px + 2 * ((100vw - 320px) / 1600));
+--fspt32: calc(42.67px + 2 * ((100vw - 320px) / 1600));
+--fspt33: calc(44.00px + 2 * ((100vw - 320px) / 1600));
+--fspt34: calc(45.33px + 2 * ((100vw - 320px) / 1600));
+--fspt35: calc(46.67px + 2 * ((100vw - 320px) / 1600));
+
 }
 
 /*---------------------------------------

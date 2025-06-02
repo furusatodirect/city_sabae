@@ -29,6 +29,38 @@ html {
   margin-left: calc(0* var(--bs-gutter-x));
 }
 
+ul li {
+  color: var(--color-p);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-normal);
+}
+
+a,
+button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+
+a {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.btn {
+  border-radius: initial;
+}
+
+
 @media (max-width: 768px) {
   .row {
     padding-left: 0;
@@ -120,36 +152,33 @@ p {
   font-weight: var(--font-weight-normal);
 }
 
-ul li {
-  color: var(--color-p);
-  font-size: var(--font-size-p);
-  font-weight: var(--font-weight-normal);
+/*---------------------------------------
+  component
+-----------------------------------------*/
+
+.ttl-vert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #000;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 2;
+  animation: fadeIn 0.5s ease-out 0.5s forwards;
 }
 
-a,
-button {
-  touch-action: manipulation;
-  transition: all 0.3s;
+.ttl-vert-inner {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 42.66px;
+  font-weight: bold;
+  letter-spacing: .8rem;
 }
 
-a {
-  display: inline-block;
-  color: var(--color-primary);
-  text-decoration: none;
-}
 
-a:hover {
-  color: var(--color-link-hover);
-}
-
-b,
-strong {
-  font-weight: var(--font-weight-bold);
-}
-
-.btn {
-  border-radius: initial;
-}
 
 /*---------------------------------------
   SOCIAL ICON
@@ -460,6 +489,7 @@ strong {
 .navbar:not(.scrolled) {
   pointer-events: none;
 }
+
 /*
 .navbar:not(.scrolled) .header-icon-fixed {
   pointer-events: auto;
@@ -524,17 +554,17 @@ a.brand-name:hover .sitelogo {
   display: inline-block;
   color: var(--color-white);
   font-family: var(--font-family-base);
-  font-size: var(--font-size-h7);
+  font-size: 26;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
-  }
+}
 
-  .navbar-nav .nav-link:last-child{
-    margin-right: 2rem;
-  }
+.navbar-nav .nav-link:last-child {
+  margin-right: 2rem;
+}
 
 .navbar.scrolled .navbar-nav .nav-link {
   color: var(--color-primary);
@@ -628,7 +658,7 @@ a.brand-name:hover .sitelogo {
   color: var(--color-white);
   background: var(--color-black);
   display: inline-block;
-padding: 0 .5rem;
+  padding: 0 .5rem;
   font-size: var(--font-size-h8);
   letter-spacing: .2rem;
   height: 36px;
@@ -927,7 +957,7 @@ img.sitelogo-f {
 .map-img {
   position: relative;
   width: 100vw;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -940,26 +970,12 @@ img.sitelogo-f {
 
 /* ✅ 地図の左上内にタイトルを配置 */
 .map-ttl {
-  position: absolute;
   top: 5%;
-  left: 0;
-  border: 2px solid #000;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.5s forwards;
+  margin-left: 1rem;
 }
 
 .map-ttl-inner {
-  display: inline-block;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  letter-spacing: 1rem;
-  padding: 1rem .5rem 0rem;
-  font-size: var(--font-size-h3);
-  font-weight: bold;
+  padding: 1rem .6rem .5rem 0;
 }
 
 
@@ -967,7 +983,7 @@ img.sitelogo-f {
 .map-text-wrap {
   position: absolute;
   top: 65%;
-  left: 65%;
+  left: 55%;
 
   /* ▼ フェードインアニメーション追加 */
   opacity: 0;
@@ -976,17 +992,31 @@ img.sitelogo-f {
 
 
 .map-main {
-  font-size: var(--font-size-h4);
+  font-size: 35.33px;
   font-weight: bold;
+  letter-spacing: .3rem;
 }
 
 .map-sub {
-  font-size: var(--font-size-h7);
+  font-size: 40.67px;
+}
+
+.map-subs {
+  font-size: 28.67px;
+}
+
+.map-subss {
+  font-size: 18px;
+  font-family: 'Shippori Mincho', serif;
+  letter-spacing: 0rem;
 }
 
 .map-read {
-  font-size: var(--font-size-h6);
-  line-height: 2rem;
+  margin-top: 1.5rem;
+  font-size: 19.33px;
+  font-weight: 700;
+  letter-spacing: 2.08px;
+  line-height: 36px;
 }
 
 /* ===== スマホ対応：縦並び ===== */
@@ -1088,9 +1118,11 @@ img.sitelogo-f {
 }
 
 .intro-read {
-  font-size: var(--font-size-h6);
-  line-height: 4rem;
-  letter-spacing: .5rem;
+  font-size: 24px;
+  font-weight: 600;
+  /* semibold相当 */
+  letter-spacing: 4.8px;
+  line-height: 60px;
   opacity: 0;
   animation: fadeIn 1.5s ease-out 1.5s forwards;
 }
@@ -1144,9 +1176,15 @@ img.sitelogo-f {
 
 .products-wrapper {
   position: relative;
+  --bs-gutter-y: 14rem;
 }
 
-.service-img {
+.products-item {
+ /* max-width: 568px;
+  margin: 0 auto;*/
+}
+
+.products-img {
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
@@ -1154,9 +1192,11 @@ img.sitelogo-f {
   overflow: hidden;
   background-color: #fff;
   border: 2px solid var(--color-black);
+/*  width: 568px;
+  height: auto;*/
 }
 
-.service-img img {
+.products-img img {
   max-width: 100%;
   max-height: 100%;
   height: auto;
@@ -1164,57 +1204,78 @@ img.sitelogo-f {
   display: block;
 }
 
-.service-content {
-  border-top: 1px solid #ccc;
-}
-
 .products-ttl {
-  position: absolute;
   top: 3rem;
   left: 80%;
-  transform: translateY(0%);
-  z-index: 2;
-  border: 2px solid #000;
-  background-color: #fff;
-  animation: fadeIn 0.5s ease-out 0.5s forwards;
 }
 
 .products-ttl-inner {
-  display: inline-block;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  letter-spacing: 1rem;
-  padding: 1rem .5rem 0rem;
-  font-size: var(--font-size-h3);
-  font-weight: bold;
+  padding: 1rem .5rem .5rem 0;
 }
 
-.product-label {
+.products-label {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2;
   border-left: 2px solid #000;
   border-bottom: 2px solid #000;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 2;
+  animation: fadeIn 0.5s ease-out 0.5s forwards;
 }
 
-.product-label-inner {
-  display: inline-block;
+.products-label-inner {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  letter-spacing: .5rem;
-  padding: .8rem .3rem 0rem;
-  font-size: var(--font-size-h5);
+  font-size: 29.33px;
   font-weight: bold;
+  letter-spacing: .3em;
+  padding: .8rem .4rem .5rem 0;
 }
 
-.products-wrapper .col-md-4:nth-child(1) {
-  margin-left: 8%;
+.products-content-inner {
+  padding: .5rem 0;
+}
+
+.products-read {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 7.9px;
+  line-height: 60px;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.products-sub {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 23px; /* ← 現在よりやや小さく */
+  font-weight: 500;
+  letter-spacing: 4.39px;
+  line-height: 46px; /* このままでOK。必要なら 1.8〜2倍で再調整可 */
+}
+
+
+.products-wrapper .col-md-4:nth-child(1){
+  margin-left: 4%;
+}
+
+
+
+.products-wrapper .col-md-4:nth-child(2){
+  margin-left: 3%;
 }
 
 .products-wrapper .col-md-4:nth-child(3) {
-  margin-left: 25%;
+  margin-left: 22%;
+}
+
+.products-wrapper .col-md-4:nth-child(4) {
+  margin-left: 3%;
 }
 
 
@@ -1396,6 +1457,16 @@ img.sitelogo-f {
   pointer-events: none;
 }
 
+.linkbnr-ttl {
+  top: -2rem;
+  left: 81.5%;
+}
+
+.linkbnr-ttl-inner {
+  padding: 1rem .5rem .5rem 0rem;
+}
+
+
 @media screen and (max-width: 1199.98px) {
   .linkbnr-border-frame {
     display: none;
@@ -1423,26 +1494,7 @@ img.sitelogo-f {
 
 }
 
-.linkbnr-ttl {
-  position: absolute;
-  top: -2rem;
-  left: 81.5%;
-  transform: translateY(0%);
-  z-index: 2;
-  border: 2px solid #000;
-  background-color: #fff;
-  animation: fadeIn 0.5s ease-out 0.5s forwards;
-}
 
-.linkbnr-ttl-inner {
-  display: inline-block;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  letter-spacing: 1rem;
-  padding: 1rem .5rem 0rem;
-  font-size: var(--font-size-h3);
-  font-weight: bold;
-}
 
 #linkbnr {
   display: flex;
@@ -2656,26 +2708,27 @@ textarea {
 -----------------------------------------*/
 @media screen and (max-width: 991px) {
 
-  .header-wrap{
+  .header-wrap {
     margin: 0 .5rem;
   }
 
-  .sitelogo{
-    opacity:1;
-}
+  .sitelogo {
+    opacity: 1;
+  }
 
-.navbar-toggler .navbar-toggler-icon {
-  background: var(--color-black);
-}
+  .navbar-toggler .navbar-toggler-icon {
+    background: var(--color-black);
+  }
 
-.navbar-toggler .navbar-toggler-icon::before,
-.navbar-toggler .navbar-toggler-icon::after {
-  background: var(--color-black);
-}
+  .navbar-toggler .navbar-toggler-icon::before,
+  .navbar-toggler .navbar-toggler-icon::after {
+    background: var(--color-black);
+  }
 
-.navbar:not(.scrolled) .navbar-toggler {
-  pointer-events: auto;
-}
+  .navbar:not(.scrolled) .navbar-toggler {
+    pointer-events: auto;
+  }
+
   .navbar-nav .dropdown-menu {
     position: relative;
     left: 10px;
