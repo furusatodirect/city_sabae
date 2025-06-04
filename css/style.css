@@ -147,8 +147,67 @@ section {
   --font-weight-bold: 700;
   --shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
   --shadow-top: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15);
-
+}
 /*tsugi size*/
+:root {
+  --fspt1009: 10px;
+  --fspt1110: 11px;
+  --fspt1312: 13px;
+  --fspt1313: 13px;
+  --fspt1511: 15px;
+  --fspt1613: 16px;
+  --fspt1616: 16px;
+  --fspt1813: 18px;
+  --fspt1814: 18px;
+  --fspt1816: 18px;
+  --fspt1818: 18px;
+  --fspt1820: 18px;
+  --fspt2013: 20px;
+  --fspt2216: 22px;
+  --fspt2222: 22px;
+  --fspt2323: 23.72px;
+  --fspt2414: 24px;
+  --fspt2516: 25px;
+  --fspt2521: 25px;
+  --fspt2616: 26px;
+  --fspt2617: 26px;
+  --fspt2720: 27px;
+  --fspt3030: 30.66px;
+  --fspt3220: 32px;
+  --fspt3724: 37px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --fspt1009: 9px;
+    --fspt1110: 10px;
+    --fspt1312: 12px;
+    --fspt1313: 13px;
+    --fspt1511: 11px;
+    --fspt1613: 13px;
+    --fspt1616: 16px;
+    --fspt1813: 13px;
+    --fspt1814: 14px;
+    --fspt1816: 16px;
+    --fspt1818: 18px;
+    --fspt1820: 20px;
+    --fspt2013: 13px;
+    --fspt2216: 16px;
+    --fspt2222: 22px;
+    --fspt2323: 23.72px;
+    --fspt2414: 14px;
+    --fspt2516: 16px;
+    --fspt2521: 21px;
+    --fspt2616: 16px;
+    --fspt2617: 17px;
+    --fspt2720: 20px;
+    --fspt3030: 30.66px;
+    --fspt3220: 20px;
+    --fspt3724: 24px;
+  }
+}
+
+
 /*
 --fspt10: calc(13.33px + 2 * ((100vw - 320px) / 1600));
 --fspt11: calc(14.66px + 2 * ((100vw - 320px) / 1600));
@@ -202,7 +261,7 @@ section {
 --fspt3724: calc(31.99px + 17.33 * ((100vw - 320px) / 1600));
 */
 
-/*clamp*/
+/*clamp pt
 --fspt1009: clamp(12.0px, calc(12.0px + 1.33 * ((100vw - 320px) / 1600)), 13.33px);
 --fspt1312: clamp(16.0px, calc(16.0px + 1.33 * ((100vw - 320px) / 1600)), 17.33px);
 --fspt1313: clamp(17.33px, calc(17.33px + 0.0 * ((100vw - 320px) / 1600)), 17.33px);
@@ -212,10 +271,18 @@ section {
 --fspt1616: clamp(21.33px, calc(21.33px + 0.0 * ((100vw - 320px) / 1600)), 21.33px);
 --fspt1813: clamp(17.33px, calc(17.33px + 6.66 * ((100vw - 320px) / 1600)), 23.99px);
 --fspt1816: clamp(21.33px, calc(21.33px + 2.66 * ((100vw - 320px) / 1600)), 23.99px);
+--fspt1717: clamp(22.66px, calc(22.66px + 0 * ((100vw - 320px) / 1600)), 22.66px);
+--fspt175175: clamp(23.33px, calc(23.33px + 0 * ((100vw - 320px) / 1600)), 23.33px);
+--fspt176176: clamp(23.46px, calc(23.46px + 0 * ((100vw - 320px) / 1600)), 23.46px);
+--fspt177177: clamp(23.59px, calc(23.59px + 0 * ((100vw - 320px) / 1600)), 23.59px);
+--fspt178178: clamp(23.72px, calc(23.72px + 0 * ((100vw - 320px) / 1600)), 23.72px);
+--fspt179179: clamp(23.85px, calc(23.85px + 0 * ((100vw - 320px) / 1600)), 23.85px);
+--fspt1820: clamp(23.99px, calc(23.99px + 2.67 * ((100vw - 320px) / 1600)), 26.66px);
 --fspt2020: clamp(26.66px, calc(26.66px + 0.0 * ((100vw - 320px) / 1600)), 26.66px);
 --fspt2013: clamp(17.33px, calc(17.33px + 9.33 * ((100vw - 320px) / 1600)), 26.66px);
 --fspt2216: clamp(21.33px, calc(21.33px + 8.0 * ((100vw - 320px) / 1600)), 29.33px);
 --fspt2222: clamp(29.33px, calc(29.33px + 0.0 * ((100vw - 320px) / 1600)), 29.33px);
+--fspt2323: clamp(30.66px, calc(30.66px + 0 * ((100vw - 320px) / 1600)), 30.66px);
 --fspt2414: clamp(18.66px, calc(18.66px + 13.33 * ((100vw - 320px) / 1600)), 31.99px);
 --fspt2415: clamp(20.0px, calc(20.0px + 11.99 * ((100vw - 320px) / 1600)), 31.99px);
 --fspt2424: clamp(31.99px, calc(31.99px + 0.0 * ((100vw - 320px) / 1600)), 31.99px);
@@ -225,7 +292,7 @@ section {
 --fspt2720: clamp(26.66px, calc(26.66px + 9.33 * ((100vw - 320px) / 1600)), 35.99px);
 --fspt3220: clamp(26.66px, calc(26.66px + 16.0 * ((100vw - 320px) / 1600)), 42.66px);
 --fspt3724: clamp(31.99px, calc(31.99px + 17.33 * ((100vw - 320px) / 1600)), 49.32px);
-
+*/
 }
 
 /*---------------------------------------

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
-  const heroSection = document.querySelector(".hero-section");
+  const heroSection = document.querySelector(".section-hero");
 
   // 特定のページを配列で定義
   const specificPages = ["/help/agreement", "/help/tradelaw", "/help/privacy", "/help/about", "/contactmenu"];
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // SP時上部マージ
     function adjustHeroMargin() {
       const navbarHeight = document.querySelector('.navbar').offsetHeight;
-      const heroSection = document.querySelector('.hero-section');
+      const heroSection = document.querySelector('.section-hero');
     
       if (window.innerWidth <= 768) {
         heroSection.style.marginTop = navbarHeight + 'px';
