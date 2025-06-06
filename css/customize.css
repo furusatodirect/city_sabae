@@ -659,17 +659,6 @@ img.sitelogo {
     padding: 0;
   }
 
-  /* 削除済みセレクタ一覧（影響なし）
-    .navbar-expand-lg .navbar-nav .nav-link → 上書きのみ残し
-    .navbar-toggler .navbar-toggler-icon → 未使用
-    .navbar-toggler .navbar-toggler-icon::before,::after → 未使用
-    .nav-tabs .nav-link → 未使用
-    .section-first → 未使用
-    .custom-block-topics-listing .custom-block-image → 未使用
-    .custom-block-topics-listing>.d-flex など → 未使用
-    .timeline-container .timeline .list-progress など → 未使用
-    .subscribe-form-wrap → 未使用
-  */
 }
 
 
