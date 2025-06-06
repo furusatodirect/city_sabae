@@ -1,29 +1,54 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
-  const heroSection = document.querySelector(".section-hero");
+  const mapSection = document.querySelector(".section-map");
 
-  // 特定のページを配列で定義
   const specificPages = ["/help/agreement", "/help/tradelaw", "/help/privacy", "/help/about", "/contactmenu"];
   const currentPath = window.location.pathname;
-
-  // 特定のページかどうかを判定
   const isSpecificPage = specificPages.includes(currentPath);
+  const mapHeight = mapSection ? mapSection.offsetHeight : 0;
 
-  const heroHeight = heroSection ? heroSection.offsetHeight : 0;
-
-  // 特定のページであれば .scrolled を常に付与
   if (navbar && isSpecificPage) {
     navbar.classList.add("scrolled");
   } else if (navbar) {
-    // 特定のページ以外ではスクロールイベントでクラスを操作
     window.addEventListener("scroll", function () {
-      if (window.scrollY > heroHeight) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
+      if (mapSection) {
+        const mapTop = mapSection.getBoundingClientRect().top + window.scrollY;
+        const triggerPoint = mapTop - 96;
+        if (window.scrollY > triggerPoint) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
       }
     });
   }
+
+  // ハンバーガーメニュー開閉によるクラス付け
+  const collapse = document.querySelector("#navbarSupportedContent");
+  const togglerImg = document.querySelector(".navbar-toggler-img");
+
+  const fadeSwitchIcon = (newSrc) => {
+    if (!togglerImg) return;
+    togglerImg.classList.add("fade-out");
+    setTimeout(() => {
+      togglerImg.src = "img/top/" + newSrc;
+      togglerImg.classList.remove("fade-out");
+    }, 200);
+  };
+
+  if (collapse) {
+    collapse.addEventListener("show.bs.collapse", function () {
+      fadeSwitchIcon("icon_close.svg");
+      if (navbar) navbar.classList.add("menu-open");
+    });
+
+    collapse.addEventListener("hide.bs.collapse", function () {
+      fadeSwitchIcon("icon_menu.svg");
+      if (navbar) navbar.classList.remove("menu-open");
+    });
+  }
+
+
 
   // 以下に既存のコードを統合します。
 
@@ -60,16 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
       // SP時上部マージ
-    function adjustHeroMargin() {
-      const navbarHeight = document.querySelector('.navbar').offsetHeight;
-      const heroSection = document.querySelector('.section-hero');
+   // function adjustHeroMargin() {
+   //   const navbarHeight = document.querySelector('.navbar').offsetHeight;
+   //   const heroSection = document.querySelector('.section-hero');
     
-      if (window.innerWidth <= 768) {
-        heroSection.style.marginTop = navbarHeight + 'px';
-      } else {
-        heroSection.style.marginTop = '0';
-      }
-    }
+   //   if (window.innerWidth <= 768) {
+   //     heroSection.style.marginTop = navbarHeight + 'px';
+   //   } else {
+   //     heroSection.style.marginTop = '0';
+   //   }
+   // }
     
     window.addEventListener('DOMContentLoaded', adjustHeroMargin);
     window.addEventListener('resize', adjustHeroMargin);
