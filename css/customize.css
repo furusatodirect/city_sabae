@@ -1880,7 +1880,7 @@ img.sitelogo {
   flex-direction: row;
 }
 
-.toplogo {
+.toplogof {
   width: 256.8px;
   height: 117px;
   margin: 0;
@@ -2053,7 +2053,7 @@ margin: 0;
     flex-direction: column;
   }
 
-  .toplogo {
+  .toplogof {
     width: 153.63px;
     height: 69.99px;
     margin-bottom: 30px;
