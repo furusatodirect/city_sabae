@@ -87,57 +87,77 @@
         </div>
       </section>
 
+
       <section class="section-map">
-        <div class="map-img">
-          <svg viewBox="0 0 901 768" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
-            <!-- 背景地図 -->
-            <image href="img/sabae/map.svg" x="0" y="0" width="901" height="768" opacity="0">
-              <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.5s" fill="freeze" />
-            </image>
-            <!-- 赤い鯖江市SVG -->
-            <image href="img/sabae/mapsabae.svg" x="442" y="234" width="130" height="70" opacity="0">
-              <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="1.2s" fill="freeze" />
-            </image>
-            <!-- 斜め線 -->
-            <line x1="507" y1="269" x2="507" y2="269" stroke="#000" stroke-width="2">
-              <animate attributeName="x2" to="660" dur="0.6s" begin="1.8s" fill="freeze" />
-              <animate attributeName="y2" to="34" dur="0.6s" begin="1.8s" fill="freeze" />
-            </line>
-            <!-- 水平線 -->
-            <line x1="660" y1="34" x2="660" y2="34" stroke="#000" stroke-width="2">
-              <animate attributeName="x2" to="693" dur="0.5s" begin="2.4s" fill="freeze" />
-            </line>
-            <!-- ラベル -->
-            <text x="700" y="46" font-size="36" fill="#000" opacity="0" font-weight="bold" letter-spacing="6">
-              <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="3s" fill="freeze" />
-              鯖江市
-            </text>
-          </svg>
-          <div class="ttl-vert map-ttl">
-            <span class="ttl-vert-inner map-ttl-inner">鯖江市のこと</span>
+        <div class="map-wrap">
+          <div class="map-ttl-wrap">
+            <img src="img/top/sec_ttl_map.svg" class="map-ttl" alt="" />
+          </div>
+          <div class="map-map-wrap">
+            <img src="img/top/sec_map.svg" class="map-map" alt="" />
           </div>
         </div>
-
-        <div class="map-text-wrap">
-          <p class="map-main">人口：およそ<span class="map-sub">67,000</span>人 <span class="map-subss">(※2025年4月現在の推計)</span></p>
-          <p class="map-main">面積：<span class="map-sub">84.59</span> <span class="map-subs">平方キロメートル</span></p>
+          <img src="img/top/sec_maps.svg" class="d-block d-lg-none map-maps" alt="" />
+        <div class="map-text-wrap d-block d-lg-none">
+          <p><span class="map-main">人口：およそ</span><span class="map-sub1">67,000</span><span class="map-main">人</span></p>
+          <p><span class="map-main">面積：</span><span class="map-sub2">84.59</span> <span class="map-subs">平方キロメートル</span></p>
+          <p><span class="map-subss">(※2025年4月現在の推計)</span></p>
           <p class="map-read">
-            福井県鯖江市は、穏やかな盆地に広がるものづくりのまち。<br class="d-none d-sm-block" />
-            日本一のメガネ産地として知られ、<br class="d-none d-sm-block" />めがねミュージアムでは眼鏡の歴史に触れることができます。<br class="d-none d-sm-block" />
-            中心地にある西山公園では、春には桜やつつじ、秋には紅葉が美しく、<br class="d-none d-sm-block" />
-            日本一の飼育数を誇る無料の動物園では、レッサーパンダが人気です。
+            福井県鯖江市は、穏やかな盆地に広がるものづくりのまち。<br />
+日本一のメガネ産地として知られ、めがねミュージアムでは眼鏡の歴史に触れることができます。中心地にある西山公園では春に桜やつつじ、秋には紅葉が美しく、日本一の飼育数を誇る無料の動物園ではレッサーパンダも人気。自然と産業が調和した、心あたたまる地域です。
           </p>
         </div>
       </section>
 
+
+      <section class="section-intro">
+        <div class="intro-layout">
+          <div class="intro-layout-pic-sta">
+            <img src="img/sabae/topmain.jpg" alt="" class="img-fluid intro-img-left-top" />
+          </div>
+          <div class="intro-text">
+            <p class="intro-read-t">眼鏡の工芸、ものづくりのまち</p>
+            <p class="intro-read-u">
+              未来に続くまちをつくるために。<br />
+              福井県鯖江市は福井県のほぼ中央に<br />
+              位置し、人口約7万人のまちです。<br />
+              地場産業である「眼鏡」「越前漆器」などを<br />
+              はじめとした伝統ある産業が息づく、<br />
+              ものづくりのまちとしても知られています。<br />
+              また、市民一人ひとりが主役になれる地域の<br />
+              風土があり、SDGsやITの推進など、<br />
+              子どもから大人までまちぐるみで様々な<br />
+              取り組みを進めています。<br />
+            </p>
+            <p class="intro-read-d">
+              そんな鯖江市自慢の魅力あふれる<br />
+              お礼品をぜひ、ふるさと納税で。
+            </p>
+          </div>
+          <div class="intro-layout-pic-end">
+            <img src="img/sabae/topmain.jpg" alt="" class="img-fluid intro-img-right-top" />
+            <img src="img/sabae/topmain.jpg" alt="" class="img-fluid intro-img-right-bottom" />
+          </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+<!--
       <section class="section-intro">
         <div class="container-fluid g-0">
           <div class="row g-0 intro-layout">
-            <!-- 左画像 -->
+
             <div class="col-lg-4 col-12 d-flex align-items-start">
               <img src="img/sabae/topmain.jpg" alt="" class="img-fluid intro-img-left-top" />
             </div>
-            <!-- テキスト -->
             <div class="col-lg-4 col-12 d-flex align-items-center justify-content-center">
               <div class="intro-text">
                 <p class="intro-read">
@@ -158,7 +178,6 @@
                 </p>
               </div>
             </div>
-            <!-- 右画像上下 -->
             <div class="col-lg-4 col-12 d-flex flex-column justify-content-around intro-layout-pic">
               <img src="img/sabae/topmain.jpg" alt="" class="img-fluid intro-img-right-top mb-2" />
               <img src="img/sabae/topmain.jpg" alt="" class="img-fluid intro-img-right-bottom mt-2" />
@@ -166,7 +185,7 @@
           </div>
         </div>
       </section>
-
+    -->
       <section class="section-products">
         <div class="container service py-3 py-sm-5 position-relative">
           <div class="ttl-vert products-ttl">
