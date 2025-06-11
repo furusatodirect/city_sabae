@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-
   // 以下に既存のコードを統合します。
 
   (function ($) {
