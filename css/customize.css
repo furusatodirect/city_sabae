@@ -29,7 +29,6 @@ body {
   line-break: strict;
 }
 
-/* セクション横幅の基準（1920ベース / マージン60px × 2） */
 .section-wrap {
   max-width: 1800px;
   margin: 0 auto;
@@ -44,7 +43,7 @@ body {
   }
 }
 
-/* Bootstrap's row に代わる軽量設定（非推奨のrowクラス排除） */
+
 .row {
   margin: 0;
   padding: 0;
@@ -71,7 +70,8 @@ a:hover {
   color: var(--color-link-hover);
 }
 
-.more-box:hover {
+.more-box:hover,
+.linkbnr li:hover  {
   opacity: 0.7;
 }
 
@@ -84,25 +84,21 @@ strong {
   border-radius: 0;
 }
 
-/* セクション間余白 */
 .sec-gap {
   display: grid;
   margin-top: 2rem;
   grid-gap: 2rem;
 }
 
-/* SP縦画面全体 */
 .svh-sp {
   height: 100vh;
 }
 
-/* SP表示切替 */
 @media screen and (max-width: 767px) {
   .section-wrap {
     width: 100%;
     max-width: none;
     padding: 0 20px;
-    /* 任意 */
   }
 }
 
@@ -1619,8 +1615,20 @@ img.sitelogo {
   display: flex;
   justify-content: center;
   max-width: 1344px;
-  margin: 166px auto;
+  margin: 0 auto;
   gap: 60px;
+}
+
+.section-feature .feature-wrap:first-of-type {
+  margin-top: 166px;
+}
+
+.section-feature .feature-wrap:last-of-type {
+  margin-bottom: 166px;
+}
+
+.feature-wrap + .feature-wrap {
+  margin-top: 80px;
 }
 
 .feature-ttl-wrap-s {
@@ -1731,6 +1739,18 @@ img.sitelogo {
     display: flex;
     flex-direction: column;
     gap: 0;
+  }
+
+  .section-feature .feature-wrap:first-of-type {
+    margin-top: 20px;
+  }
+  
+  .section-feature .feature-wrap:last-of-type {
+    margin-bottom: 20px;
+  }
+  
+  .feature-wrap + .feature-wrap {
+    margin-top: 10px;
   }
 
   .feature-pic img {
