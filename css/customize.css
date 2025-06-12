@@ -71,7 +71,7 @@ a:hover {
 }
 
 .more-box:hover,
-.linkbnr li:hover  {
+.linkbnr li:hover {
   opacity: 0.7;
 }
 
@@ -911,6 +911,217 @@ img.sitelogo {
 /*---------------------------------------
   section-map
 -----------------------------------------*/
+
+.section-map {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #fffef7;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.map-wrap {
+  width: 1089.93px;
+  height: 758.51px;
+  margin: 130px auto 176px 539px;
+  display: flex;
+  position: relative;
+
+}
+
+.map-ttl-wrap {
+  display: flex;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+}
+
+.map-ttl {
+  width: 70.71px;
+  height: 339.69px;
+  display: block;
+}
+
+.map-map-wrap {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.map-map {
+  width: 707.94px;
+  height: 602.3px;
+}
+
+.map-text-wrap {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+}
+
+.map-p-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 628.34px;
+  z-index: 2;
+}
+
+.map-main {
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 4.48px;
+}
+
+.map-sub1 {
+  font-family: 'Karla';
+  font-weight: bold;
+  font-size: 37px;
+  letter-spacing: 5.18px;
+}
+
+.map-sub2 {
+  font-family: 'Karla';
+  font-weight: bold;
+  font-size: 37px;
+  letter-spacing: 5.18px;
+}
+
+.map-subs {
+  font-weight: bold;
+  font-size: 26px;
+  letter-spacing: 1.3px;
+}
+
+.map-subss {
+  font-family: 'Shippori Mincho';
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.75px;
+}
+
+.map-read {
+  margin-top: 30px;
+  height: 158.14px;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1.56px;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .section-map {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #fffef7;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .map-wrap {
+    width: 100%;
+    height: auto;
+    margin: 64px 36px;
+    padding: 0;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .map-ttl-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .map-ttl {
+    width: 41.9px;
+    height: 184.24px;
+    display: block;
+  }
+
+  .map-map-wrap {
+    width: 100%;
+    margin-top: 49px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .map-map {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .map-text-wrap {
+    position: relative;
+    margin-top: 20px;
+    z-index: 2;
+  }
+
+  .map-p-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .map-main {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3.73px;
+  }
+
+  .map-sub1 {
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 3.73px;
+  }
+
+  .map-sub2 {
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 3.73px;
+  }
+
+  .map-subs {
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 1.13px;
+  }
+
+  .map-subss {
+    font-family: 'Shippori Mincho';
+    margin-top: 8px;
+    font-size: 11px;
+    letter-spacing: 0.73px;
+    display: flex;
+    justify-content: end;
+  }
+
+   .map-read {
+    margin-top: 30px;
+    height: auto;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2.08px;
+    line-height: 26px;
+  }
+
+}
+
+
+/*
 .section-map {
   width: 100vw;
   display: flex;
@@ -1154,7 +1365,7 @@ img.sitelogo {
 
 }
 
-
+*/
 
 
 /*---------------------------------------
@@ -1386,6 +1597,7 @@ img.sitelogo {
 .tproducts-ttl {
   width: 86.72px;
   height: 412.52px;
+  display: block;
 }
 
 .tproducts-wrapper-down {
@@ -1627,7 +1839,7 @@ img.sitelogo {
   margin-bottom: 166px;
 }
 
-.feature-wrap + .feature-wrap {
+.feature-wrap+.feature-wrap {
   margin-top: 80px;
 }
 
@@ -1744,12 +1956,12 @@ img.sitelogo {
   .section-feature .feature-wrap:first-of-type {
     margin-top: 20px;
   }
-  
+
   .section-feature .feature-wrap:last-of-type {
     margin-bottom: 20px;
   }
-  
-  .feature-wrap + .feature-wrap {
+
+  .feature-wrap+.feature-wrap {
     margin-top: 10px;
   }
 
@@ -1930,20 +2142,20 @@ ul.linkbnr {
     border: 2px solid var(--color-black);
     position: relative;
   }
-  
+
   .linkbnr-ttl-wrap {
     position: absolute;
     top: -2px;
     right: -2px;
     z-index: 1;
   }
-  
+
   .linkbnr-ttl {
     width: 41.9px;
     height: 293.48px;
     display: block;
   }
-  
+
   .linkbnr-layout {
     width: 100%;
     display: flex;
@@ -1951,8 +2163,8 @@ ul.linkbnr {
     margin: 0;
     position: relative;
   }
-  
-  
+
+
   ul.linkbnr {
     display: flex;
     flex-wrap: wrap;
@@ -1964,24 +2176,24 @@ ul.linkbnr {
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .linkbnr li {
     display: flex;
     align-items: center;
   }
-  
+
   .linkbnr li a {
     display: flex;
     align-items: center;
     text-decoration: none;
   }
-  
+
   .linkbnr_bnr {
     width: 230.02px;
     height: 58.02px;
     display: block;
   }
-  
+
   .linkbnr_arrow {
     width: 19.66px;
     height: 19.66px;
