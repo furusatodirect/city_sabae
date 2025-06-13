@@ -592,7 +592,7 @@ img.sitelogo {
   }
 
   .rl-nav {
-    width: 243.12px;
+    min-width: 243.12px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -641,7 +641,7 @@ img.sitelogo {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .header-icon-fixed .navbar-icon {
