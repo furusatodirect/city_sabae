@@ -2215,12 +2215,28 @@ ul.linkbnr {
   justify-content: center;
 }
 
+.section-qapu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 253, 235), rgb(255, 255, 255)
+  );
+  pointer-events: none;
+}
+
+
 .qapu-wrap-out {
   max-width: 969.21px;
   height: 344.19px;
-  margin: 115px auto;
+  margin: 230px auto 115px;
   padding-right: 0;
 }
+
 
 .qapu-wrap {
   display: flex;
@@ -2349,8 +2365,6 @@ ul.linkbnr {
   section-qapu-bg
 -----------------------------------------*/
 
-
-
 .section-qapu-bg{
   width: 100%;
   height: 100%;
@@ -2361,6 +2375,27 @@ ul.linkbnr {
   display: flex;
 }
 
+.section-qapu-img{
+  position: relative;
+}
+
+.section-qapu-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* 高さを少し広げるとより自然に */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.8) 40%,
+    rgba(255, 255, 255, 0.4) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
 .section-qapu-img img{
   display: block;
   margin: 0;
