@@ -326,7 +326,7 @@ p {
   height: 80px;
   z-index: 999;
   padding-left: 90px;
-  padding-right: 45px;
+  padding-right: 60px;
   background: transparent;
   transition: none !important;
   /* ← これでフェードを強制オフ */
@@ -786,7 +786,6 @@ img.sitelogo {
   color: var(--color-link-hover);
 }
 
-/* 通常：縦線（非scrolled時） */
 .rl-nav-link {
   position: relative;
   display: inline-block;
@@ -809,7 +808,6 @@ img.sitelogo {
   transform: scaleY(0);
 }
 
-/* scrolled時：sc-rnl以外の縦線は無効 */
 .navbar.scrolled .rl-nav-link:not(.sc-rnl)::after {
   display: none !important;
   content: none !important;
@@ -832,7 +830,6 @@ img.sitelogo {
   top: auto;
   right: auto;
   background: var(--color-primary);
-  /* 念のため再指定 */
   opacity: 0;
   visibility: hidden;
 }
@@ -2119,14 +2116,14 @@ ul.linkbnr {
   .use-pic-wrap {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -2px;
     z-index: 2;
   }
 
   .use-pic-img {
     display: block;
-    width: 337px;
-    height: 213.34px;
+    width: 339px;
+    height: 217.34px;
     border-right: 0 !important;
   }
 
@@ -2136,8 +2133,9 @@ ul.linkbnr {
     border: 2px solid var(--color-black);
     border-left: 0 !important;
     background-color: var(--color-white);
-    padding: 110px 36px 30px 36px;
+    padding: 106px 16px 30px 36px;
     margin-top: 125px;
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -2163,7 +2161,7 @@ ul.linkbnr {
     font-size: 13px;
     letter-spacing: 1.56px;
     line-height: 26px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .use-read {
@@ -2171,7 +2169,7 @@ ul.linkbnr {
     font-size: 14px;
     letter-spacing: 0.84px;
     line-height: 29px;
-    margin-bottom: 34px;
+    margin-bottom: 23px;
   }
 
   .btn-more-use {
@@ -2245,7 +2243,7 @@ ul.linkbnr {
   width: 100%;
   height: 100%;
   position: relative;
-  left: 30px;
+  left: 15px;
 }
 
 .qapu-ttl-wrap {
@@ -2284,32 +2282,32 @@ ul.linkbnr {
   justify-content: center;
 }
 
-.qapu-read p {
+.qapu-item {
+  position: relative;
+  padding-left: 34px;
+  text-indent: 0;
   font-weight: 600;
   font-size: 25px;
   letter-spacing: 3px;
-  line-height: 0;
+  line-height: 60px;
 }
 
-.tx-r {
+.qapu-item::before {
+  content: "Q.";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ED161B;
   font-family: 'Karla';
   font-style: italic;
   font-weight: 600;
-  color: #ED161B;
-  font-size: 30px !important;
-  letter-spacing: 2.7px !important;
-  line-height: 59px !important;
+  font-size: 30px;
+  letter-spacing: 2.7px;
+  line-height: 53px;
 }
 
 
-.qapu-read a {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  padding-bottom: 0rem;
-}
-
+/*
 .qapu-read a::after {
   content: "";
   position: absolute;
@@ -2325,7 +2323,7 @@ ul.linkbnr {
 .qapu-read a:hover::after {
   width: 100%;
 }
-
+*/
 .qapu-read a:hover {
   color: var(--color-gray);
   transition: color 0.3s ease;
@@ -2333,8 +2331,8 @@ ul.linkbnr {
 
 .btn-more-qapu {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 5;
+  right: -40px;
 }
 
 .btn-more-qapu .more-box {
@@ -2359,6 +2357,137 @@ ul.linkbnr {
   display: block;
 }
 
+@media screen and (max-width: 767.98px) {
+
+  .section-qapu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 253, 235), rgb(255, 255, 255)
+    );
+    pointer-events: none;
+  }
+
+  .qapu-wrap-out {
+    width: 100%;
+    height: auto;
+    margin: 94px auto 0;
+    padding: 36px;
+  }
+ 
+  .qapu-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+  }
+  
+  .qapu-ttl-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .qapu-ttl {
+    width: 207.81px;
+    height: 41.96px;
+    display: block;
+  }
+  
+  .qapu-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+    padding: 60px 0;
+  }
+  
+  .qapu-ttlp {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.44px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .qapu-read {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+ 
+  .qapu-item {
+    position: relative;
+    padding-left: 22px;
+    text-indent: 0;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 21px;
+  }
+  
+  .qapu-item::before {
+    content: "Q.";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ED161B;
+    font-family: 'Karla';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1.62px;
+    line-height: 18px;
+  }
+
+  .qapu-read a:hover {
+    color: var(--color-gray);
+    transition: color 0.3s ease;
+  }
+  
+  .btn-more-qapu {
+    position: absolute;
+    bottom: -18px;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .btn-more-qapu .more-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 154.08px;
+    height: 39.56px;
+    font-size: 16px;
+    letter-spacing: 1.7px;
+    line-height: 25px;
+    text-align: center;
+    background: var(--color-black);
+    color: var(--color-white);
+    transition: color 0.3s ease;
+  }
+  
+  .btn-more-qapu .more-box img {
+    width: 14.37px;
+    height: 11.12px;
+    display: block;
+  }
+}
 
 
 /*---------------------------------------
@@ -2402,164 +2531,13 @@ ul.linkbnr {
   padding: 0;
 }
 
-
-/*
-.section-qapu {
-  background-color: #fff;
-}
-
-.qapu-layout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 0;
-}
-
-.qapu-ttl {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  border: 2px solid #000;
-  background: #fff;
-  padding: 1rem 0.5rem;
-  margin-right: 2rem;
-  font-weight: bold;
-  font-size: var(--font-size-h3);
-}
-
-.qapu-ttl-inner {
-  display: inline-block;
-  letter-spacing: 1rem;
-}
-
-.qapu-wrap {
-  flex: 1;
-  background-color: #fff;
-  z-index: 1;
-  position: relative
-}
-
-.qapu-text {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 0 1rem;
-}
-
-.qapu-ttlp {
-  align-self: flex-start;
-  letter-spacing: .2rem;
-  font-size: var(--font-size-h5);
-}
-
-.qapu-read {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.qapu-read p {
-  font-size: var(--font-size-h4);
-  line-height: 5rem;
-  font-weight: var(--font-weight-bold);
-}
-
-.qapu-read a {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  padding-bottom: 0rem;
-}
-
-.qapu-read a::after {
-  content: "";
-  position: absolute;
-  bottom: 0.8rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: var(--color-primary);
-  transition: width 0.4s ease;
-}
-
-.qapu-read a:hover::after {
-  width: 100%;
-}
-
-.qapu-read a:hover {
-  color: var(--color-gray);
-  transition: color 0.3s ease;
-}
-
-
-.tx-r {
-  color: #ED161B;
-}
-
-
-
-.qapu-img-wrapper {
-  position: relative;
-  height: 1000px;
-  background-image: url('../img/sabae/bg-qa.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.qapu-img-wrapper img {
-  display: none;
-}
-
-
-.qapu-img-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.97) 15%,
-      rgba(255, 255, 255, 0.9) 30%,
-      rgba(255, 255, 255, 0.7) 50%,
-      rgba(255, 255, 255, 0.4) 70%,
-      rgba(255, 255, 255, 0.15) 90%,
-      rgba(255, 255, 255, 0) 100%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-
-
 @media screen and (max-width: 767.98px) {
-  .qapu-layout {
-    height: auto;
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
+  .section-qapu-img::before {
+    height: 150px; /* 高さを少し広げるとより自然に */
   }
 
-  .col-lg-6 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .qapu-ttl {
-    writing-mode: horizontal-tb;
-    margin-right: 0;
-    margin-bottom: 1rem;
-    font-size: var(--font-size-h4);
-  }
 }
-*/
+
 
 /*---------------------------------------
   section-footer
