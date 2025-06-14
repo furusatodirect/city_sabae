@@ -1155,14 +1155,20 @@ img.sitelogo {
 }
 
 
+.intro-wrap {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .intro-layout {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  max-width: 2560px;
-  box-sizing: border-box;
-  margin-bottom: 120px;
+  /*  margin-bottom: 120px;*/
+  margin-bottom: clamp(50px, 6.25vw, 120px);
 }
 
 .intro-img-left-top,
@@ -1180,23 +1186,29 @@ img.sitelogo {
   position: relative;
   top: 0;
   left: 0;
-  width: 450px;
-  height: 600px;
+  /*width: 450px;
+  height: 600px;*/
+  width: clamp(312px, 23.4375vw, 450px);
+  height: clamp(188px, 31.25vw, 600px);
   opacity: 0;
   animation: fadeIn .5s ease-out .5s forwards;
 }
 
 .intro-img-right-top {
   align-self: flex-start;
-  width: 307.29px;
-  height: 443.57px;
+  /*width: 307.29px;
+  height: 443.57px;*/
+  width: clamp(170.5px, 16vw, 307.29px);
+  height: clamp(239.89px, 23vw, 443.57px);
   opacity: 0;
   animation: fadeIn 1.0s ease-out 1.0s forwards;
 }
 
 .intro-img-right-bottom {
-  width: 517.71px;
-  height: 297px;
+  /*width: 517.71px;
+  height: 297px;*/
+  width: clamp(265.5px, 27vw, 517.71px);
+  height: clamp(173.49px, 15.5vw, 297px);
   opacity: 0;
   animation: fadeIn 2s ease-out 2s forwards;
 }
@@ -1208,33 +1220,45 @@ img.sitelogo {
 }
 
 .intro-read-t {
-  margin-bottom: 96px;
+  /*margin-bottom: 96px;*/
+  margin-bottom: clamp(28px, 5vw, 96px);
 }
 
 .intro-read-u {
-  margin-bottom: 100px;
+  /*margin-bottom: 100px;*/
+  margin-bottom: clamp(40px, 5.2vw, 100px);
 }
 
 .intro-read-d {}
 
 .intro-img-right-top {
-  margin-top: 170px;
+  /*margin-top: 170px;*/
+  margin-top: clamp(55px, 8.85vw, 170px);
 }
 
 .intro-img-right-bottom {
-  margin-top: 125px;
+  /*margin-top: 125px;*/
+  margin-top: clamp(30px, 6.5vw, 125px);
+
 }
 
 .intro-text {
   align-self: flex-start;
   margin: 0;
-  padding-top: 60px;
+  /*padding-top: 60px;*/
+  padding-top: clamp(42px, 3.125vw, 60px);
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
   font-family: 'Shippori Mincho';
 }
 
 .intro-read-t {
-  font-size: 25px;
-  letter-spacing: 4.67px;
+  /*font-size: 25px;
+  letter-spacing: 4.67px;*/
+  font-size: clamp(21px, 1.3vw, 25px);
+  line-height: clamp(46px, 2.4vw, 46px);
+  letter-spacing: clamp(2.1px, 0.24vw, 4.67px);
   font-weight: bold;
   opacity: 0;
   animation: fadeIn 1.5s ease-out 1.5s forwards;
@@ -1243,16 +1267,19 @@ img.sitelogo {
 
 .intro-read-u,
 .intro-read-d {
-  font-size: 18px;
+ /* font-size: 18px;
   line-height: 50px;
-  letter-spacing: 4.80px;
+  letter-spacing: 4.80px;*/
+  font-size: clamp(14px, 0.94vw, 18px);
+  line-height: clamp(33px, 2.6vw, 50px);
+  letter-spacing: clamp(2.66px, 0.25vw, 4.8px);
   font-weight: 600;
   opacity: 0;
   animation: fadeIn 1.5s ease-out 1.5s forwards;
 }
 
 @media screen and (max-width: 767.98px) {
-  .intro-layout {
+.intro-layout {
     display: block;
     position: relative;
     background-color: #fffef7;
@@ -1308,19 +1335,18 @@ img.sitelogo {
 
   .intro-read-t {
     font-size: 21px;
-    letter-spacing: 2.1px;
     line-height: 46px;
+    letter-spacing: 2.1px;
     font-weight: bold;
     opacity: 0;
-
     animation: fadeIn 1.5s ease-out 1.5s forwards;
   }
 
   .intro-read-u,
   .intro-read-d {
     font-size: 14px;
-    letter-spacing: 2.66px;
     line-height: 33px;
+    letter-spacing: 2.66px;
     font-weight: 600;
     opacity: 0;
     animation: fadeIn 1.5s ease-out 1.5s forwards;
