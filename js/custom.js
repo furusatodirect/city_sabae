@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
-  const mapSection = document.querySelector(".section-map");
+  const mapSection = document.querySelector(".header-on");
 
   const specificPages = ["/help/agreement", "/help/tradelaw", "/help/privacy", "/help/about", "/contactmenu"];
   const currentPath = window.location.pathname;
