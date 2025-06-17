@@ -3402,6 +3402,7 @@ ul.linkbnr {
   position: relative;
   overflow: hidden;
   display: flex;
+  border-bottom: 2px solid var(--color-black);
 }
 
 .section-qapu-img {
@@ -3448,7 +3449,6 @@ ul.linkbnr {
   width: 100%;
   margin: 0;
   padding: 0;
-  border-top: 2px solid var(--color-black);
 }
 
 .footer-wrap {
@@ -3893,7 +3893,8 @@ ul.linkbnr {
 }
 
 .intro-prod-ttl-wrap {
-  margin-bottom: 10px;
+bottom: -2px;
+position: relative;
 }
 
 .introprod-ttl {
@@ -3906,6 +3907,9 @@ ul.linkbnr {
   display: flex;
   width: 100%;
   position: relative;
+  padding: 48px 50px 40px;
+  border: 2px solid var(--color-black);
+  background-color: var(--color-white);
 }
 
 .prod-pic-wrap {
@@ -3922,22 +3926,23 @@ ul.linkbnr {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
 }
 
 .prod-detail-text {
+  font-family: 'Shippori Mincho';
   font-weight: bold;
   font-size: clamp(13px, 3vw, 18px);
   letter-spacing: clamp(1.56px, 1vw, 1.8px);
   line-height: clamp(20px, 4vw, 28px);
+  margin-bottom: 45px;
 }
 
 .prod-price-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
 }
 
 .prod-price-wrap p {
@@ -3954,12 +3959,13 @@ ul.linkbnr {
 
 .prod-price {
   font-family: 'Karla';
-  font-weight: bold;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   font-size: clamp(17px, 5vw, 43px);
   letter-spacing: clamp(1.36px, 1vw, 3.44px);
   line-height: clamp(16px, 4vw, 41px);
+  padding-bottom: 8px;
+    margin-right: 5px;
 }
 
 .price-yen {
@@ -3971,9 +3977,9 @@ ul.linkbnr {
 }
 
 .btn-more-prod {
-  position: absolute;
+  display: flex;
+  justify-content: end;
   margin-top: 10px;
-  right: 0;
 }
 
 .btn-more-prod .more-box {
@@ -3996,4 +4002,116 @@ ul.linkbnr {
   width: 14.37px;
   height: 11.12px;
   display: block;
+}
+
+/*.articles-pagination
+*/
+.articles-pagination {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 799px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.articles-pagination a {
+  font-size: clamp(13px, 2.5vw, 16px);
+  letter-spacing: clamp(1.3px, 1vw, 3.2px);
+  line-height: clamp(28px, 4vw, 34px);
+  font-family: 'Shippori Mincho';
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.articles-pagination a:hover {
+  opacity: 0.7;
+}
+
+.articles-pagination__prev img {
+  margin-right: 8px;
+  width: 14px;
+  height: auto;
+}
+
+.articles-pagination__next img {
+  margin-left: 8px;
+  width: 14px;
+  height: auto;
+}
+
+
+/*.section-articles
+*/
+.section-articles{
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.articles-wrap{
+  width: 100%;
+  max-width: 1344px;
+  height: auto;
+  margin: 0 auto;
+  padding: 110px 0;
+}
+.articles-ttl-wrap{
+  width: 100%;
+  margin-bottom: 25px;
+}
+.articles-ttl{
+  font-family: 'Shippori Mincho';
+  font-weight: bold;
+  margin: 0;
+  font-size: 31px;
+  letter-spacing: 3.72px;
+}
+
+.articles-prod-wrap{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(414px, 1fr));
+  gap: 50px;
+  width: 100%;
+}
+
+.articles-prod-detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.prod-detail-pic{
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--color-black);
+}
+
+.prod-detail-txt{
+  font-family: 'Shippori Mincho';
+  font-weight: bold;
+  margin-bottom: 15px;
+font-size: clamp(18px, 2vw, 18px);
+letter-spacing: clamp(1.8px, 0.5vw, 1.8px);
+line-height: clamp(28px, 3vw, 28px);
+}
+
+.prod-detail-cate {
+  font-weight: bold;
+  font-size: clamp(13px, 2.5vw, 16px);
+  letter-spacing: clamp(1.3px, 1vw, 3.2px);
+  line-height: clamp(28px, 4vw, 34px);
+  background-color: #F0F0F0;
+  padding: 0 5px;
+  text-align: center;
+  margin: 0;
 }
