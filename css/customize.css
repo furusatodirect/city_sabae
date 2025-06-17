@@ -3402,7 +3402,7 @@ ul.linkbnr {
   position: relative;
   overflow: hidden;
   display: flex;
-  border-bottom: 2px solid var(--color-black);
+ /* border-bottom: 2px solid var(--color-black);*/
 }
 
 .section-qapu-img {
@@ -3449,6 +3449,7 @@ ul.linkbnr {
   width: 100%;
   margin: 0;
   padding: 0;
+  border-top: 2px solid var(--color-black);
 }
 
 .footer-wrap {
