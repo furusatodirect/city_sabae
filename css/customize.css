@@ -424,6 +424,7 @@ p {
 }
 
 .hero-anime img {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -431,41 +432,40 @@ p {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: anime 18s infinite;
-  animation-timing-function: ease-in-out;
+  animation: anime-inout 18s ease infinite;
 }
 
-.hero-anime img:nth-child(1) {
+.hero-anime img:nth-of-type(1) {
   animation-delay: 0s;
 }
 
-.hero-anime img:nth-child(2) {
+.hero-anime img:nth-of-type(2) {
   animation-delay: 6s;
 }
 
-.hero-anime img:nth-child(3) {
+.hero-anime img:nth-of-type(3) {
   animation-delay: 12s;
 }
 
-@keyframes anime {
+@keyframes anime-inout {
   0% {
-    opacity: 0;
+    opacity: 0
   }
 
-  5.5% {
-    opacity: 1;
+  5% {
+    opacity: 1
   }
 
   33% {
-    opacity: 1;
+    opacity: 1
   }
 
-  38.8% {
-    opacity: 0;
+  38% {
+    opacity: 0
   }
 
   100% {
-    opacity: 0;
+    opacity: 0
   }
 }
 
@@ -3904,7 +3904,7 @@ ul.linkbnr {
 
 .intro-prod-layout {
   display: flex;
-    width: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -3914,7 +3914,7 @@ ul.linkbnr {
 
 .prod-pic {
   width: 320.33px;
-    height: 200px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -3940,16 +3940,16 @@ ul.linkbnr {
   margin-top: auto;
 }
 
-.prod-price-wrap p{
-color: #F84949;
+.prod-price-wrap p {
+  color: #F84949;
 }
 
 .prod-price-ttl {
   font-weight: bold;
   font-family: 'Noto Sans JP';
   font-size: clamp(8px, 2vw, 21px);
-letter-spacing: clamp(1.44px, 1vw, 3.78px);
-line-height: clamp(16px, 4vw, 43px);
+  letter-spacing: clamp(1.44px, 1vw, 3.78px);
+  line-height: clamp(16px, 4vw, 43px);
 }
 
 .prod-price {
@@ -3958,10 +3958,11 @@ line-height: clamp(16px, 4vw, 43px);
   font-weight: 600;
   font-size: 16px;
   font-size: clamp(17px, 5vw, 43px);
-letter-spacing: clamp(1.36px, 1vw, 3.44px);
-line-height: clamp(16px, 4vw, 41px);
+  letter-spacing: clamp(1.36px, 1vw, 3.44px);
+  line-height: clamp(16px, 4vw, 41px);
 }
-.price-yen{
+
+.price-yen {
   font-weight: bold;
   font-family: 'Noto Sans JP';
   font-size: clamp(10px, 3vw, 25px);
