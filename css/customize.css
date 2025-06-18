@@ -4266,3 +4266,166 @@ ul.linkbnr {
 
 
 }
+
+/*---------------------------------------
+  use
+-----------------------------------------*/
+
+.uselist-detail {
+  background-color: #FFFDEB;
+  width: 100%;
+  height: auto;
+  padding: 196px 0;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.uselist-head-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uselist-ttl-wrap{
+  margin: 0 auto;
+}
+
+.uselist-ttl{
+  width: 116.31px;
+  height: 218.9px;
+  display: block;
+  margin-bottom: 46px;
+}
+
+.uselist-headtxt-wrap{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.uselist-head-txt{
+  font-family: 'Shippori Mincho';
+  font-weight: 600;
+  font-size: clamp(14px, 3vw, 18px);
+  letter-spacing: clamp(0.84px, 1vw, 3.6px);
+  line-height: clamp(29px, 4vw, 34px);
+  margin-bottom: 179px;
+}
+
+
+.uselist-dp-wrap {
+  position: relative;
+  width: 1280px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 170px;
+}
+
+.uselist-layout,
+.uselist-layout--reverse {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.uselist-layout--reverse {
+  flex-direction: row-reverse;
+}
+
+.uselist-wrap {
+  width: 1022px;
+  height: 450px;
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.uselist-layout .uselist-wrap {
+  padding: 0 120px;
+  align-items: flex-start;
+}
+
+.uselist-layout--reverse .uselist-wrap {
+  padding: 24px 120px;
+  align-items: flex-end;
+}
+
+.uselist-pic-wrap {
+  position: absolute;
+  bottom: 60px;
+  z-index: 2;
+  width: 671.31px;
+  height: 450.35px;
+}
+
+.uselist-layout .uselist-pic-wrap {
+  right: 0;
+  display: flex;
+    justify-content: flex-end;
+}
+
+.uselist-layout--reverse .uselist-pic-wrap {
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.uselist-pic-img {
+  width: 631.47px;
+  height: 450px;
+  object-fit: cover;
+  border: 2px solid var(--color-black);
+}
+
+.uselist-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: auto 0;
+  justify-content: center;
+}
+
+.uselist-dpno{
+  margin-bottom: 0;
+  color: #F84949;
+  font-family: 'Karla';
+  font-weight: 600;
+  font-size: clamp(24px, 6vw, 50px);
+letter-spacing: clamp(3.84px, 2vw, 5px);
+
+}
+
+.uselist-ttlp {
+  margin-bottom: 25px;
+  font-family: 'Shippori Mincho';
+  font-weight: 600;
+  font-size: 20px;
+  font-size: clamp(20px, 4vw, 27px);
+  letter-spacing: clamp(3.2px, 1.5vw, 4.32px);
+  line-height: clamp(29px, 4vw, 38px);
+}
+
+.uselist-read {
+  margin-bottom: 0;
+  font-family: 'Shippori Mincho';
+  font-weight: 600;
+  font-size: clamp(14px, 2.5vw, 16px);
+  letter-spacing: clamp(0.84px, 1vw, 1.92px);
+  line-height: clamp(29px, 3vw, 32px);
+}
+
+
+
