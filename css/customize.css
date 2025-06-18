@@ -4270,8 +4270,9 @@ ul.linkbnr {
 /*---------------------------------------
   use
 -----------------------------------------*/
-
-.uselist-detail {
+/*.uselist
+*/
+.section-uselist {
   background-color: #FFFDEB;
   width: 100%;
   height: auto;
@@ -4298,8 +4299,8 @@ ul.linkbnr {
 }
 
 .uselist-ttl{
-  width: 116.31px;
-  height: 218.9px;
+  width: clamp(83.8px, 8.2vw, 116.31px);
+  height: auto;
   display: block;
   margin-bottom: 46px;
 }
@@ -4318,7 +4319,6 @@ ul.linkbnr {
   margin-bottom: 179px;
 }
 
-
 .uselist-dp-wrap {
   position: relative;
   width: 1280px;
@@ -4330,15 +4330,55 @@ ul.linkbnr {
   gap: 170px;
 }
 
-.uselist-layout,
-.uselist-layout--reverse {
+
+.uselist-layout {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
-  justify-content: flex-start;
+  width: 100%;
 }
 
-.uselist-layout--reverse {
+.uselist-layout .uselist-wrap {
+  padding: 66px 0 64px 120px;
+  align-items: flex-start;
+}
+
+.uselist-layout .uselist-pic-wrap {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  z-index: 2;
+  width: 671.31px;
+  height: 450.35px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.uselist-layout-reverse {
+  display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.uselist-layout-reverse .uselist-wrap {
+  padding: 66px 120px 64px 0;
+  align-items: flex-end;
+}
+
+.uselist-layout-reverse .uselist-pic-wrap {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: auto;
+  z-index: 2;
+  width: 671.31px;
+  height: 450.35px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .uselist-wrap {
@@ -4351,36 +4391,6 @@ ul.linkbnr {
   justify-content: center;
   position: relative;
   z-index: 1;
-}
-
-.uselist-layout .uselist-wrap {
-  padding: 0 120px;
-  align-items: flex-start;
-}
-
-.uselist-layout--reverse .uselist-wrap {
-  padding: 24px 120px;
-  align-items: flex-end;
-}
-
-.uselist-pic-wrap {
-  position: absolute;
-  bottom: 60px;
-  z-index: 2;
-  width: 671.31px;
-  height: 450.35px;
-}
-
-.uselist-layout .uselist-pic-wrap {
-  right: 0;
-  display: flex;
-    justify-content: flex-end;
-}
-
-.uselist-layout--reverse .uselist-pic-wrap {
-  left: 0;
-  display: flex;
-  justify-content: flex-start;
 }
 
 .uselist-pic-img {
@@ -4425,6 +4435,301 @@ letter-spacing: clamp(3.84px, 2vw, 5px);
   font-size: clamp(14px, 2.5vw, 16px);
   letter-spacing: clamp(0.84px, 1vw, 1.92px);
   line-height: clamp(29px, 3vw, 32px);
+}
+
+
+/*.userepo
+*/
+
+.section-userepo {
+  width: 100%;
+  height: auto;
+  padding: 150px 0;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userepo-head-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userepo-ttl-wrap{
+  margin: 0 auto;
+}
+
+.userepo-ttl{
+  width: 116.16px;
+  height: 247.53px;
+  display: block;
+  margin-bottom: 46px;
+}
+
+.userepo-headtxt-wrap{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.userepo-head-txt{
+  margin-bottom: 0;
+  font-family: 'Shippori Mincho';
+  font-weight: 600;
+  font-size: clamp(14px, 2.5vw, 16px);
+  letter-spacing: clamp(0.84px, 1vw, 1.92px);
+  line-height: clamp(29px, 3vw, 32px);
+}
+
+.userepo-wrap {
+  position: relative;
+  width: 1040px;
+  height: auto;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.userepo-detail-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.userepo-detail-link:hover {
+  opacity: 0.7;
+}
+
+
+.userepo-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 120px 40px;
+  width: 100%;
+}
+
+.userepo-wrap-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.userepo-pic {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.userepo-txtp {
+font-weight: bold;
+font-size: clamp(20px, 4vw, 27px);
+letter-spacing: clamp(3.2px, 1.5vw, 4.32px);
+line-height: clamp(29px, 4vw, 38px);
+margin: 0;
+}
+
+.userepo-txt {
+  font-family: 'Shippori Mincho';
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: clamp(14px, 2.5vw, 16px);
+  letter-spacing: clamp(0.84px, 1vw, 1.87px);
+  line-height: clamp(29px, 3vw, 32px);
+}
+
+
+/*.userepo-pagination
+*/
+.userepo-pagination {
+  width: 100%;
+  max-width: 191.05px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userepo-pagination__link,
+.userepo-pagination__prev,
+.userepo-pagination__next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-family: 'Karla';
+  font-weight: bold;
+  text-decoration: none;
+  color: #CCCCCC;
+  transition: opacity 0.3s ease;
+  min-width: 18px;
+  height: 34px;
+
+}
+
+.userepo-pagination__link.active {
+  color: #000;
+}
+
+.userepo-pagination__link:hover,
+.userepo-pagination__prev:hover,
+.userepo-pagination__next:hover {
+  opacity: 0.9;
+}
+
+.userepo-pagination__prev img,
+.userepo-pagination__next img {
+  width: 10.72px;
+  height: auto;
+}
+
+.userepo-pagination__prev {
+  margin-right: 8px;
+}
+
+.userepo-pagination__next {
+  margin-left: 8px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+  .section-uselist {
+    background-color: #FFFDEB;
+    width: 100%;
+    height: auto;
+    padding: 196px 0;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .uselist-head-wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .uselist-ttl-wrap{
+    margin: 0 auto;
+  }
+  
+  .uselist-ttl{
+    width: clamp(83.8px, 8.2vw, 116.31px);
+    height: auto;
+    display: block;
+    margin-bottom: 46px;
+  }
+  
+  .uselist-headtxt-wrap{
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .uselist-head-txt{
+    font-family: 'Shippori Mincho';
+    font-weight: 600;
+    font-size: clamp(14px, 3vw, 18px);
+    letter-spacing: clamp(0.84px, 1vw, 3.6px);
+    line-height: clamp(29px, 4vw, 34px);
+    margin-bottom: 179px;
+  }
+  
+  .uselist-dp-wrap {
+    position: relative;
+    width: 1280px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 170px;
+  }
+  
+  
+  .uselist-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .uselist-layout .uselist-wrap {
+    padding: 66px 0 64px 120px;
+    align-items: flex-start;
+  }
+  
+  .uselist-layout .uselist-pic-wrap {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    z-index: 2;
+    width: 671.31px;
+    height: 450.35px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .uselist-layout-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .uselist-layout-reverse .uselist-wrap {
+    padding: 66px 120px 64px 0;
+    align-items: flex-end;
+  }
+  
+  .uselist-layout-reverse .uselist-pic-wrap {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: auto;
+    z-index: 2;
+    width: 671.31px;
+    height: 450.35px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .uselist-wrap {
+    width: 1022px;
+    height: 450px;
+    background: var(--color-white);
+    border: 2px solid var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .uselist-pic-img {
+    width: 631.47px;
+    height: 450px;
+    object-fit: cover;
+    border: 2px solid var(--color-black);
+  }
+
+
+
 }
 
 
