@@ -2086,7 +2086,7 @@ img.sitelogo {
   }
 
   .refeature-header-p {
-    letter-spacing:2px;
+    letter-spacing: 2px;
   }
 
   .btn-more-refeature {
@@ -2155,16 +2155,16 @@ img.sitelogo {
 
   .refeature-text {
     padding: 16px 0;
-    gap:12px;
+    gap: 12px;
   }
 
   .refeature-ttlp {
     font-weight: bold;
-      letter-spacing:3.2px;
-    }
+    letter-spacing: 3.2px;
+  }
 
 
-  
+
   .refeature-read {
     letter-spacing: 1.9px;
   }
@@ -3393,7 +3393,7 @@ ul.linkbnr {
   position: relative;
   overflow: hidden;
   display: flex;
- /* border-bottom: 2px solid var(--color-black);*/
+  /* border-bottom: 2px solid var(--color-black);*/
 }
 
 .section-qapu-img {
@@ -4089,6 +4089,7 @@ ul.linkbnr {
   color: inherit;
   display: block;
 }
+
 .articles-prod-detail-link:hover {
   opacity: 0.7;
 }
@@ -4164,7 +4165,7 @@ ul.linkbnr {
     gap: 20px;
   }
 
-.fd-head-pic img,
+  .fd-head-pic img,
   .fd-contents-pic {
     width: 100%;
     height: 100%;
@@ -4174,11 +4175,11 @@ ul.linkbnr {
     padding: 5px;
     margin-bottom: 5px;
   }
-  
+
 
 
   .company-wrap {
-       padding: 20px;
+    padding: 20px;
   }
 
   .intro-prod-wrap {
@@ -4208,15 +4209,17 @@ ul.linkbnr {
   }
 
 
-/*.articles-pagination
+  /*.articles-pagination
 */
 
-.articles-pagination__prev {
-  left: 20px;
-}
-.articles-pagination__next {
-  right: 20px;
-}
+  .articles-pagination__prev {
+    left: 20px;
+  }
+
+  .articles-pagination__next {
+    right: 20px;
+  }
+
   /*.section-articles
   */
   .section-articles {
@@ -4249,7 +4252,7 @@ ul.linkbnr {
     display: flex;
     flex-direction: column;
     gap: 25px;
-   }
+  }
 
   .articles-prod-detail {
     gap: 5px;
@@ -4285,23 +4288,23 @@ ul.linkbnr {
   align-items: center;
 }
 
-.uselist-ttl-wrap{
+.uselist-ttl-wrap {
   margin: 0 auto;
 }
 
-.uselist-ttl{
+.uselist-ttl {
   width: clamp(83.8px, 8.2vw, 116.31px);
   height: auto;
   display: block;
   margin-bottom: 46px;
 }
 
-.uselist-headtxt-wrap{
+.uselist-headtxt-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-.uselist-head-txt{
+.uselist-head-txt {
   font-family: 'Shippori Mincho';
   font-weight: 600;
   font-size: clamp(14px, 3vw, 18px);
@@ -4399,13 +4402,13 @@ ul.linkbnr {
   justify-content: center;
 }
 
-.uselist-dpno{
+.uselist-dpno {
   margin-bottom: 0;
   color: #F84949;
   font-family: 'Karla';
   font-weight: 600;
   font-size: clamp(24px, 6vw, 50px);
-letter-spacing: clamp(3.84px, 2vw, 5px);
+  letter-spacing: clamp(3.84px, 2vw, 5px);
 
 }
 
@@ -4453,23 +4456,23 @@ letter-spacing: clamp(3.84px, 2vw, 5px);
   align-items: center;
 }
 
-.userepo-ttl-wrap{
+.userepo-ttl-wrap {
   margin: 0 auto;
 }
 
-.userepo-ttl{
-  width: 116.16px;
-  height: 247.53px;
+.userepo-ttl {
+  width: clamp(83.8px, 8.2vw, 116.31px);
+  height: auto;
   display: block;
   margin-bottom: 46px;
 }
 
-.userepo-headtxt-wrap{
+.userepo-headtxt-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-.userepo-head-txt{
+.userepo-head-txt {
   margin-bottom: 0;
   font-family: 'Shippori Mincho';
   font-weight: 600;
@@ -4491,6 +4494,7 @@ letter-spacing: clamp(3.84px, 2vw, 5px);
   color: inherit;
   display: block;
 }
+
 .userepo-detail-link:hover {
   opacity: 0.7;
 }
@@ -4518,11 +4522,11 @@ letter-spacing: clamp(3.84px, 2vw, 5px);
 }
 
 .userepo-txtp {
-font-weight: bold;
-font-size: clamp(20px, 4vw, 27px);
-letter-spacing: clamp(3.2px, 1.5vw, 4.32px);
-line-height: clamp(29px, 4vw, 38px);
-margin: 0;
+  font-weight: bold;
+  font-size: clamp(20px, 4vw, 27px);
+  letter-spacing: clamp(3.2px, 1.5vw, 4.32px);
+  line-height: clamp(29px, 4vw, 38px);
+  margin: 0;
 }
 
 .userepo-txt {
@@ -4590,138 +4594,166 @@ margin: 0;
 
 @media screen and (max-width: 1024px) {
 
-
+/*.uselist
+*/
   .section-uselist {
-    background-color: #FFFDEB;
-    width: 100%;
-    height: auto;
-    padding: 196px 0;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 110px 0;
   }
-  
+
   .uselist-head-wrap {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
-  
-  .uselist-ttl-wrap{
-    margin: 0 auto;
+
+  .uselist-ttl-wrap {
   }
-  
-  .uselist-ttl{
-    width: clamp(83.8px, 8.2vw, 116.31px);
-    height: auto;
-    display: block;
-    margin-bottom: 46px;
+
+  .uselist-ttl {
   }
-  
-  .uselist-headtxt-wrap{
-    margin: 0 auto;
-    text-align: center;
+
+  .uselist-headtxt-wrap {
+    padding: 0 20px;
+ }
+
+  .uselist-head-txt {
+    margin-bottom: 100px;
+
   }
-  
-  .uselist-head-txt{
-    font-family: 'Shippori Mincho';
-    font-weight: 600;
-    font-size: clamp(14px, 3vw, 18px);
-    letter-spacing: clamp(0.84px, 1vw, 3.6px);
-    line-height: clamp(29px, 4vw, 34px);
-    margin-bottom: 179px;
-  }
-  
+
   .uselist-dp-wrap {
-    position: relative;
-    width: 1280px;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 170px;
+    width: 100%;
+    gap: 100px;
   }
-  
-  
+
+
   .uselist-layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100%;
   }
-  
+
   .uselist-layout .uselist-wrap {
-    padding: 66px 0 64px 120px;
-    align-items: flex-start;
+    padding: 80px 20px 20px;
+    margin-right: 18px;
+    margin-top: 100px;
+    left: -2px;
   }
-  
+
   .uselist-layout .uselist-pic-wrap {
-    position: absolute;
-    bottom: 60px;
-    right: 0;
-    z-index: 2;
-    width: 671.31px;
-    height: 450.35px;
-    display: flex;
-    justify-content: flex-end;
+    top: -60px;
+    right: -2px;
+    width: 339px;
+    height: 217.34px;
   }
-  
+
   .uselist-layout-reverse {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100%;
-  }
-  
+   }
+
   .uselist-layout-reverse .uselist-wrap {
-    padding: 66px 120px 64px 0;
-    align-items: flex-end;
+    padding: 80px 20px 20px;
+    margin-left: 18px;
+    margin-top: 100px;
+    right: -2px;
   }
-  
+
   .uselist-layout-reverse .uselist-pic-wrap {
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    right: auto;
-    z-index: 2;
-    width: 671.31px;
-    height: 450.35px;
-    display: flex;
-    justify-content: flex-start;
+    top: -60px;
+    left: -2px;
+    width: 339px;
+    height: 217.34px;
   }
-  
+
   .uselist-wrap {
-    width: 1022px;
-    height: 450px;
-    background: var(--color-white);
-    border: 2px solid var(--color-black);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .uselist-pic-img {
+    width:100%;
+    height: auto;
+  }
+
+  .uselist-text {
   }
   
-  .uselist-pic-img {
-    width: 631.47px;
-    height: 450px;
-    object-fit: cover;
-    border: 2px solid var(--color-black);
+  .uselist-dpno {
+  
   }
+  
+  .uselist-ttlp {
+  }
+  
+  .uselist-read {
+  }
+  
+
+/*.userepo
+*/
+
+.section-userepo {
+  padding: 110px 0;
+}
+
+.userepo-head-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userepo-ttl-wrap {
+  margin: 0 auto;
+}
 
 
+.userepo-ttl {
+  width: clamp(83.8px, 8.2vw, 116.31px);
+  height: auto;
+  display: block;
+  margin-bottom: 46px;
+}
+
+.userepo-headtxt-wrap {
+  padding: 0 20px;
+}
+
+.userepo-head-txt {
 
 }
 
 
+.userepo-wrap {
+  width: 100%;
+  padding: 50px 20px;
+}
 
+.userepo-detail-link {
+
+}
+
+.userepo-detail-link:hover {
+}
+
+
+.userepo-layout {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.userepo-wrap-detail {
+}
+
+.userepo-pic {
+}
+
+.userepo-txtp {
+}
+
+.userepo-txt {
+}
+
+
+
+
+
+
+
+
+}
