@@ -5045,7 +5045,7 @@ input[type="radio"] {
   background-color: #FFFDEB;
   width: 100%;
   height: auto;
-  padding: 162px 0;
+  padding: 176px 0;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -5059,7 +5059,7 @@ input[type="radio"] {
   max-width: 1344px;
   height: auto;
   margin: 0 auto;
-  padding: 70px 0;
+  padding-bottom: 35px;
 }
 
 .faqindex-ttl-wrap {
@@ -5101,7 +5101,7 @@ input[type="radio"] {
   padding: 30px 50px;
   display: flex;
   flex-direction: column;
-  gap:40px;
+  gap:25px;
 }
 
 .faqindex-info-detail{
@@ -5180,13 +5180,11 @@ input[type="radio"] {
 
 /*DOWN
 */
-
-
 .faqindex-read {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:25px;
+  gap:20px;
 }
 
 .faqindex-item {
@@ -5243,14 +5241,58 @@ input[type="radio"] {
 }
 
 .faqindex-line{
+  width: 100%;
+  max-width: 1344px;
   border: 2px solid var(--color-black);
+margin: 100px auto 0;
+}
+
+
+.faqindex-faqlink-wrap{
+  width: 100%;
+  max-width: 1344px;
+  height: auto;
+  margin: 80px auto;
+}
+
+
+.faqindex-faqlink-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.faq-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.faq-btn:hover,
+.faq-btn:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.faq-anchor {
+  scroll-margin-top: 110px;
 }
 
 .faqindex-fqa-wrap {
   width: 100%;
   max-width: 1344px;
   height: auto;
-  margin: 60px auto;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -5266,6 +5308,7 @@ input[type="radio"] {
 
 .faqindex-accttl{
   margin-bottom: 0;
+  margin-left: 22px;
   font-family: 'Shippori Mincho';
   font-weight: 600;
   font-size:27px;
@@ -5289,6 +5332,8 @@ input[type="radio"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .faq-item-q{
@@ -5345,10 +5390,14 @@ input[type="radio"] {
 
 .faq-item-A {
   display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
 .faq-toggle:checked + .faq-item-Q + .faq-item-A {
   display: block;
+  max-height: 1000px;
 }
 
 .icon_faq {
@@ -5371,6 +5420,7 @@ input[type="radio"] {
 
 .always-open .faq-item-A {
   display: block;
+  max-height: 1000px;
 }
 
 .always-open .icon-open {
@@ -5379,4 +5429,13 @@ input[type="radio"] {
 
 .always-open .icon-close {
   display: none;
+}
+
+.pic_faq{
+  width: 100%;
+  height: auto;
+  padding: 20px 34px 20px 0;
+}
+.outlink{
+  text-decoration: underline;
 }
