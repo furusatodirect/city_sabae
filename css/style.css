@@ -357,6 +357,50 @@ p {
   }
 }
 
+
+.use-anime {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.use-anime img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeAnime-use 32s infinite;
+}
+
+.use-anime img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.use-anime img:nth-child(2) {
+  animation-delay: 8s;
+}
+
+.use-anime img:nth-child(3) {
+  animation-delay: 16s;
+}
+
+.use-anime img:nth-child(4) {
+  animation-delay: 24s;
+}
+
+@keyframes fadeAnime-use {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  35% { opacity: 1; }
+  45% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
 /*.tproducts-anime
  */
 @keyframes fadeUp {
@@ -566,9 +610,9 @@ img.sitelogo {
   .navbar-collapse {
     transition: none !important;
     height: 100vh !important;
-    opacity: .9 !important;
     display: block !important;
     visibility: visible !important;
+      background-color: rgba(255, 253, 235, 0.98) !important;
   }
 
   .collapse:not(.show) {
@@ -694,7 +738,7 @@ img.sitelogo {
     transform: translateY(-50%);
     width: 5.97px;
     height: 11.41px;
-    background-image: url('../img/icon_sr.svg');
+    background-image: url('/img/icon_sr.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -818,14 +862,17 @@ img.sitelogo {
 }
 
 .hero-right .hero-icon-scroll {
-  width: clamp(70px, calc(70px + (88 - 70) * ((100vw - 320px) / 1600)), 88px);
-  height: clamp(42.36px, calc(42.36px + (55.61 - 42.36) * ((100vw - 320px) / 1600)), 55.61px);
+/*  width: clamp(70px, calc(70px + (88 - 70) * ((100vw - 320px) / 1600)), 88px);
+  height: clamp(42.36px, calc(42.36px + (55.61 - 42.36) * ((100vw - 320px) / 1600)), 55.61px);*/
+  width: clamp(56px, calc(56px + (70.4 - 56) * ((100vw - 320px) / 1600)), 70.4px);
+  height: clamp(33.89px, calc(33.89px + (44.488 - 33.89) * ((100vw - 320px) / 1600)), 44.488px);
+
 }
 
 .hero-icon-scroll {
   position: absolute;
-  bottom: 80px;
-  right: 126px;
+  bottom: 50px;
+  right: 70px;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
   pointer-events: none;
   z-index: 2
@@ -866,6 +913,8 @@ img.sitelogo {
   display: inline-block;
   font-size: 23px;
   letter-spacing: .3rem;
+  text-decoration: underline;
+  text-underline-offset: 10px;
 }
 
 .vertical-menu a:hover {
@@ -889,7 +938,6 @@ img.sitelogo {
   transform-origin: center;
   transition: transform 0.4s ease;
 }
-
 .rl-nav-link:hover::after {
   transform: scaleY(0);
 }
@@ -1565,27 +1613,24 @@ img.sitelogo {
 }
 
 .tproducts-img {
-  aspect-ratio: 1 / 1;
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
   border: 2px solid var(--color-black);
-  transform: none !important;
 }
 
-.tproducts-img>img {
+.tproducts-img > img {
   max-width: 100%;
   max-height: 100%;
-  height: auto;
-  width: auto;
   display: block;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.tproducts-img:hover>img {
+.tproducts-img:hover > img {
   transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
 
 .tproducts-label {
@@ -1913,7 +1958,7 @@ img.sitelogo {
   .refeature-header-wrap {
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px 14px 20px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -2395,7 +2440,7 @@ ul.linkbnr {
 
   .linkbnr-ttl-wrap {
     position: absolute;
-    top: -2px;
+    top: -4px;
     right: -2px;
     z-index: 1;
   }
@@ -2561,6 +2606,8 @@ ul.linkbnr {
   top: 0;
   right: 0;
   z-index: 2;
+  width: 671.31px;
+  height: 450.35px;
 }
 
 .use-pic-img {
@@ -2660,6 +2707,8 @@ ul.linkbnr {
     top: 0;
     right: -2px;
     z-index: 2;
+    width: 339px;
+    height: 217.34px;
   }
 
   .use-pic-img {
@@ -2687,7 +2736,7 @@ ul.linkbnr {
   .use-ttl-wrap {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -2px;
     z-index: 3;
   }
 
@@ -3375,6 +3424,8 @@ ul.linkbnr {
   display: inline-block;
   font-size: 20px;
   letter-spacing: .3rem;
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .vertical-fmenu a:hover {
@@ -4930,9 +4981,9 @@ input[type="radio"] {
   margin-bottom: 0;
   font-family: 'Shippori Mincho';
   font-weight: bold;
-  font-size: 20px;
-  letter-spacing: ;
-  line-height: ;
+  font-size: clamp(16px, 2.8vw, 20px);
+  letter-spacing: clamp(1.6px, 1vw, 2px);
+  line-height: clamp(20px, 2.8vw, 24px);
 
 }
 
@@ -4940,18 +4991,18 @@ input[type="radio"] {
   margin-bottom: 0;
   font-family: 'Shippori Mincho';
   font-weight: 500;
-  font-size: clamp(13px, 3vw, 18px);
-  letter-spacing: ;
-  line-height: ;
+  font-size: clamp(13px, 3vw, 16px);
+  letter-spacing: 2.4px;
+  line-height: clamp(24px, 3vw, 28px);
 }
 
 .faqindex-info-pn {
   margin-bottom: 0;
   font-family: 'Kaela';
   font-weight: bold;
-  font-size: clamp(20px, 4vw, 32px);
-  letter-spacing: ;
-  line-height: ;
+  font-size: clamp(24px, 5vw, 32px);
+  letter-spacing: 2.88px;
+  line-height: clamp(30px, 4vw, 38px);
 }
 
 .icon_chat {
@@ -5058,7 +5109,7 @@ input[type="radio"] {
 .faqindex-line {
   width: 100%;
   max-width: 1344px;
-  border: 2px solid var(--color-black);
+  border: 1px solid var(--color-black);
   margin: 100px auto 0;
 }
 
@@ -5085,7 +5136,7 @@ input[type="radio"] {
   justify-content: center;
   padding: 10px 40px;
   font-size: clamp(13px, 4vw, 23px);
-  font-weight: bold;
+  font-weight: 600;
   color: #000;
   background-color: #fff;
   border: 1px solid #000;
@@ -5172,7 +5223,7 @@ input[type="radio"] {
   color: #ED161B;
   font-family: 'Karla';
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   letter-spacing: 2.7px;
 }
@@ -5185,7 +5236,7 @@ input[type="radio"] {
   color: #ED161B;
   font-family: 'Karla';
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   letter-spacing: 2.7px;
 }
@@ -5196,7 +5247,7 @@ input[type="radio"] {
   position: relative;
   padding-left: 34px;
   text-indent: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(13px, 3vw, 16px);
   letter-spacing: 3px;
 }
@@ -5340,28 +5391,19 @@ input[type="radio"] {
     margin-bottom: 0;
     font-family: 'Shippori Mincho';
     font-weight: bold;
-
-    letter-spacing: ;
-    line-height: ;
-
   }
 
   .faqindex-info-txt {
     margin-bottom: 0;
     font-family: 'Shippori Mincho';
     font-weight: 500;
-
-    letter-spacing: ;
-    line-height: ;
   }
 
   .faqindex-info-pn {
     margin-bottom: 0;
     font-family: 'Kaela';
     font-weight: bold;
-
-    letter-spacing: ;
-    line-height: ;
+    letter-spacing: 1px;
   }
 
   .icon_chat {
@@ -5457,7 +5499,7 @@ input[type="radio"] {
   .faqindex-ttlt-wrap {
     position: absolute;
     top: -42px;
-    left: -2px;
+    left: -4px;
     z-index: 1;
   }
 
