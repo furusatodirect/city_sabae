@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!togglerImg) return;
     togglerImg.classList.add("fade-out");
     setTimeout(() => {
-      togglerImg.src = "/img/" + newSrc;
+      togglerImg.src = "/town_sabae/img/" + newSrc;
       togglerImg.classList.remove("fade-out");
     }, 200);
   };
