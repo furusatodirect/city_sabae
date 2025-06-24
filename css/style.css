@@ -2417,7 +2417,6 @@ ul.linkbnr {
 @media screen and (max-width: 767.98px) {
   .linkbnr-wrap-out {
     max-width: 335px;
-    max-height: 664px;
     margin: 80px auto;
     padding-right: 0;
   }
