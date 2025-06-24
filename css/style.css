@@ -4222,7 +4222,7 @@ ul.linkbnr {
 }
 
 .uselist-layout .uselist-wrap {
-  padding: 66px 0 64px 120px;
+  padding: 50px 0 64px 120px;
   align-items: flex-start;
 }
 
@@ -4247,8 +4247,8 @@ ul.linkbnr {
 }
 
 .uselist-layout-reverse .uselist-wrap {
-  padding: 66px 120px 64px 0;
-  align-items: flex-end;
+  padding: 50px 0 64px 480px
+  /*align-items: flex-end;*/
 }
 
 .uselist-layout-reverse .uselist-pic-wrap {
