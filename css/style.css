@@ -1159,7 +1159,7 @@ img.sitelogo {
   height: 158.14px;
   font-weight: bold;
   font-size: 13px;
-  letter-spacing: 1.56px;
+  letter-spacing: 1px;
   line-height: 26px;
 }
 
@@ -4996,6 +4996,18 @@ input[type="radio"] {
   font-size: clamp(24px, 5vw, 32px);
   letter-spacing: 2.88px;
   line-height: clamp(30px, 4vw, 38px);
+}
+
+.faqindex-info-pn-s {
+  margin-bottom: 0;
+  font-family: 'Noto Sans JP';
+  font-weight: bold;
+  font-size: clamp(18px, 5vw, 24px);
+  letter-spacing: 2.88px;
+  line-height: clamp(26px, 4vw, 30px);
+}
+.info-pn-s-Kaela{
+  font-family: 'Kaela'!important;
 }
 
 .icon_chat {
