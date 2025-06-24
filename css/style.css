@@ -1696,19 +1696,20 @@ img.sitelogo {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 250.39px;
-  height: 64.28px;
-  font-size: 26px;
-  letter-spacing: 3.12px;
-  line-height: 41px;
+  width: 200.78px;
+  height: 51.54px;
+  font-size: 22px;
+  letter-spacing: 2.64px;
+  line-height: 34px;
   text-align: center;
   background: var(--color-black);
   color: var(--color-white);
+  transition: color 0.3s ease;
 }
 
 .btn-more-tproducts .more-box img {
-  width: 23.36px;
-  height: 18.06px;
+  width: 18.73px;
+  height: 14.49px;
   display: block;
 }
 
@@ -1789,19 +1790,16 @@ img.sitelogo {
   }
 
   .btn-more-tproducts .more-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 8px;
-    width: 154.08px;
+    width: 152px;
     height: 39.56px;
     font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 0;
+    letter-spacing: 1.92px;
+    line-height: 25px;
   }
 
   .btn-more-tproducts .more-box img {
-    width: 14.37px;
+    width: 14.03px;
     height: 11.12px;
     display: block;
   }
@@ -1865,11 +1863,11 @@ img.sitelogo {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 154.08px;
-  height: 39.56px;
-  font-size: 16px;
-  letter-spacing: 1.7px;
-  line-height: 25px;
+  width: 200.78px;
+  height: 51.54px;
+  font-size: 22px;
+  letter-spacing: 2.64px;
+  line-height: 34px;
   text-align: center;
   background: var(--color-black);
   color: var(--color-white);
@@ -1879,8 +1877,8 @@ img.sitelogo {
 }
 
 .btn-more-refeature .more-box img {
-  width: 14.37px;
-  height: 11.12px;
+  width: 18.73px;
+  height: 14.49px;
   display: block;
 }
 
@@ -1990,25 +1988,19 @@ img.sitelogo {
   }
 
   .btn-more-refeature .more-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 8px;
-    width: 154.08px;
+    width: 152px;
     height: 39.56px;
     font-size: 16px;
-    letter-spacing: 1.7px;
+    letter-spacing: 1.92px;
     line-height: 25px;
     text-align: center;
-    background: var(--color-black);
-    color: var(--color-white);
-    transition: color 0.3s ease;
     margin-right: 4px;
     margin-bottom: 15px;
   }
 
   .btn-more-refeature .more-box img {
-    width: 14.37px;
+    width: 14.03px;
     height: 11.12px;
     display: block;
   }
@@ -3000,11 +2992,11 @@ ul.linkbnr {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 154.08px;
-  height: 39.56px;
-  font-size: 16px;
-  letter-spacing: 1.7px;
-  line-height: 25px;
+  width: 200.78px;
+  height: 51.54px;
+  font-size: 22px;
+  letter-spacing: 2.64px;
+  line-height: 34px;
   text-align: center;
   background: var(--color-black);
   color: var(--color-white);
@@ -3012,8 +3004,8 @@ ul.linkbnr {
 }
 
 .btn-more-faq .more-box img {
-  width: 14.37px;
-  height: 11.12px;
+  width: 18.73px;
+  height: 14.49px;
   display: block;
 }
 
@@ -3125,14 +3117,11 @@ ul.linkbnr {
   }
 
   .btn-more-faq .more-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 8px;
-    width: 154.08px;
+    width: 152px;
     height: 39.56px;
     font-size: 16px;
-    letter-spacing: 1.7px;
+    letter-spacing: 1.92px;
     line-height: 25px;
     text-align: center;
     background: var(--color-black);
@@ -3141,7 +3130,7 @@ ul.linkbnr {
   }
 
   .btn-more-faq .more-box img {
-    width: 14.37px;
+    width: 14.03px;
     height: 11.12px;
     display: block;
   }
