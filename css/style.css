@@ -201,14 +201,14 @@ a:hover {
 }
 
 a img:hover {
-  opacity: 0.7;
+  opacity: 0.8;
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
 
 .more-box:hover,
 .linkbnr li:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 b,
@@ -469,6 +469,61 @@ p {
 
 
 /*---------------------------------------
+  external-link
+-----------------------------------------*/
+.external-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.external-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #000;
+  padding: 3px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0 !important;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.external-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #fff;
+}
+
+.external-link:hover .external-tooltip,
+.external-link:focus .external-tooltip {
+  opacity: 1 !important;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .external-link:active .external-tooltip {
+    opacity: 1 !important;
+  }
+}
+
+
+/*---------------------------------------
   NAVBAR
 -----------------------------------------*/
 
@@ -558,7 +613,6 @@ img.sitelogo {
 
 .navbar.scrolled .navbar-nav .nav-link:hover,
 .navbar.scrolled .navbar-nav a:hover,
-.navbar.scrolled .navbar-nav a:hover span,
 .navbar.scrolled .navbar-nav a:hover i {
   color: var(--color-gray) !important;
 }
