@@ -440,6 +440,34 @@ p {
 }
 
 
+/*confirm-popup
+*/
+.confirm-popup {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 9999;
+  display: none;
+}
+.confirm-popup::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+  border: 8px solid transparent;
+  border-right-color: #fff;
+}
+.confirm-popup button {
+  margin: 0 5px;
+  font-size: 13px;
+}
+
+
 /*---------------------------------------
   NAVBAR
 -----------------------------------------*/
@@ -492,7 +520,7 @@ a.brand-name:hover .sitelogo {
 }
 
 img.sitelogo {
-  width: clamp(105.68px, calc(105.68px + (158.31 - 105.68) * ((100vw - 320px) / 1600)), 158.31px);
+  width: clamp(207.08px, calc(207.08px + (322.38 - 207.08) * ((100vw - 320px) / 1600)), 322.38px);
   height: auto;
   display: flex;
   transition: filter 0.3s ease;
@@ -558,6 +586,28 @@ img.sitelogo {
 
 .navbar-box img,
 .navbar-icon img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.navbar-boxfd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 16px;
+  letter-spacing: 2.88px;
+  width: 203.79px;
+  height: 33.98px;
+  line-height: 1;
+  text-align: center;
+  background: var(--color-black);
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.navbar-boxfd img {
   width: 16px;
   height: 16px;
   display: block;
@@ -785,6 +835,12 @@ img.sitelogo {
     width: 133.89px;
     height: 34px;
   }
+
+  .header-icon-fixed .navbar-boxfd {
+    width: 200px;
+    height: 39.56px;
+  }
+
 
   .navbar:not(.scrolled) .navbar-toggler {
     pointer-events: auto;
@@ -1695,9 +1751,9 @@ img.sitelogo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  width: 200.78px;
-  height: 51.54px;
+  gap: 6px;
+  width: 271.96px;
+  height: 52px;
   font-size: 22px;
   letter-spacing: 2.64px;
   line-height: 34px;
@@ -1708,8 +1764,8 @@ img.sitelogo {
 }
 
 .btn-more-tproducts .more-box img {
-  width: 18.73px;
-  height: 14.49px;
+  width: 16.96px;
+  height: 16.97px;
   display: block;
 }
 
@@ -1790,8 +1846,8 @@ img.sitelogo {
   }
 
   .btn-more-tproducts .more-box {
-    gap: 8px;
-    width: 152px;
+    gap: 4px;
+    width: 200px;
     height: 39.56px;
     font-size: 16px;
     letter-spacing: 1.92px;
@@ -1799,8 +1855,8 @@ img.sitelogo {
   }
 
   .btn-more-tproducts .more-box img {
-    width: 14.03px;
-    height: 11.12px;
+    width: 16.96px;
+    height: 16.97px;
     display: block;
   }
 
@@ -5029,10 +5085,28 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 329.96px;
-  height: 45.08px;
-  font-size: clamp(16px, 2.5vw, 18px);
-  letter-spacing: 1.7px;
+  width: 432.87px;
+  height: 45px;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 25px;
+  text-align: center;
+  background: var(--color-black);
+  color: var(--color-white);
+  transition: color 0.3s ease;
+  margin-right: 34px;
+}
+
+.faqindex-info-outlinks {
+  font-family: 'Shippori Mincho';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 306.87px;
+  height: 45px;
+  font-size: 18px;
+  letter-spacing: 0;
   line-height: 25px;
   text-align: center;
   background: var(--color-black);
@@ -5046,6 +5120,7 @@ input[type="radio"] {
   height: 18.88px;
   display: inline-block;
   vertical-align: middle;
+  margin-left: 6px;
 }
 
 /*DOWN
@@ -5105,7 +5180,7 @@ input[type="radio"] {
 }
 
 .faqindex-ttlt {
-  width: 329.95px;
+  width: 364px;
   height: 54.59px;
   display: block;
 }
@@ -5131,7 +5206,7 @@ input[type="radio"] {
 .faqindex-faqlink-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
 .faq-btn {
@@ -5139,9 +5214,10 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   padding: 10px 40px;
-  font-size: clamp(13px, 4vw, 23px);
+  font-size: clamp(13px, 4vw, 22px);
   font-weight: 600;
   color: #000;
+  letter-spacing: 2.6px;
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 30px;
@@ -5184,8 +5260,7 @@ input[type="radio"] {
   font-family: 'Shippori Mincho';
   font-weight: 600;
   font-size: clamp(20px, 3.5vw, 27px);
-  letter-spacing: ;
-  line-height: ;
+  letter-spacing: 4.2px;
 }
 
 
@@ -5433,9 +5508,9 @@ input[type="radio"] {
     justify-content: center;
     gap: 8px;
     width: 100%;
-    height: 45.08px;
-
-    letter-spacing: 1.7px;
+    height: 45px;
+    font-size: 13px;
+    letter-spacing: 0;
     line-height: 25px;
     text-align: center;
     background: var(--color-black);
@@ -5443,12 +5518,32 @@ input[type="radio"] {
     transition: color 0.3s ease;
     margin-right: 0;
   }
+  
+  .faqindex-info-outlinks {
+    font-family: 'Shippori Mincho';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 45px;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 25px;
+    text-align: center;
+    background: var(--color-black);
+    color: var(--color-white);
+    transition: color 0.3s ease;
+    margin-right: 0;
+  }
+  
 
   .icon_outlink {
-    width: 18.88px;
-    height: 18.88px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     vertical-align: middle;
+    margin-left: 0
   }
 
   /*DOWN
@@ -5508,7 +5603,7 @@ input[type="radio"] {
   }
 
   .faqindex-ttlt {
-    width: 253.62px;
+    width: 279.76px;
     height: 41.96px;
     display: block;
   }
@@ -5542,7 +5637,7 @@ input[type="radio"] {
     align-items: center;
     justify-content: center;
     padding: 5px 10px;
-
+    letter-spacing: 1.5px;
     font-weight: bold;
     color: #000;
     background-color: #fff;
@@ -5585,12 +5680,10 @@ input[type="radio"] {
 
   .faqindex-accttl {
     margin-bottom: 0;
-    margin-left: 22px;
+    margin-left: 6px;
     font-family: 'Shippori Mincho';
     font-weight: 600;
-
-    letter-spacing: ;
-    line-height: ;
+    letter-spacing: 2.2px;
   }
 
 
