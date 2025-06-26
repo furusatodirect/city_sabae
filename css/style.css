@@ -480,12 +480,12 @@ p {
 .external-tooltip {
   position: absolute;
   left: 50%;
-  bottom: 100%;
+  bottom: calc(100% + 2px);
   transform: translateX(-50%);
   background: #fff;
   border: 1px solid #000;
-  padding: 3px 10px;
-  font-size: 12px;
+  padding: 3px 8px;
+  font-size: 11px;
   white-space: nowrap;
   opacity: 0 !important;
   pointer-events: none;
@@ -494,13 +494,14 @@ p {
   color: #000;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.4;
-  min-height: 24px;
+  line-height: 0;
+  min-height: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.external-tooltip::before,
 .external-tooltip::after {
   content: "";
   position: absolute;
@@ -508,7 +509,18 @@ p {
   left: 50%;
   transform: translateX(-50%);
   border: 6px solid transparent;
+  pointer-events: none;
+}
+
+.external-tooltip::before {
+  border-top-color: #000;
+  z-index: 0;
+  margin-top: 1px;
+}
+
+.external-tooltip::after {
   border-top-color: #fff;
+  z-index: 1;
 }
 
 .external-link:hover .external-tooltip,
@@ -1090,14 +1102,35 @@ img.sitelogo {
   margin-top: clamp(20px, calc(20px + 67 * ((100vw - 320px) / 1600)), 87px);
 }
 
-.topprodlist .btn {
-  display: block;
-  margin: 0 auto;
-  width: 249.1px;
-  height: 44.71px;
-  font-size: 22px;
-  letter-spacing: .3rem;
+.btn-more-topmenu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 55px;
 }
+
+.topmenu .more-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 271.96px;
+  height: 52px;
+  font-size: 22px;
+  letter-spacing: 2.64px;
+  line-height: 34px;
+  text-align: center;
+  background: var(--color-black);
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.btn-more-topmenu .more-box img {
+  width: 16.96px;
+  height: 16.97px;
+  display: block;
+}
+
+
 
 @media screen and (max-width: 1024px) {
   .hero-left {
@@ -1119,7 +1152,7 @@ img.sitelogo {
   }
 
   .topmenulist,
-  .topprodlist {
+  .btn-more-topmenu {
     display: none;
   }
 
@@ -5652,7 +5685,7 @@ input[type="radio"] {
   .faqindex-ttlt-wrap {
     position: absolute;
     top: -42px;
-    left: -4px;
+    left: -5px;
     z-index: 1;
   }
 
