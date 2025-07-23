@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>preview | 返礼品詳細</title>
+    <link rel="icon" href="https://sabae.furusato-direct.jp/html/user_data/assets/img/common/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://sabae.furusato-direct.jp/html/user_data/assets/img/common/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.15/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://sabae.furusato-direct.jp/html/user_data/assets/css/style.css" media="all" />
+    <link rel="stylesheet" href="https://sabae.furusato-direct.jp/html/user_data/assets/css/customize.css" media="all" />
+    <style>
+      .ec-layoutRole .ec-layoutRole__contents {
+        margin-right: initial;
+        margin-left: initial;
+        width: initial;
+        max-width: initial;
+        display: initial;
+        flex-wrap: initial;
+      }
+
+      .df_cart,
+      .floating_cart .form-group,
+      .addition {
+        display: none;
+      }
+      .area-pro-tbl .part dl dd {
+        flex-grow: initial;
+      }
+
+      dd.cplink + dd.cplink::before {
+        content: ">";
+        margin-right: 0.3rem;
+      }
+
+      .sw-bar-wrap {
+        position: relative;
+      }
+      .swiper-scrollbar {
+        bottom: -4px !important;
+        background-color: #ccc;
+      }
+      .swiper-scrollbar-drag {
+        background-color: #0095e1;
+      }
+      .pd_thumb.nogradient {
+        mask-image: none;
+        -webkit-mask-image: none;
+      }
+      .pd_thumb.gradient {
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      }
+      .pd_thumb.left-gradient {
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 100%);
+      }
+      .pd_thumb.right-gradient {
+        mask-image: linear-gradient(to right, black 0%, black 90%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, black 0%, black 90%, transparent 100%);
+      }
+      .form-group {
+        display: none;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+
+  <body id="page_product_detail" class="product_page">
+    <div class="ec-layoutRole">
+      <nav class="navbar navbar-expand-lg scrolled">
+        <div class="header-wrap">
+          <a class="brand-name" href="https://furusato-sabae.jp/"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/common_logos.svg" class="sitelogo" alt="" /></a>
+          <div class="d-lg-none">
+            <a href="https://sabae.furusato-direct.jp/cart" class="navbar-icon"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_cart.svg" class="" alt="" /><span class="cart-badge">0</span></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_menu.svg" alt="メニュー" class="navbar-toggler-img" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav-logo d-lg-none">
+              <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/common_logo.svg" class="sitelogo" alt="" />
+            </div>
+            <ul class="navbar-nav ms-lg-auto rl-nav">
+              <li><a href="https://furusato-sabae.jp/#about" class="nav-item nav-link rl-nav-link sc-rnl">鯖江市のこと</a></li>
+              <li><a href="https://furusato-sabae.jp/feature/" class="nav-item nav-link rl-nav-link sc-rnl">お礼品ものがたり</a></li>
+              <li><a href="https://furusato-sabae.jp/usage/" class="nav-item nav-link rl-nav-link sc-rnl">寄附金の使い道</a></li>
+              <li><a href="https://furusato-sabae.jp/faq/" class="nav-item nav-link rl-nav-link sc-rnl">よくあるご質問</a></li>
+            </ul>
+            <ul class="navbar-nav ms-lg-auto rl-navs d-lg-none">
+              <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/furusatonozei.html" target="_blank">-ふるさと納税とは</a></li>
+              <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/OneStopTokurei.html" target="_blank">-ワンストップ特例制度について</a></li>
+              <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/Zaimu_r5hurusatonouz.html" target="_blank">-ふるさと納税寄附状況</a></li>
+              <li><a href="/help/tradelaw" class="">-特定商取引法の表示</a></li>
+              <li><a href="/help/privacy" class="">-プライバシーポリシー</a></li>
+            </ul>
+            <div class="navbar-nav header-icon-fixed">
+              <a href="/mypage/login" class="">
+                <span class="navbar-box">
+                  <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_login.svg" class="" alt="" />
+                  会員登録 /ログイン
+                </span>
+              </a>
+              <a href="/mymenu" class="">
+                <span class="navbar-boxs">
+                  <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_user.svg" class="" alt="" />
+                  マイページ
+                </span>
+              </a>
+
+              <a href="https://sabae.furusato-direct.jp/cart" class="navbar-icon"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_cart.svg" class="" alt="" /><span class="cart-badge">0</span></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="ec-layoutRole__contents">
+        <div class="ec-layoutRole__main">
+          <main>
+            <section class="section-Sprod">
+              <div class="Sprod-container">
+                <div class="Sprod-ttlwrap">
+                  <p class="Sprod-ttl">鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー</p>
+                </div>
+
+                <div class="Sprod-headwrap">
+                  <div class="Sprod-head-left">
+                    <div class="Sprod-head-swiper">
+                      <div class="swiper pd_main pic-m">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0627175049_685e5b696cff5.jpg" class="img-fluid w-100" alt="鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー" loading="lazy" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0626115315_685cb61b9484b.jpg" class="img-fluid w-100" alt="鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー" loading="lazy" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0626115318_685cb61e3462d.jpg" class="img-fluid w-100" alt="鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー" loading="lazy" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0626115320_685cb620f3de2.jpg" class="img-fluid w-100" alt="鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー" loading="lazy" />
+                          </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                      <div class="sw-bar-wrap">
+                        <div class="swiper pd_thumb pic-t">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0627175049_685e5b696cff5.jpg" class="img-fluid w-100" alt="鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0626115315_685cb61b9484b.jpg" class="img-fluid w-100" alt="鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0626115318_685cb61e3462d.jpg" class="img-fluid w-100" alt="鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0626115320_685cb620f3de2.jpg" class="img-fluid w-100" alt="鯖江のメガネ工場がいつも使っている 高機能プロ仕様のメガネ拭き ライトグレー" loading="lazy" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="Sprod-head-sticky">
+                  <div class="Sprod-head-cartbox">
+                    <div class="Sprod-cartbox">
+                      <div class="price-wrap">
+                        <p class="price-ttl">寄附額</p>
+                        <p class="price-prod">5,000<span class="price-yen">円</span></p>
+                      </div>
+                      <div class="fav-off">
+                        <button id="favorite" class="favorite btn btn-outline-dark" onclick="addFavoriteProduct(58)">
+                          <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_favorite.svg" class="icon_favorite" alt="" />
+                          <span>お気に入りに追加</span>
+                        </button>
+                      </div>
+
+                      <div id="sec_bt_cart">
+                        <form action="https://sabae.furusato-direct.jp/products/add_cart/58" method="post" id="form1" name="form1">
+                          <div class="default">
+                            <button type="submit" class="add-cart go-cart"><span class="icon_cart"></span><span>寄附カートに入れる</span></button>
+                          </div>
+                          <input type="hidden" id="product_id" name="product_id" value="58" /><input type="hidden" id="ProductClass" name="ProductClass" value="58" />
+                          <div class="form-group"><label for="quantity" class="required">Quantity</label><input type="number" id="quantity" name="quantity" required="required" min="1" maxlength="9" class="form-control" value="1" /></div>
+                          <input type="hidden" id="_token" name="_token" value="zcWi8SXkubMEzZ4kNqfPRINWzZG3xpx3btkqZSnwLZk" />
+                        </form>
+
+                        <div class="addition">
+                          <div class="btns">
+                            <button onclick="additionclose">
+                              <i class="far fa-times-circle"></i>
+                            </button>
+                            <button onclick="location.href='https://sabae.furusato-direct.jp/cart'" class="gocart">寄附カートへ進む</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class="cartbox-txt">※追加内容は、注文確定前であればカートでいつでも変更・削除可能です。<br />カートへの追加だけではご注文は確定しません。追加後、カートからご注文を確定させてください。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="Sprod-detailwrap">
+                  <div class="Sprod-detail-txt">
+                    <p class="Sprod-txt">
+                      【高機能プロ仕様 メガネ拭き】<br />
+                      <br />
+                      汚れ落ち抜群！眼鏡以外にも携帯液晶画面にも使用可能！<br />
+                      鯖江のメガネ工場で使用している汚れ落ち抜群のメガネ拭きです。<br />
+                      <br />
+                      【特長】<br />
+                      ・両面起毛加工されたしずく型の極細繊維が、微細な凹凸を優しく拭き取ります。<br />
+                      ・特殊多層構造で、薄過ぎず手に馴染む適度な量感と優しい手触り感があります。<br />
+                      ・吸水性に優れ、落ちにくい油汚れも拭き取れます。<br />
+                      ・繰り返し洗濯しても使用できる耐久性があります。<br />
+                      ・繊維上の細菌増殖を抑制し防臭効果のある抗菌防臭加工を施しています。<br />
+                      <br />
+                      【お取り扱い上の注意】<br />
+                      表面に付着しているゴミ等でキズがつく可能性があります。ゴミ等を落としてから、ご使用下さい。<br />
+                      繰り返し洗濯しても使用できる耐久性がありますが、漂白剤・柔軟剤等は使用しないでください。<br />
+                      またアイロンや乾燥機の使用も避けてください。熱により繊維が傷むことがあります。<br />
+                      洗濯の際に初めの数回は色落ちする事がありますので、他の物とは分けて洗濯するようにして下さい。<br />
+                      <br />
+                      【地場産品基準】<br />
+                      類型：99<br />
+                      区域内の工場で製造される商品であり、原材料を仕入れ、商品開発し、起毛加工や特殊表面加工を行うことで全体の9割の付加価値を生じているもの
+                    </p>
+                  </div>
+
+                  <div class="Sprod-detail-box">
+                    <p class="Sprod-box-ttl">お礼品について</p>
+                    <div class="part txtbase">
+                      <dl class="part">
+                        <dt>カテゴリー</dt>
+                        <dd class="linkcate-wrap"><a class="linkcateid" href="https://sabae.furusato-direct.jp/products/list?category_id=136">雑貨・日用品</a> ＞ <a class="linkcateid" href="https://sabae.furusato-direct.jp/products/list?category_id=146">その他雑貨・日用品</a></dd>
+                      </dl>
+                      <dl>
+                        <dt>内容量</dt>
+                        <dd>
+                          【内容】<br />
+                          メガネ拭き 1枚<br />
+                          <br />
+                          【サイズ】<br />
+                          20 × 30cm<br />
+                          <br />
+                          【素材】<br />
+                          ポリエステル100％<br />
+                          <br />
+                          【カラー】<br />
+                          ライトグレー
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>事業者名</dt>
+                        <dd>
+                          株式会社 シャルマン<br />
+                          <a class="glink" href="https://sabae.furusato-direct.jp/products/list?operator_name=株式会社 シャルマン">他のお礼品を見る <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_arrow_p.svg" class="icon_arrow_p" alt="" /></a>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="Sprod-detail-box">
+                    <p class="Sprod-box-ttl">お申込みについて</p>
+                    <div class="part txtbase">
+                      <dl>
+                        <dt>申込期日</dt>
+                        <dd>通年</dd>
+                      </dl>
+                      <dl>
+                        <dt>発送期日</dt>
+                        <dd>決済から14日前後で発送予定</dd>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="btn-more-tproducts">
+                    <a href="https://sabae.furusato-direct.jp/products/list" class="more-box"> お礼品一覧ページへ戻る </a>
+                  </div>
+                </div>
+              </div>
+
+              <script type="text/javascript">
+                const apiAddFavoriteProductUrl = "https://sabae.furusato-direct.jp/api/add_favorite/0";
+
+                function addFavoriteProduct(id) {
+                  const requestURL = apiAddFavoriteProductUrl.replace(/0$/, id);
+                  $.ajax({
+                    url: requestURL,
+                    type: "post",
+                    dataType: "json",
+                  })
+                    .then((data) => {
+                      console.log(data);
+                      window.location.reload();
+                    })
+                    .fail((error) => {
+                      if (error.status === 406) {
+                        window.location = "https://sabae.furusato-direct.jp/mypage/login";
+                      }
+                    });
+                }
+              </script>
+            </section>
+
+              <section class="section-Sprodblock">
+                        <div class="Sproduct-containerbottom">
+                          <p class="Sprodblock-ttl">おすすめ返礼品</p>
+                          <div class="Sproduct-item-wrap">
+                            <a href="https://sabae.furusato-direct.jp/products/detail/85" class="articles-prod-detail-link">
+                              <div class="articles-prod-detail">
+                                <div class="prod-detail-pic-wrap">
+                                  <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0627123232_685e10d086a7a.jpg" class="prod-detail-pic" alt="KISSO Gift Ticket　Silver（6000円相当）" loading="lazy" />
+                                </div>
+                                <p class="prod-detail-txt">KISSO Gift Ticket　Silver（6000円相当）</p>
+                              </div>
+                              <p class="pd-price">20,000<span>円</span></p>
+                            </a>
+                            <a href="https://sabae.furusato-direct.jp/products/detail/85" class="articles-prod-detail-link">
+                              <div class="articles-prod-detail">
+                                <div class="prod-detail-pic-wrap">
+                                  <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0627123232_685e10d086a7a.jpg" class="prod-detail-pic" alt="KISSO Gift Ticket　Silver（6000円相当）" loading="lazy" />
+                                </div>
+                                <p class="prod-detail-txt">KISSO Gift Ticket　Silver（6000円相当）</p>
+                              </div>
+                              <p class="pd-price">20,000<span>円</span></p>
+                            </a>
+                            <a href="https://sabae.furusato-direct.jp/products/detail/85" class="articles-prod-detail-link">
+                              <div class="articles-prod-detail">
+                                <div class="prod-detail-pic-wrap">
+                                  <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0627123232_685e10d086a7a.jpg" class="prod-detail-pic" alt="KISSO Gift Ticket　Silver（6000円相当）" loading="lazy" />
+                                </div>
+                                <p class="prod-detail-txt">KISSO Gift Ticket　Silver（6000円相当）</p>
+                              </div>
+                              <p class="pd-price">20,000<span>円</span></p>
+                            </a>
+                            <a href="https://sabae.furusato-direct.jp/products/detail/85" class="articles-prod-detail-link">
+                              <div class="articles-prod-detail">
+                                <div class="prod-detail-pic-wrap">
+                                  <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0627123232_685e10d086a7a.jpg" class="prod-detail-pic" alt="KISSO Gift Ticket　Silver（6000円相当）" loading="lazy" />
+                                </div>
+                                <p class="prod-detail-txt">KISSO Gift Ticket　Silver（6000円相当）</p>
+                              </div>
+                              <p class="pd-price">20,000<span>円</span></p>
+                            </a>
+                          </div>
+                        </div>
+                      </section>
+          </main>
+        </div>
+      </div>
+
+      <div class="ec-layoutRole__contentBottom"></div>
+
+      <div class="ec-layoutRole__footer">
+        <footer class="section-footer">
+          <div class="footer-wrap">
+            <div class="footer-wrap1">
+              <div class="toplogof">
+                <a href="https://furusato-sabae.jp/">
+                  <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/common_logo.svg" class="sitelogo-f" alt="" />
+                </a>
+              </div>
+              <div class="ad-wrapft">
+                <p class="ad-t13">お問い合わせ窓口：</p>
+                <p class="ad-t18">一般社団法人SOEふるさと納税事業部</p>
+                <p class="ad-t13">
+                  住所：〒916-8666 鯖江市西山町13番1号<br />
+                  TEL：050-1731-6099（平日10:00-17:00対応）<br />
+                  MAIL：furusato-sabae@soe.or.jp
+                </p>
+                <p class="ad-t11">※お電話及びメールは、一般社団法人SOEがご対応いたします。</p>
+              </div>
+              <div class="topmenulist-wrap">
+                <div class="topfmenulist">
+                  <ul class="vertical-fmenu">
+                    <li><a href="https://furusato-sabae.jp/#about" class="l-nav-link">鯖江市のこと</a></li>
+                    <li><a href="https://furusato-sabae.jp/feature/" class="l-nav-link">お礼品ものがたり</a></li>
+                    <li><a href="https://furusato-sabae.jp/usage/" class="l-nav-link">寄附金の使い道</a></li>
+                    <li><a href="https://furusato-sabae.jp/faq/" class="l-nav-link">よくあるご質問</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-wrap2">
+              <ul class="footer-wrap2-links">
+                <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/furusatonozei.html" target="_blank" class="nav-link">ふるさと納税とは</a></li>
+                <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/OneStopTokurei.html" target="_blank" class="nav-link">ワンストップ特例制度について</a></li>
+                <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/Zaimu_r5hurusatonouz.html" target="_blank" class="nav-link">ふるさと納税寄附状況</a></li>
+                <li><a href="/help/tradelaw" class="nav-link">特定商取引法の表示</a></li>
+                <li><a href="/help/privacy" class="nav-link">プライバシーポリシー</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-wrap3">
+              <ul class="f-linkbnr">
+                <li>
+                  <a id="bnr_rakuten" href="https://www.rakuten.co.jp/f182079-sabae/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_rakuten.svg" class="" alt="楽天ふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_choice" href="https://www.furusato-tax.jp/city/product/18207" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_choice.svg" class="" alt="ふるさとチョイス" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_satofull" href="https://www.satofull.jp/city-sabae-fukui/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_satofull.svg" class="" alt="さとふる" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_furunavi" href="https://furunavi.jp/municipal_single.aspx?municipalid=793" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_furunavi.svg" class="" alt="ふるなび" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_ana" href="https://furusato.ana.co.jp/donation/c/c18207/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_ana.svg" class="" alt="ANAふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_jal" href="https://furusato.jal.co.jp/municipality/182079" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_jal.svg" class="" alt="JALふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_furulabo" href="https://furusato.asahi.co.jp/city/detail/182079" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_furulabo.svg" class="" alt="ふるラボ" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_mitsukoshi" href="https://mifurusato.jp/j/182079.html" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_mitsukoshi.svg" class="" alt="三越伊勢丹ふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_amazon" href="https://www.amazon.co.jp/fmc/furusato/region/%E4%B8%AD%E9%83%A8/%E7%A6%8F%E4%BA%95%E7%9C%8C%E9%AF%96%E6%B1%9F%E5%B8%82/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_amazon.svg" class="" alt="amazonふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_jremall" href="https://furusato.jreast.co.jp/furusato/prd/reg4/pre18/mak17570/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_jremall.svg" class="linkbnr_bnr" alt="JRE MALL" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_yahoo" href="https://furusato.yahoo.co.jp/prefectures/municipalities/182079?sc_i=shopping_pc_web_detail_storepref_muni_lst_intr_lnk" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_yahoo.svg" class="linkbnr_bnr" alt="Yahoo" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_aupay" href="https://furusato.wowma.jp/products/list.php?municipality_code=182079" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_aupay.svg" class="linkbnr_bnr" alt="au PAY" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_saison" href="https://furusato.saisoncard.co.jp/city.php?n=182079" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_saison.svg" class="linkbnr_bnr" alt="セゾン" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_kabuand" href="https://kabuand.com/furusato/areas/18/cities/v8aaej8zmge4br9r069ja8mjq0" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_kabu&amp;.svg" class="linkbnr_bnr" alt="KABUand" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_t-mall" href="https://t-mall.tsite.jp/category/108/sort_condition/3?3" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_t-mall.svg" class="linkbnr_bnr" alt="Vポイントモール" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-wrap4">
+              <p class="copyright-text">© Sabae City. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/template/default/assets/js/function.js"></script>
+    <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/template/default/assets/js/eccube.js"></script>
+    <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/user_data/assets/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.15/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/user_data/assets/js/customize.js"></script>
+  </body>
+</html>
