@@ -96,19 +96,6 @@
                 width: 100%;
                 margin-bottom: 20px;
               }
-              .Sprodlist-ttltop-wrapX {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                margin-bottom: 20px;
-              }
-              .Sprodlist-ttltop-wrapX .Sprodblock-ttl-top {
-                margin-bottom: 0px !important;
-              }
-              .search-keyw-ttl {
-                padding-left: 14px;
-              }
               .Sprodblock-ttl-top {
                 margin-bottom: 18px;
                 font-family: "Shippori Mincho";
@@ -166,14 +153,15 @@
                 margin-right: 6px;
               }
               .search-wrap-orderby {
+                margin-left: auto;
                 align-self: flex-end;
               }
               .search-group {
                 display: flex;
-                gap: 20px;
+                gap: 70px;
                 align-items: flex-start;
                 margin-bottom: 50px;
-                justify-content: flex-end;
+                justify-content: space-between;
               }
               .section-Sprodlist {
                 padding-top: 0px;
@@ -185,7 +173,7 @@
                 right: -20px;
               }
               .search-keyw-seleWrap input {
-                width: 250px;
+                width: 215px;
               }
 
               .section-Sprodcatelist {
@@ -238,13 +226,6 @@
                 .Sprodlist-ttltop-wrap {
                   gap: 0px;
                 }
-                .Sprodlist-ttltop-wrapX {
-                  display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 30px;
-                width: 100%;
-              }
                 .Sproduct-itemsix-wrap {
                   grid-template-columns: repeat(2, 1fr);
                   gap: 8px;
@@ -261,30 +242,39 @@
                 }
                 .search-group {
                   gap: 0;
-                  justify-content:space-between;
+                  justify-content: flex-start;
                   margin-bottom: 30px;
-                  margin-top: -10px;
                 }
-                .filter {
-                width: 200px!important;
-              }
+                .filter-btn {
+                  font-family: "Shippori Mincho";
+                  background-color: #000;
+                  width: 200px;
+                  height: 36px;
+                  color: #fff;
+                  border: 2px solid #000;
+                  font-size: 16px;
+                  letter-spacing: 1px;
+                  display: inline-block;
+                  text-align: center;
+                  line-height: 30px;
+                }
               }
 
               /*filter btn*/
               .filter {
                 font-size: 0.9rem;
                 font-weight: bold;
-                padding: 8px;
-                width: 175px;
-                color: #fff;
-                background-color: #000;
+                border: 1px solid #333;
+                border-radius: 8px;
+                padding: 7px 15px;
+                width: 140px;
+                line-height: 24px;
               }
               .filter span {
                 position: relative;
                 display: block;
-                text-align: center;
+                text-align: right;
               }
-              /*
               .filter span::before {
                 content: "";
                 display: block;
@@ -296,7 +286,6 @@
                 background: url("https://sabae.furusato-direct.jp/html/user_data/assets/img/icon_filter.png") no-repeat center center;
                 background-size: cover;
               }
-                */
               /*popup*/
               .popup {
                 position: fixed;
@@ -347,9 +336,8 @@
               .popup .midashi span {
                 position: relative;
                 font-weight: bold;
-                color: #000;
+                padding-left: 28px;
               }
-              /*
               .popup .midashi span::before {
                 content: "";
                 display: block;
@@ -360,7 +348,7 @@
                 left: 0;
                 background: url("https://sabae.furusato-direct.jp/html/user_data/assets/img/icon_find.png") no-repeat center center;
                 background-size: cover;
-              }*/
+              }
               .popup input.search {
                 background: #fff url("https://sabae.furusato-direct.jp/html/user_data/assets/img/icon_find.png") no-repeat right 10px top 50%;
                 background-size: 24px 24px;
@@ -499,7 +487,11 @@
                 padding: 6px;
                 white-space: nowrap;
                 height: auto;
-              }
+              } /*
+              .popup .M_categories li a:hover {
+                background: #000;
+                color: #fff;
+              }*/
               .popup .under_display {
                 border-top: 1px solid #c8c8c8;
                 padding: 20px;
@@ -694,6 +686,101 @@
               </div>
             </section>
 
+            <div class="popup" id="js-popup">
+              <div class="innerbox">
+                <div class="midashi"><span>フィルター</span></div>
+                <div class="closebtn" id="popup-close"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/popup_close.png" alt="close" /></div>
+                <div class="scrollbox">
+                  <input type="text" name="sa" placeholder="キーワードから探す" class="search" id="input-keywords" />
+
+                  <section>
+                    <h6>寄附額から探す</h6>
+                    <ul class="P_categories">
+                      <li class="">
+                        <a href="https://sabae.furusato-direct.jp/products/list?min_price=0&max_price=10000&orderby=1">～10,000円</a>
+                      </li>
+                      <li class="">
+                        <a href="https://sabae.furusato-direct.jp/products/list?min_price=10001&max_price=20000&orderby=1">～20,000円</a>
+                      </li>
+                      <li class="">
+                        <a href="https://sabae.furusato-direct.jp/products/list?min_price=20001&max_price=30000&orderby=1">～30,000円</a>
+                      </li>
+                      <li class="">
+                        <a href="https://sabae.furusato-direct.jp/products/list?min_price=30001&max_price=50000&orderby=1">～50,000円</a>
+                      </li>
+                      <li class="">
+                        <a href="https://sabae.furusato-direct.jp/products/list?min_price=50001&max_price=100000&orderby=1">～100,000円</a>
+                      </li>
+                      <li class="">
+                        <a href="https://sabae.furusato-direct.jp/products/list?min_price=100001&orderby=1">100,000円～</a>
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h6>カテゴリーから探す</h6>
+                    <ul class="L_categories">
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=眼鏡&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_01.png" alt="眼鏡" loading="lazy" />眼鏡</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=サングラス&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_02.png" alt="サングラス" loading="lazy" />サングラス</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=引換券&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_03.png" alt="引換券・サービス" loading="lazy" />引換券・サービス</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=工芸品&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_04.png" alt="工芸品" loading="lazy" />工芸品</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=雑貨&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_05.png" alt="雑貨・その他" loading="lazy" />雑貨・その他</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=定期便&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_06.png" alt="定期便" loading="lazy" />定期便</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?category_id=2&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_07.png" alt="お肉" loading="lazy" />お肉</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?category_id=1&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_08.png" alt="お米" loading="lazy" />お米</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?category_id=5&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_09.png" class="cateimg" alt="カニ・海鮮" loading="lazy" />カニ・海鮮</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=お菓子&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_10.png" alt="お菓子・スイーツ" loading="lazy" />お菓子・スイーツ</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=野菜&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_11.png" alt="野菜・果物" loading="lazy" />野菜・果物</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=お酒&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_12.png" alt="お酒" loading="lazy" />お酒</a>
+                      </li>
+                      <li>
+                        <a href="https://sabae.furusato-direct.jp/products/list?name=加工品&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_13.png" alt="加工品・その他食品" loading="lazy" />加工品・その他食品</a>
+                      </li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>中カテゴリー</h6>
+                    <ul class="M_categories">
+                      <li class="sub-category parent-category-id-3" id="sub-category-id-54" data-parent-category_id="3" data-category_id="54">
+                        <a href="https://sabae.furusato-direct.jp/products/list?category_id=144&orderby=1"><span>ファッション</span></a>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+                <!--/scrollbox-->
+                <div class="under_display">
+                  <div class="flex">
+                    <a class="allclear" id="clearForm">すべてクリア</a>
+                    <button class="btn_show" id="search-product"><span id="product-count">1000</span>件のお礼の品を表示</button>
+                  </div>
+                </div>
+              </div>
+              <div class="layer" id="popup-bg"></div>
+            </div>
+
             <section class="section-Sprodlist">
               <form name="form1" id="form1" method="get" action="?">
                 <input type="hidden" id="mode" name="mode" />
@@ -708,8 +795,41 @@
               </form>
 
               <div class="Sprodlist-container">
-                <div class="Sprodlist-ttltop-wrapX">
+                <div class="Sprodlist-ttltop-wrap">
                   <p class="Sprodblock-ttl-top">すべてのお礼品</p>
+                </div>
+
+                <div class="search-group">
+                  <div class="search-wrap d-none d-lg-block">
+                    <div class="search-pull">
+                      <div class="search-pull-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_price_range.svg" class="icon_price_range" alt="" /><span>寄附額から探す</span></div>
+                      <div class="search-pull-seleWrap">
+                        <label class="search-pull-Wrap">
+                          <select class="order-by form-control">
+                            <option value=""></option>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="search-wrap">
+                    <div class="search-pull d-none d-lg-block">
+                      <div class="search-pull-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_category.svg" class="icon_category" alt="" /><span>カテゴリから探す</span></div>
+                      <div class="search-pull-seleWrap">
+                        <label class="search-pull-Wrap">
+                          <select class="order-by form-control">
+                            <option value=""></option>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="search-wrap">
+                    <button class="filter" id="popupbtnf"><span>フィルター</span></button>
+                  </div>
+
                   <div class="search-wrap">
                     <div class="search-keyw">
                       <div class="search-keyw-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_search_keyword.svg" class="icon_search_keyword" alt="" /><span>キーワードから探す</span></div>
@@ -723,11 +843,11 @@
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="search-group">
-                  <div class="search-wrap">
-                    <button class="filter" id="popupbtnf"><span>+ 絞り込み検索</span></button>
+
+
+                  <div class="search-wrap d-lg-none">
+                    <div class="filter filter-btn" id="popupbtnf"><span>+ 絞り込み検索</span></div>
                   </div>
 
                   <div class="search-wrap-orderby">
@@ -1281,100 +1401,6 @@
             </section>
           </main>
         </div>
-      </div>
-
-      <div class="popup" id="js-popup">
-        <div class="innerbox">
-          <div class="midashi"><span>絞り込み検索</span></div>
-          <div class="closebtn" id="popup-close"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/popup_close.png" alt="close" /></div>
-          <div class="scrollbox">
-            <input type="text" name="sa" placeholder="キーワードから探す" class="search" id="input-keywords" />
-
-            <section>
-              <h6>寄附額から探す</h6>
-              <ul class="P_categories">
-                <li class="">
-                  <a href="https://sabae.furusato-direct.jp/products/list?min_price=0&max_price=10000&orderby=1">～10,000円</a>
-                </li>
-                <li class="">
-                  <a href="https://sabae.furusato-direct.jp/products/list?min_price=10001&max_price=20000&orderby=1">～20,000円</a>
-                </li>
-                <li class="">
-                  <a href="https://sabae.furusato-direct.jp/products/list?min_price=20001&max_price=30000&orderby=1">～30,000円</a>
-                </li>
-                <li class="">
-                  <a href="https://sabae.furusato-direct.jp/products/list?min_price=30001&max_price=50000&orderby=1">～50,000円</a>
-                </li>
-                <li class="">
-                  <a href="https://sabae.furusato-direct.jp/products/list?min_price=50001&max_price=100000&orderby=1">～100,000円</a>
-                </li>
-                <li class="">
-                  <a href="https://sabae.furusato-direct.jp/products/list?min_price=100001&orderby=1">100,000円～</a>
-                </li>
-              </ul>
-            </section>
-
-            <section>
-              <h6>カテゴリーから探す</h6>
-              <ul class="L_categories">
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=眼鏡&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_01.png" alt="眼鏡" loading="lazy" />眼鏡</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=サングラス&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_02.png" alt="サングラス" loading="lazy" />サングラス</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=引換券&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_03.png" alt="引換券・サービス" loading="lazy" />引換券・サービス</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=工芸品&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_04.png" alt="工芸品" loading="lazy" />工芸品</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=雑貨&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_05.png" alt="雑貨・その他" loading="lazy" />雑貨・その他</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=定期便&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_06.png" alt="定期便" loading="lazy" />定期便</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?category_id=2&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_07.png" alt="お肉" loading="lazy" />お肉</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?category_id=1&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_08.png" alt="お米" loading="lazy" />お米</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?category_id=5&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_09.png" class="cateimg" alt="カニ・海鮮" loading="lazy" />カニ・海鮮</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=お菓子&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_10.png" alt="お菓子・スイーツ" loading="lazy" />お菓子・スイーツ</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=野菜&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_11.png" alt="野菜・果物" loading="lazy" />野菜・果物</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=お酒&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_12.png" alt="お酒" loading="lazy" />お酒</a>
-                </li>
-                <li>
-                  <a href="https://sabae.furusato-direct.jp/products/list?name=加工品&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_13.png" alt="加工品・その他食品" loading="lazy" />加工品・その他食品</a>
-                </li>
-              </ul>
-            </section>
-            <section>
-              <h6>中カテゴリー</h6>
-              <ul class="M_categories">
-                <li class="sub-category parent-category-id-3" id="sub-category-id-54" data-parent-category_id="3" data-category_id="54">
-                  <a href="https://sabae.furusato-direct.jp/products/list?category_id=144&orderby=1"><span>ファッション</span></a>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div class="under_display">
-            <div class="flex">
-              <a class="allclear" id="clearForm">すべてクリア</a>
-              <button class="btn_show" id="search-product"><span id="product-count">1000</span>件のお礼の品を表示</button>
-            </div>
-          </div>
-        </div>
-        <div class="layer" id="popup-bg"></div>
       </div>
 
       <div class="ec-layoutRole__footer">
