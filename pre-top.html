@@ -106,6 +106,18 @@
               .Sprodlist-ttltop-wrapX .Sprodblock-ttl-top {
                 margin-bottom: 0px !important;
               }
+              .search-pu-ttl {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+              }
+              .search-pu-ttl span {
+                font-family: "Shippori Mincho";
+                font-weight: 700;
+                font-size: clamp(16px, 3.5vw, 22px);
+                letter-spacing: 1px;
+                color: #000;
+              }
               .search-keyw-ttl {
                 padding-left: 14px;
               }
@@ -230,9 +242,6 @@
                 max-width: 90%;
                 vertical-align: middle;
               }
-              .popup .scrollbox {
-    height: 80vh!important;
-}
 
               @media screen and (max-width: 1024px) {
                 .section-Sprodlist-top {
@@ -243,11 +252,11 @@
                 }
                 .Sprodlist-ttltop-wrapX {
                   display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 30px;
-                width: 100%;
-              }
+                  flex-direction: column;
+                  align-items: flex-start;
+                  gap: 30px;
+                  width: 100%;
+                }
                 .Sproduct-itemsix-wrap {
                   grid-template-columns: repeat(2, 1fr);
                   gap: 8px;
@@ -264,13 +273,13 @@
                 }
                 .search-group {
                   gap: 0;
-                  justify-content:space-between;
+                  justify-content: space-between;
                   margin-bottom: 30px;
                   margin-top: -10px;
                 }
                 .filter {
-                width: 200px!important;
-              }
+                  width: 200px !important;
+                }
               }
 
               /*filter btn*/
@@ -350,22 +359,22 @@
               .popup .midashi span {
                 position: relative;
                 font-weight: bold;
+                font-size: 19px;
                 color: #000;
+                letter-spacing: 3px;
               }
-              /*
-              .popup .midashi span::before {
-                content: "";
+
+              .popup input {
+                font-family: "Karla", "Shippori Mincho", serif;
+                color: #000;
+                cursor: text;
+                width: 100%;
+                border: 2px solid #000;
+                border-radius: 0px;
+                padding: 10px;
                 display: block;
-                position: absolute;
-                width: 24px;
-                height: 24px;
-                top: 2px;
-                left: 0;
-                background: url("https://sabae.furusato-direct.jp/html/user_data/assets/img/icon_find.png") no-repeat center center;
-                background-size: cover;
-              }*/
+              }
               .popup input.search {
-                background: #fff url("https://sabae.furusato-direct.jp/html/user_data/assets/img/icon_find.png") no-repeat right 10px top 50%;
                 background-size: 24px 24px;
               }
               .popup h6 {
@@ -375,8 +384,8 @@
               .popup .scrollbox {
                 -webkit-overflow-scrolling: auto;
                 overflow-y: auto;
-                padding: 30px;
-                height: 60vh;
+                padding: 0 30px;
+                height: auto;
               }
               .popup .scrollbox section {
                 padding: 40px 0;
@@ -387,7 +396,7 @@
                 padding-top: 30px;
               }
               .popup .scrollbox section:last-of-type {
-                padding-bottom: 0;
+                padding-bottom: 30px;
               }
               .popup .chartwrap {
                 height: 150px;
@@ -736,7 +745,7 @@
 
                 <div class="search-group">
                   <div class="search-wrap">
-                    <button class="filter" id="popupbtnf"><span>+ 絞り込み検索</span></button>
+                    <button class="filter" id="popupbtnf"><span>絞り込み  ＋</span></button>
                   </div>
 
                   <div class="search-wrap-orderby">
@@ -997,10 +1006,12 @@
           <div class="midashi"><span>絞り込み検索</span></div>
           <div class="closebtn" id="popup-close"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/popup_close.png" alt="close" /></div>
           <div class="scrollbox">
-            <input type="text" name="sa" placeholder="キーワードから探す" class="search" id="input-keywords" />
-
             <section>
-              <h6>寄附額から探す</h6>
+              <div class="search-pu-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_search_keyword.svg" class="icon_search_keyword" alt="" /><span>キーワードから探す</span></div>
+              <input type="text" name="sa" class="search" id="input-keywords" />
+            </section>
+            <section>
+              <div class="search-pu-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_price_range.svg" class="icon_price_range" alt="" /><span>寄付額から探す</span></div>
               <ul class="P_categories">
                 <li class="">
                   <a href="https://sabae.furusato-direct.jp/products/list?min_price=0&max_price=10000&orderby=1">～10,000円</a>
@@ -1024,7 +1035,7 @@
             </section>
 
             <section>
-              <h6>カテゴリから探す</h6>
+              <div class="search-pu-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_category.svg" class="icon_category" alt="" /><span>カテゴリから探す</span></div>
               <ul class="L_categories">
                 <li>
                   <a href="https://sabae.furusato-direct.jp/products/list?name=眼鏡&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_01.png" alt="眼鏡" loading="lazy" />眼鏡</a>
@@ -1064,14 +1075,6 @@
                 </li>
                 <li>
                   <a href="https://sabae.furusato-direct.jp/products/list?name=加工品&orderby=1"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/cate_img_13.png" alt="加工品・その他食品" loading="lazy" />加工品・その他食品</a>
-                </li>
-              </ul>
-            </section>
-            <section>
-              <h6>中カテゴリー</h6>
-              <ul class="M_categories">
-                <li class="sub-category parent-category-id-3" id="sub-category-id-54" data-parent-category_id="3" data-category_id="54">
-                  <a href="https://sabae.furusato-direct.jp/products/list?category_id=144&orderby=1"><span>ファッション</span></a>
                 </li>
               </ul>
             </section>
