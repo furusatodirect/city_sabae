@@ -128,6 +128,15 @@
                 font-size: clamp(20px, 3.5vw, 40px);
                 letter-spacing: 4.2px;
               }
+              .Sprodblock-ttl-result {
+                margin-bottom: 18px;
+                font-family: "Shippori Mincho";
+                font-weight: bold;
+                font-size: clamp(18px, 3.5vw, 24px);
+                letter-spacing: 4.2px;
+                bottom: -75px;
+                position: relative;
+              }
               .Sproduct-itemsix-wrap {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -203,7 +212,7 @@
               .section-Sprodcatelist {
                 background-color: #fffdeb;
                 width: 100%;
-                padding: 100px 0;
+                padding: 100px 16px;
                 margin: 0 auto;
                 position: relative;
                 overflow: visible !important;
@@ -228,7 +237,7 @@
                 align-items: center;
                 gap: 6px;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: clamp(12px, 3.5vw, 16px);
                 line-height: calc(18 / 16);
               }
 
@@ -265,7 +274,7 @@
                   padding: 80px 16px 0px;
                 }
                 .section-Sprodlist {
-                  padding-top: 60px;
+                  /*padding-top: 60px;*/
                 }
                 .search-keyw-seleWrap input {
                   width: 274px;
@@ -280,7 +289,34 @@
                 .filter {
                   width: 200px !important;
                 }
+                .Sprodcatelist {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 20px;
+                }
+
+                .Sprodcatelist li {
+                  flex: none;
+                  width: 100%;
+                }
+                .Sprodblock-ttl-result {
+                  bottom: 0;
+                }
+                .search-result.sticky {
+                  position: fixed;
+                  top: 60px;
+                  left: 0;
+                  right: 0;
+                  z-index: 999;
+                  background: #fff; /* 背景必須 */
+                }
+                .search-result.stop {
+                  position: absolute;
+                  bottom: 0;
+                  top: auto;
+                }
               }
+              
 
               /*filter btn*/
               .filter {
@@ -580,7 +616,7 @@
               }
             </style>
 
-            <section class="section-Sprodlist-top">
+            <section class="section-Sprodlist-top d-none">
               <div class="Sprodlist-container">
                 <div class="Sprodlist-ttltop-wrap">
                   <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/list_ttl_prod.svg" class="Sprodlist-ttl" alt="" />
@@ -648,7 +684,7 @@
               </div>
             </section>
 
-            <section class="section-Sprodcatelist d-none d-lg-block">
+            <section class="section-Sprodcatelist d-none">
               <div class="Sprodlist-container">
                 <div class="Sprodlist-ttltop-wrap">
                   <p class="Sprodblock-ttl-top">カテゴリから探す</p>
@@ -700,6 +736,16 @@
               </div>
             </section>
 
+
+            <section class="section-Sprodlist-top">
+              <div class="Sprodlist-container">
+                <div class="Sprodlist-ttltop-wrap">
+                  <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/list_ttl_prod.svg" class="Sprodlist-ttl" alt="" />
+                </div>
+              </div>
+            </section>
+
+
             <section class="section-Sprodlist">
               <form name="form1" id="form1" method="get" action="?">
                 <input type="hidden" id="mode" name="mode" />
@@ -715,17 +761,20 @@
 
               <div class="Sprodlist-container">
                 <div class="Sprodlist-ttltop-wrapX">
-                  <p class="Sprodblock-ttl-top">すべてのお礼品</p>
-                  <div class="search-wrap">
-                    <div class="search-keyw">
-                      <div class="search-keyw-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_search_keyword.svg" class="icon_search_keyword" alt="" /><span>キーワードから探す</span></div>
-                      <div class="search-keyw-seleWrap">
-                        <form method="get" class="search-form-1" action="https://sabae.furusato-direct.jp/products/list">
-                          <label>
-                            <input type="search" name="name" maxlength="50" class="search-name" placeholder="" />
-                          </label>
-                          <button type="submit" aria-label="検索">検索</button>
-                        </form>
+                  <p class="Sprodblock-ttl-top d-none">すべてのお礼品</p>
+                  <p class="Sprodblock-ttl-result">お礼品：100件</p>
+                  <div class="search-result">
+                    <div class="search-wrap">
+                      <div class="search-keyw">
+                        <div class="search-keyw-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_search_keyword.svg" class="icon_search_keyword" alt="" /><span>キーワードから探す</span></div>
+                        <div class="search-keyw-seleWrap">
+                          <form method="get" class="search-form-1" action="https://sabae.furusato-direct.jp/products/list">
+                            <label>
+                              <input type="search" name="name" maxlength="50" class="search-name" placeholder="" />
+                            </label>
+                            <button type="submit" aria-label="検索">検索</button>
+                          </form>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -733,7 +782,7 @@
 
                 <div class="search-group">
                   <div class="search-wrap">
-                    <button class="filter" id="popupbtnf"><span>絞り込み  ＋</span></button>
+                    <button class="filter" id="popupbtnf"><span>絞り込み ＋</span></button>
                   </div>
 
                   <div class="search-wrap-orderby">
@@ -974,12 +1023,20 @@
                   </div>
                 </div>
               </div>
-              <div class="bak_product_list">
+              <div class="ec-pagerRole">
+                <nav class="sabae-pagination">
+                  <a href="/products/list?orderby=1&amp;pageno=1" class="sabae-pagination__link active"> 1 </a>
+                  <a href="/products/list?orderby=1&amp;pageno=2" class="sabae-pagination__link"> 2 </a>
+
+                  <a href="/products/list?orderby=1&amp;pageno=2" class="sabae-pagination__next">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_p_next.svg" alt="" />
+                  </a>
+                </nav>
+              </div>
+              <div class="bak_product_list d-none">
                 <div class="Sprod-detailwrap-bak">
                   <div class="btn-more-tproducts">
-                    <a href="https://sabae.furusato-direct.jp/products/list?orderby=1" class="more-box">
-                      お礼品の続きを見る
-                    </a>
+                    <a href="https://sabae.furusato-direct.jp/products/list?orderby=1" class="more-box"> お礼品の続きを見る </a>
                   </div>
                 </div>
               </div>
