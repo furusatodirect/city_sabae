@@ -203,7 +203,7 @@
               .section-Sprodcatelist {
                 background-color: #fffdeb;
                 width: 100%;
-                padding: 100px 0;
+                padding: 100px 16px;
                 margin: 0 auto;
                 position: relative;
                 overflow: visible !important;
@@ -228,7 +228,7 @@
                 align-items: center;
                 gap: 6px;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: clamp(12px, 3.5vw, 16px);
                 line-height: calc(18 / 16);
               }
 
@@ -280,6 +280,17 @@
                 .filter {
                   width: 200px !important;
                 }
+                .Sprodcatelist {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 20px;
+                }
+
+                .Sprodcatelist li {
+                  flex: none;
+                  width: 100%;
+                }
+
               }
 
               /*filter btn*/
@@ -648,7 +659,7 @@
               </div>
             </section>
 
-            <section class="section-Sprodcatelist d-none d-lg-block">
+            <section class="section-Sprodcatelist">
               <div class="Sprodlist-container">
                 <div class="Sprodlist-ttltop-wrap">
                   <p class="Sprodblock-ttl-top">カテゴリから探す</p>
@@ -733,7 +744,7 @@
 
                 <div class="search-group">
                   <div class="search-wrap">
-                    <button class="filter" id="popupbtnf"><span>絞り込み  ＋</span></button>
+                    <button class="filter" id="popupbtnf"><span>絞り込み ＋</span></button>
                   </div>
 
                   <div class="search-wrap-orderby">
@@ -977,9 +988,7 @@
               <div class="bak_product_list">
                 <div class="Sprod-detailwrap-bak">
                   <div class="btn-more-tproducts">
-                    <a href="https://sabae.furusato-direct.jp/products/list?orderby=1" class="more-box">
-                      お礼品の続きを見る
-                    </a>
+                    <a href="https://sabae.furusato-direct.jp/products/list?orderby=1" class="more-box"> お礼品の続きを見る </a>
                   </div>
                 </div>
               </div>
