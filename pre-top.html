@@ -80,7 +80,6 @@
         <div class="ec-layoutRole__main">
           <main>
             <style>
-              /*ポップアップ*/
               /*popup*/
               .popup {
                 position: fixed;
@@ -374,7 +373,7 @@
                 }
               }
 
-              /*鯖江のお礼品タイトル*/
+              /*sabae prod title*/
               .section-Sprodlist-top-ttl {
                 background-color: #fffdeb;
                 width: 100%;
@@ -396,7 +395,7 @@
                   padding-left: 16px;
                 }
               }
-              /*人気のお礼品*/
+              /*sabae sec prod popular*/
               .section-Sprodlist-top {
                 background-color: #fffdeb;
                 width: 100%;
@@ -432,7 +431,7 @@
                   padding: 0 16px;
                 }
               }
-              /*カテゴリから探す*/
+              /*sabae sec prod cate*/
               .section-Sprodcatelist {
                 background-color: #fffdeb;
                 width: 100%;
@@ -486,7 +485,7 @@
                   padding: 0 16px;
                 }
               }
-              /*検索セクション*/
+              /*sabae sec prod search*/
               .section-Sprod-search {
                 background-color: #fffdeb;
                 width: 100%;
@@ -520,7 +519,7 @@
                   gap: 10px;
                 }
               }
-              /*---検索機能*/
+              /*---sec prod search function*/
               .search-wrap-pc {
                 display: flex;
                 flex-direction: column;
@@ -536,7 +535,7 @@
                 font-size: clamp(20px, 3.5vw, 40px);
                 letter-spacing: 4.2px;
               }
-              /*---検索　絞り込み*/
+              /*---sec prod search filter*/
               .filter {
                 width: 150px;
                 height: 36px;
@@ -550,7 +549,7 @@
                 font-weight: bold;
                 color: #fff;
               }
-              /*---検索　価格ソート*/
+              /*---sec prod search sort*/
               .selectWrap-top {
                 cursor: pointer;
                 position: relative;
@@ -605,7 +604,7 @@
                   gap: 10px;
                 }
 
-                /*---検索　キーワード*/
+              /*---sec prod search key*/
                 .search-wrap-sp {
                   background-color: #fffdeb;
                   display: flex;
@@ -617,7 +616,7 @@
                 .search-keyw-sp {
                   display: flex;
                   flex-direction: column;
-                  width: 100%; /* min-width固定は外して横幅可変に */
+                  width: 100%;
                 }
 
                 .search-keyw-seleWrap-sp {
@@ -659,7 +658,7 @@
                   -webkit-appearance: none;
                   appearance: none;
                   line-height: 1;
-                  width: 100%; /* 横幅いっぱいに */
+                  width: 100%;
                 }
 
                 .search-filter {
@@ -673,9 +672,9 @@
                 .search-wrap-orderby {
                   flex: 1;
                 }
-                /*---検索　絞り込み*/
+              /*---sec prod search filter*/
                 .search-wrap {
-                  flex: 1; /* ボタン側も広げる */
+                  flex: 1;
                 }
                 .filter {
                   width: 100%;
@@ -690,7 +689,7 @@
                   font-weight: bold;
                   color: #fff;
                 }
-                /*---検索　価格ソート*/
+              /*---sec prod search sort*/
                 .selectWrap-top {
                   width: 100%;
                   cursor: pointer;
@@ -731,7 +730,7 @@
                 }
               }
 
-              /*お礼品*/
+              /*---sec prod*/
               .section-Sprodlist-re {
                 background-color: #fffdeb;
                 width: 100%;
@@ -746,42 +745,38 @@
                 }
               }
 
+              /*---sec prod search sticky*/
               @media screen and (max-width: 1024px) {
-  .stickywrap {
-    position: -webkit-sticky; /* iOS Safari */
-    position: sticky;
-    top: 60px; /* ヘッダーの高さに合わせる */
-    z-index: 10;
-    background-color: transparent; /* デフォルト */
-    transition: background-color 0.3s ease;
-  }
+                .stickywrap {
+                  position: -webkit-sticky;
+                  position: sticky;
+                  top: 60px;
+                  z-index: 10;
+                  background-color: transparent;
+                  transition: background-color 0.3s ease;
+                }
 
-  .stickywrap.is-sticky .search-wrap-sp {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    padding-bottom: 10px;
-  }
-}
-
-
+                .stickywrap.is-sticky .search-wrap-sp {
+                  background-color: rgba(255, 255, 255, 0.9) !important;
+                  padding-bottom: 10px !important;
+                }
+              }
             </style>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const stickyTarget = document.querySelector(".stickywrap");
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const stickyTarget = document.querySelector(".stickywrap");
 
-  window.addEventListener("scroll", function () {
-    const offsetTop = stickyTarget.offsetTop;
-    if (window.scrollY > offsetTop - 60) {
-      stickyTarget.classList.add("is-sticky");
-    } else {
-      stickyTarget.classList.remove("is-sticky");
-    }
-  });
-});
-
-  </script>
-
-
+                window.addEventListener("scroll", function () {
+                  const offsetTop = stickyTarget.offsetTop;
+                  if (window.scrollY > offsetTop - 60) {
+                    stickyTarget.classList.add("is-sticky");
+                  } else {
+                    stickyTarget.classList.remove("is-sticky");
+                  }
+                });
+              });
+            </script>
 
             <section class="section-Sprodlist-top-ttl">
               <div class="section-Sprodlist-top-wrap">
