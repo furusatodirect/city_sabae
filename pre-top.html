@@ -383,6 +383,19 @@
                 position: relative;
                 overflow: visible !important;
               }
+              .section-Sprodlist-top-wrap {
+                background-color: #fffdeb;
+                max-width: 1345px;
+                margin: 0 auto;
+              }
+              @media screen and (max-width: 1024px) {
+                .section-Sprodlist-top-ttl {
+                  padding-top: 80px;
+                }
+                .section-Sprodlist-top-wrap {
+                  padding-left: 16px;
+                }
+              }
               /*人気のお礼品*/
               .section-Sprodlist-top {
                 background-color: #fffdeb;
@@ -404,6 +417,20 @@
                 grid-template-columns: repeat(3, 1fr);
                 gap: 21.66px;
                 width: 100%;
+              }
+              @media screen and (max-width: 1024px) {
+                .Sprodblock-ttl-top {
+                  margin-bottom: 20px;
+                  padding-left: 16px;
+                }
+                .section-Sprodlist-top {
+                  padding-top: 20px;
+                }
+                .Sproduct-itemsix-wrap {
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 8px;
+                  padding: 0 16px;
+                }
               }
               /*カテゴリから探す*/
               .section-Sprodcatelist {
@@ -448,6 +475,17 @@
                 max-width: 90%;
                 vertical-align: middle;
               }
+              @media screen and (max-width: 1024px) {
+                .section-Sprodcatelist {
+                  padding: 60px 0;
+                }
+                .Sprodcatelist {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 20px;
+                  padding: 0 16px;
+                }
+              }
               /*検索セクション*/
               .section-Sprod-search {
                 background-color: #fffdeb;
@@ -465,7 +503,24 @@
                 padding: 0;
                 margin-bottom: 40px;
               }
-              /*****検索機能*/
+              @media screen and (max-width: 1024px) {
+                .section-Sprod-search {
+                  background-color: #fffdeb;
+                  width: 100%;
+                  padding-top: 0px !important;
+                  margin: 0 auto;
+                  position: relative;
+                  overflow: visible !important;
+                }
+                .Sprodlist-pc {
+                  flex-direction: column;
+                  align-items: start;
+                  padding: 16px;
+                  margin-bottom: 0px;
+                  gap: 10px;
+                }
+              }
+              /*---検索機能*/
               .search-wrap-pc {
                 display: flex;
                 flex-direction: column;
@@ -476,15 +531,15 @@
                 justify-content: space-between;
               }
               .Sprodblock-ttl-topre {
-              font-family: "Shippori Mincho";
+                font-family: "Shippori Mincho";
                 font-weight: bold;
                 font-size: clamp(20px, 3.5vw, 40px);
                 letter-spacing: 4.2px;
               }
-              /*****検索　絞り込み*/
+              /*---検索　絞り込み*/
               .filter {
-                 width: 150px;
-                 height: 36px;
+                width: 150px;
+                height: 36px;
                 background-color: #000;
               }
               .filter span {
@@ -495,7 +550,7 @@
                 font-weight: bold;
                 color: #fff;
               }
-              /*****検索　価格ソート*/
+              /*---検索　価格ソート*/
               .selectWrap-top {
                 cursor: pointer;
                 position: relative;
@@ -533,6 +588,148 @@
                 -moz-appearance: none;
                 letter-spacing: 3px;
               }
+              @media screen and (max-width: 1024px) {
+                .section-Sprod-search {
+                  background-color: #fffdeb;
+                  width: 100%;
+                  padding-top: 60px;
+                  margin: 0 auto;
+                  position: relative;
+                  overflow: visible !important;
+                }
+                .Sprodlist-pc {
+                  flex-direction: column;
+                  align-items: start;
+                  padding: 16px;
+                  margin-bottom: 0px;
+                  gap: 10px;
+                }
+
+                /*---検索　キーワード*/
+                .search-wrap-sp {
+                  background-color: #fffdeb;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  padding: 0 16px;
+                }
+
+                .search-keyw-sp {
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%; /* min-width固定は外して横幅可変に */
+                }
+
+                .search-keyw-seleWrap-sp {
+                  width: 100%;
+                }
+
+                .search-form-sp {
+                  display: flex;
+                  align-items: center;
+                  width: 100%;
+                }
+
+                .search-label-sp {
+                  position: relative;
+                  display: flex;
+                  align-items: center;
+                  flex: 1;
+                }
+
+                .search-label-sp .icon_search_keyword {
+                  position: absolute;
+                  left: 10px;
+                  width: 16px;
+                  height: 16px;
+                  pointer-events: none;
+                }
+
+                .search-name-sp {
+                  flex: 1;
+                  padding-left: 36px;
+                  font-family: "Shippori Mincho";
+                  font-size: clamp(16px, 3.5vw, 18px);
+                  font-weight: 600;
+                  border: 2px solid #000;
+                  border-radius: 0 !important;
+                  color: #000 !important;
+                  height: 42px;
+                  box-sizing: border-box;
+                  -webkit-appearance: none;
+                  appearance: none;
+                  line-height: 1;
+                  width: 100%; /* 横幅いっぱいに */
+                }
+
+                .search-filter {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 10px;
+                  width: 100%;
+                }
+
+                .search-wrap-orderby {
+                  flex: 1;
+                }
+                /*---検索　絞り込み*/
+                .search-wrap {
+                  flex: 1; /* ボタン側も広げる */
+                }
+                .filter {
+                  width: 100%;
+                  height: 36px;
+                  background-color: #000;
+                }
+                .filter span {
+                  position: relative;
+                  display: block;
+                  text-align: center;
+                  font-size: 16px;
+                  font-weight: bold;
+                  color: #fff;
+                }
+                /*---検索　価格ソート*/
+                .selectWrap-top {
+                  width: 100%;
+                  cursor: pointer;
+                  position: relative;
+                }
+                .selectWrap-top::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  right: 14px;
+                  transform: translateY(-50%);
+                  width: 0;
+                  height: 0;
+                  margin-top: 2;
+                  border-left: 6px solid transparent;
+                  border-right: 6px solid transparent;
+                  border-top: 10px solid #000;
+                  pointer-events: none;
+                }
+                .selectWrap-top select {
+                  border: 2px solid #000;
+                  border-radius: 0 !important;
+                  cursor: pointer;
+                  color: #000 !important;
+                  height: 36px;
+                  width: 100%;
+                  padding: 0;
+                  font-family: "Shippori Mincho";
+                  font-size: 16px;
+                  font-weight: 600;
+                  padding-right: 20px;
+                  text-align: center;
+                  position: relative;
+                  appearance: none;
+                  -webkit-appearance: none;
+                  -moz-appearance: none;
+                  letter-spacing: 3px;
+                }
+              }
 
               /*お礼品*/
               .section-Sprodlist-re {
@@ -543,10 +740,51 @@
                 position: relative;
                 overflow: visible !important;
               }
+              @media screen and (max-width: 1024px) {
+                .section-Sprodlist-re {
+                  padding: 16px 16px 100px;
+                }
+              }
+
+              @media screen and (max-width: 1024px) {
+  .stickywrap {
+    position: -webkit-sticky; /* iOS Safari */
+    position: sticky;
+    top: 60px; /* ヘッダーの高さに合わせる */
+    z-index: 10;
+    background-color: transparent; /* デフォルト */
+    transition: background-color 0.3s ease;
+  }
+
+  .stickywrap.is-sticky .search-wrap-sp {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    padding-bottom: 10px;
+  }
+}
+
+
             </style>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const stickyTarget = document.querySelector(".stickywrap");
+
+  window.addEventListener("scroll", function () {
+    const offsetTop = stickyTarget.offsetTop;
+    if (window.scrollY > offsetTop - 60) {
+      stickyTarget.classList.add("is-sticky");
+    } else {
+      stickyTarget.classList.remove("is-sticky");
+    }
+  });
+});
+
+  </script>
+
+
+
             <section class="section-Sprodlist-top-ttl">
-              <div class="Sprodlist-container">
+              <div class="section-Sprodlist-top-wrap">
                 <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/list_ttl_prod.svg" class="Sprodlist-ttl" alt="" />
               </div>
             </section>
@@ -675,32 +913,32 @@
                     <p class="Sprodblock-ttl-topre">すべてのお礼品</p>
                   </div>
 
-                  <div class="search-wrap-pc">
-                    <div class="search-keyw">
-                      <div class="search-keyw-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_search_keyword.svg" class="icon_search_keyword" alt="" /><span>キーワードから探す</span></div>
-                      <div class="search-keyw-seleWrap">
-                        <form method="get" class="search-form-1" action="https://sabae.furusato-direct.jp/products/list">
-                          <label>
-                            <input type="search" name="name" maxlength="50" class="search-name" placeholder="" />
+                  <div class="d-none d-md-block">
+                    <div class="search-wrap-pc">
+                      <div class="search-keyw">
+                        <div class="search-keyw-ttl"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_search_keyword.svg" class="icon_search_keyword" alt="" /><span>キーワードから探す</span></div>
+                        <div class="search-keyw-seleWrap">
+                          <form method="get" class="search-form-1" action="https://sabae.furusato-direct.jp/products/list">
+                            <label>
+                              <input type="search" name="name" maxlength="50" class="search-name" placeholder="" />
+                            </label>
+                            <button type="submit" aria-label="検索">検索</button>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="search-filter">
+                        <div class="search-wrap">
+                          <button class="filter" id="popupbtnf"><span>絞り込み ＋</span></button>
+                        </div>
+                        <div class="search-wrap-orderby">
+                          <label class="selectWrap-top">
+                            <select id="orderby" name="orderby" class="order-by form-control">
+                              <option value="https://sabae.furusato-direct.jp/products/list?orderby=2">新着順</option>
+                              <option value="https://sabae.furusato-direct.jp/products/list?orderby=3">価格が高い</option>
+                              <option value="https://sabae.furusato-direct.jp/products/list?orderby=1" selected>価格が低い</option>
+                            </select>
                           </label>
-                          <button type="submit" aria-label="検索">検索</button>
-                        </form>
-                      </div>
-                    </div>
-
-                    <div class="search-filter">
-                      <div class="search-wrap">
-                        <button class="filter" id="popupbtnf"><span>絞り込み ＋</span></button>
-                      </div>
-
-                      <div class="search-wrap-orderby">
-                        <label class="selectWrap-top">
-                          <select id="orderby" name="orderby" class="order-by form-control">
-                            <option value="https://sabae.furusato-direct.jp/products/list?orderby=2">新着順</option>
-                            <option value="https://sabae.furusato-direct.jp/products/list?orderby=3">価格が高い</option>
-                            <option value="https://sabae.furusato-direct.jp/products/list?orderby=1" selected>価格が低い</option>
-                          </select>
-                        </label>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -712,6 +950,35 @@
                 </script>
               </div>
             </section>
+
+            <div class="d-block d-md-none stickywrap">
+              <div class="search-wrap-sp">
+                <div class="search-keyw-sp">
+                  <div class="search-keyw-seleWrap-sp">
+                    <form method="get" class="search-form-sp" action="https://sabae.furusato-direct.jp/products/list">
+                      <label class="search-label-sp">
+                        <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_search_keyword.svg" class="icon_search_keyword" alt="" />
+                        <input type="search" name="name" class="search-name-sp" placeholder="キーワードから探す" />
+                      </label>
+                    </form>
+                  </div>
+                </div>
+                <div class="search-filter">
+                  <div class="search-wrap">
+                    <button class="filter" id="popupbtnf"><span>絞り込み ＋</span></button>
+                  </div>
+                  <div class="search-wrap-orderby">
+                    <label class="selectWrap-top">
+                      <select id="orderby" name="orderby" class="order-by form-control">
+                        <option value="https://sabae.furusato-direct.jp/products/list?orderby=2">新着順</option>
+                        <option value="https://sabae.furusato-direct.jp/products/list?orderby=3">価格が高い</option>
+                        <option value="https://sabae.furusato-direct.jp/products/list?orderby=1" selected>価格が低い</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <section class="section-Sprodlist-re">
               <div class="Sproduct-container">
