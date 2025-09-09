@@ -575,11 +575,10 @@
                 color: #000 !important;
                 height: 36px;
                 width: 150px;
-                padding: 0;
                 font-family: "Shippori Mincho";
                 font-size: 16px;
                 font-weight: 600;
-                padding-right: 40px;
+                padding-left: 0px;
                 text-align: center;
                 position: relative;
                 appearance: none;
@@ -604,7 +603,7 @@
                   gap: 10px;
                 }
 
-              /*---sec prod search key*/
+                /*---sec prod search key*/
                 .search-wrap-sp {
                   background-color: #fffdeb;
                   display: flex;
@@ -672,7 +671,7 @@
                 .search-wrap-orderby {
                   flex: 1;
                 }
-              /*---sec prod search filter*/
+                /*---sec prod search filter*/
                 .search-wrap {
                   flex: 1;
                 }
@@ -689,7 +688,7 @@
                   font-weight: bold;
                   color: #fff;
                 }
-              /*---sec prod search sort*/
+                /*---sec prod search sort*/
                 .selectWrap-top {
                   width: 100%;
                   cursor: pointer;
@@ -716,11 +715,10 @@
                   color: #000 !important;
                   height: 36px;
                   width: 100%;
-                  padding: 0;
                   font-family: "Shippori Mincho";
                   font-size: 16px;
                   font-weight: 600;
-                  /*padding-right: 20px;*/
+                  padding-left: 0px;
                   text-align: center;
                   position: relative;
                   appearance: none;
@@ -729,7 +727,6 @@
                   letter-spacing: 3px;
                 }
               }
-
               /*---sec prod*/
               .section-Sprodlist-re {
                 background-color: #fffdeb;
@@ -912,10 +909,10 @@
                         </div>
                         <div class="search-wrap-orderby">
                           <label class="selectWrap-top">
-                            <select id="orderby" name="orderby" class="order-by form-control">
-                              <option value="https://sabae.furusato-direct.jp/products/list?orderby=2">新着順</option>
+                            <select id="orderby" name="orderby" class="order-by">
+                              <option value="https://sabae.furusato-direct.jp/products/list?orderby=1">価格が低い</option>
                               <option value="https://sabae.furusato-direct.jp/products/list?orderby=3">価格が高い</option>
-                              <option value="https://sabae.furusato-direct.jp/products/list?orderby=1" selected>価格が低い</option>
+                              <option value="https://sabae.furusato-direct.jp/products/list?orderby=2">新着順</option>
                             </select>
                           </label>
                         </div>
@@ -949,10 +946,10 @@
                   </div>
                   <div class="search-wrap-orderby">
                     <label class="selectWrap-top">
-                      <select id="orderby" name="orderby" class="order-by form-control">
+                      <select id="orderby" name="orderby" class="order-by">
+                        <option value="https://sabae.furusato-direct.jp/products/list?orderby=1">価格が低い</option>
                         <option value="https://sabae.furusato-direct.jp/products/list?orderby=2">新着順</option>
                         <option value="https://sabae.furusato-direct.jp/products/list?orderby=3">価格が高い</option>
-                        <option value="https://sabae.furusato-direct.jp/products/list?orderby=1" selected>価格が低い</option>
                       </select>
                     </label>
                   </div>
