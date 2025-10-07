@@ -88,6 +88,7 @@
         flex-direction: column;
         row-gap: 10px;
         padding-top: 10px;
+        flex-wrap: wrap;
       }
 
       .selectWrap-sku {
@@ -168,6 +169,35 @@
           -moz-appearance: none;
           letter-spacing: 3px;
           padding: 0;
+        }
+
+        .ec-numberWrap {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .ec-numberInput,
+        .ec-cartRow__amountUpDown {
+          order: 1;
+        }
+
+        .fav-on,
+        .fav-off {
+          order: 2;
+          flex-basis: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 8px;
+          width: 100% !important;
+        }
+
+        .fav-on .favorite,
+        .fav-off .favorite {
+          width: 100% !important;
+          height: 48px;
+          justify-content: center;
+          align-items: center;
+          margin-top: 22px;
         }
       }
 
