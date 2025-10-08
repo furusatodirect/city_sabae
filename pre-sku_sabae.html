@@ -85,7 +85,7 @@
 
       /*SKU GROUP*/
       .related-products__title {
-        padding: 2rem 0 .5rem;
+        padding: 2rem 0 0.5rem;
         font-family: "Shippori Mincho";
         font-weight: bold;
         margin-bottom: 15px;
@@ -93,14 +93,11 @@
         letter-spacing: 2.6px;
         line-height: clamp(24px, 3vw, 28px);
       }
-
       .related-products__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 6px;
         list-style: none;
-        padding: 0;
-        margin: 0;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -256,6 +253,20 @@
                     </div>
                   </div>
 
+                  <script>
+                    function adjustDetailMargin() {
+                      const related = document.querySelector(".related-products");
+                      const detailwrap = document.querySelector(".Sprod-detailwrap");
+                      if (window.innerWidth > 1024 && related && detailwrap) {
+                        const relatedHeight = related.offsetHeight;
+                        detailwrap.style.marginTop = `-${relatedHeight + -360}px`;
+                      } else if (detailwrap) {
+                        detailwrap.style.marginTop = "20px";
+                      }
+                    }
+                    window.addEventListener("load", adjustDetailMargin);
+                    window.addEventListener("resize", adjustDetailMargin);
+                  </script>
                   <div class="related-products">
                     <p class="related-products__title">同一グループの返礼品</p>
 
@@ -346,7 +357,7 @@
                         <dt>事業者名</dt>
                         <dd>
                           越前漆器協同組合<br />
-                          <a class="glink" href="https://sabae.furusato-direct.jp/products/list?operator_name=%E8%B6%8A%E5%89%8D%E6%BC%86%E5%99%A8%E5%8D%94%E5%90%8C%E7%B5%84%E5%90%88&orderby=1">他のお礼品を見る <img src="/html/user_data/assets/img/sabae/icon_arrow_p.svg" class="icon_arrow_p" alt="" /></a>
+                          <a class="glink" href="https://sabae.furusato-direct.jp/products/list?operator_name=%E8%B6%8A%E5%89%8D%E6%BC%86%E5%99%A8%E5%8D%94%E5%90%8C%E7%B5%84%E5%90%88&orderby=1">他のお礼品を見る <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_arrow_p.svg" class="icon_arrow_p" alt="" /></a>
                         </dd>
                       </dl>
                     </div>
