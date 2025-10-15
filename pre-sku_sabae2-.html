@@ -83,21 +83,258 @@
         }
       }
 
-      /*SKU GROUP*/
-      .related-products__title {
-        padding: 2rem 0 0.5rem;
-        font-family: "Shippori Mincho";
-        font-weight: bold;
-        margin-bottom: 15px;
-        font-size: 17px;
-        letter-spacing: 2.6px;
-        line-height: clamp(24px, 3vw, 28px);
+      .sku-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 10px;
+        flex-wrap: wrap;
       }
-      .related-products__list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
-        list-style: none;
+
+      .selectWrap-sku {
+        cursor: pointer;
+        position: relative;
+      }
+      .selectWrap-sku::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        margin-top: 2;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 10px solid #000;
+        pointer-events: none;
+      }
+      .selectWrap-sku:has(select:disabled)::after {
+  border-top: 10px solid #CCC;
+}
+      .selectWrap-sku select {
+        border: 2px solid #000;
+        border-radius: 0 !important;
+        cursor: pointer;
+        color: #000 !important;
+        height: 36px;
+        width: 100%;
+        font-family: "Shippori Mincho";
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 0px;
+        text-align: center;
+        position: relative;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        letter-spacing: 3px;
+        padding: 0;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .selectWrap-sku {
+          width: 100%;
+          cursor: pointer;
+          position: relative;
+        }
+        .selectWrap-sku::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 14px;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          margin-top: 2;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 10px solid #000;
+          pointer-events: none;
+        }
+        .selectWrap-sku select {
+          border: 2px solid #000;
+          border-radius: 0 !important;
+          cursor: pointer;
+          color: #000 !important;
+          height: 36px;
+          width: 100%;
+          font-family: "Shippori Mincho";
+          font-size: 16px;
+          font-weight: 600;
+          padding-left: 0px;
+          text-align: center !important;
+          text-align-last: center !important;
+          -moz-text-align-last: center;
+          position: relative;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          letter-spacing: 3px;
+          padding: 0;
+        }
+
+        .ec-numberWrap {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .ec-numberInput,
+        .ec-cartRow__amountUpDown {
+          order: 1;
+        }
+
+        .fav-on,
+        .fav-off {
+          order: 2;
+          flex-basis: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 8px;
+          width: 100% !important;
+        }
+
+        .fav-on .favorite,
+        .fav-off .favorite {
+          width: 100% !important;
+          height: 48px;
+          justify-content: center;
+          align-items: center;
+          margin-top: 22px;
+        }
+      }
+
+      .fav-on,
+      .fav-off {
+        width: initial;
+        display: flex;
+      }
+
+      .fav-off .favorite {
+        margin-top: 0px;
+        width: 200px;
+        border: 2px solid #000 !important;
+        height: 36px;
+      }
+
+      .fav-off:hover {
+        background-color: #000;
+        width: 200px;
+        color: #fff;
+        height: 36px;
+      }
+
+      .fav-on span,
+      .fav-off span {
+        font-family: "Shippori Mincho";
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 3px;
+      }
+
+      .ec-cartRow__amountUpDown {
+        display: flex;
+        align-items: center;
+      }
+
+      .ec-cartRow__amountDownButton .ec-cartRow__amountDownButton__icon img,
+      .ec-cartRow__amountDownButtonDisabled .ec-cartRow__amountDownButton__icon img {
+        display: block;
+        margin-left: -0.4em;
+        width: 0.8em;
+        height: 0.8em;
+        position: absolute;
+        top: 28%;
+        left: 50%;
+      }
+      .ec-cartRow__amountDownButton,
+      .ec-cartRow__amountDownButtonDisabled {
+        margin: 0 2px;
+        display: inline-block;
+        border: 2px solid #000;
+        border-radius: 50%;
+        width: 30px;
+        min-width: 30px;
+        max-width: 30px;
+        height: 30px;
+        cursor: pointer;
+        line-height: 40px;
+        vertical-align: middle;
+        position: relative;
+        text-align: center;
+        background: #fff;
+      }
+
+      .ec-cartRow__amountUpButton .ec-cartRow__amountUpButton__icon img {
+        display: block;
+        margin-left: -0.4em;
+        width: 0.8em;
+        height: 0.8em;
+        position: absolute;
+        top: 28%;
+        left: 50%;
+      }
+
+      .ec-cartRow__amountUpButton,
+      .ec-cartRow__amountDownButton {
+        border: 1px solid #c9c9c9;
+      }
+      .ec-cartRow__amountUpButton {
+        margin: 0 2px;
+        display: inline-block;
+        border: 1px solid #c9c9c9;
+        border-radius: 50%;
+        width: 30px;
+        min-width: 30px;
+        max-width: 30px;
+        height: 30px;
+        cursor: pointer;
+        line-height: 40px;
+        vertical-align: middle;
+        position: relative;
+        text-align: center;
+        background: #fff;
+      }
+      .ec-numberWrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .ec-numberInput {
+        display: flex;
+        align-items: center;
+      }
+
+      .ec-numberInput span {
+        font-family: "Shippori Mincho";
+        padding-right: 10px;
+        color: #000 !important;
+        font-weight: 700;
+      }
+
+      .ec-numberInput input {
+        margin-bottom: 0 !important;
+        border: 2px solid #000;
+        border-radius: 0 !important;
+        cursor: pointer;
+        color: #000 !important;
+        height: 36px;
+      }
+
+      .ec-numberInput input[type="number"] {
+        text-align: center;
+        width: 60px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .ec-numberInput input[type="number"]::-webkit-inner-spin-button,
+      .ec-numberInput input[type="number"]::-webkit-outer-spin-button {
+        opacity: 1;
+        pointer-events: auto;
+        cursor: pointer;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -157,7 +394,7 @@
             <section class="section-Sprod">
               <div class="Sprod-container">
                 <div class="Sprod-ttlwrap">
-                  <p class="Sprod-ttl">フラワーボウル　紅梅（こうばい）</p>
+                  <p class="Sprod-ttl">フラワーボウル<!--紅梅（こうばい）--></p>
                 </div>
 
                 <div class="Sprod-headwrap">
@@ -166,8 +403,13 @@
                       <div class="swiper pd_main pic-m">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
+                            <img src="img/org_sku.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                          </div>
+                          <!--
+                          <div class="swiper-slide">
                             <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123424_68ae7cc0dcbd0.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
                           </div>
+                          -->
                           <div class="swiper-slide">
                             <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb611364.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
                           </div>
@@ -191,8 +433,13 @@
                         <div class="swiper pd_thumb pic-t">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123424_68ae7cc0dcbd0.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                              <img src="img/org_sku.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
                             </div>
+                          <!--
+                          <div class="swiper-slide">
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123424_68ae7cc0dcbd0.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                          </div>
+                          -->
                             <div class="swiper-slide">
                               <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb611364.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
                             </div>
@@ -223,90 +470,74 @@
                         <p class="price-prod">5,000<span class="price-yen">円</span></p>
                       </div>
 
-                      <div class="fav-off">
-                        <button id="favorite" class="favorite btn btn-outline-dark" onclick="addFavoriteProduct(58)">
-                          <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_favorite.svg" class="icon_favorite" alt="" />
-                          <span>お気に入りに追加</span>
-                        </button>
-                      </div>
-
                       <div id="sec_bt_cart">
-                        <form action="https://sabae.furusato-direct.jp/products/add_cart/1197" method="post" id="form1" name="form1">
+                        <form action="https://sabae.furusato-direct.jp/products/add_cart/58" method="post" id="form1" name="form1">
+                          <div class="ec-productRole__actions sku-wrap">
+                            <div class="selectWrap-sku">
+                              <select id="classcategory_id1" name="classcategory_id1" class="form-control">
+                                <option value="">色を選択してください</option>
+                                <option value="4">紅梅（こうばい）</option>
+                                <option value="4">桑染（くわぞめ）</option>
+                                <option value="5">蕎麦切（そばぎり）</option>
+                                <option value="6">錆御納戸（さびおなんど）</option>
+                              </select>
+                            </div>
+                            <div class="selectWrap-sku">
+                              <select id="classcategory_id2" name="classcategory_id2" class="form-control" disabled="" style="opacity: 0.2; cursor: not-allowed;">
+                                <option value="">サイズを選択してください</option>
+                                <option value="4">S</option>
+                                <option value="5">M</option>
+                                <option value="6">L</option>
+                              </select>
+                            </div>
+
+                            <div class="ec-numberWrap">
+                              <div class="ec-numberInput"><span>数量</span> <input type="number" id="quantity" name="quantity" required="required" min="1" maxlength="9" class="form-control" value="1" /></div>
+                              <div class="ec-cartRow__amountUpDown">
+                                <div class="ec-cartRow__amountDownButton">
+                                  <span class="ec-cartRow__amountDownButton__icon"><img src="https://sabae.furusato-direct.jp/html/template/default/assets/icon/minus.svg" alt="reduce" /></span>
+                                </div>
+                                <a href="https://sabae.furusato-direct.jp/cart/up/1196" token-for-anchor="BEN9fFm-wOpHXQOpC6mIQdQO0uOWGbvv6Ce4OtVRz-Y" class="ec-cartRow__amountUpButton load-overlay" data-method="put" data-confirm="false">
+                                  <span class="ec-cartRow__amountUpButton__icon"><img src="https://sabae.furusato-direct.jp/html/template/default/assets/icon/plus-dark.svg" alt="reduce" /></span>
+                                </a>
+                              </div>
+
+                              <div class="fav-off">
+                                <button id="favorite" class="favorite btn btn-outline-dark" onclick="">
+                                  <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_favorite.svg" class="icon_favorite" alt="" />
+                                  <span>お気に入りに追加</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
                           <div class="default">
                             <button type="submit" class="add-cart go-cart"><span class="icon_cart"></span><span>寄附カートに入れる</span></button>
                           </div>
                           <input type="hidden" id="product_id" name="product_id" value="58" /><input type="hidden" id="ProductClass" name="ProductClass" value="58" />
                           <div class="form-group"><label for="quantity" class="required">Quantity</label><input type="number" id="quantity" name="quantity" required="required" min="1" maxlength="9" class="form-control" value="1" /></div>
                           <input type="hidden" id="_token" name="_token" value="zcWi8SXkubMEzZ4kNqfPRINWzZG3xpx3btkqZSnwLZk" />
-                        </form>
 
-                        <div class="addition">
-                          <div class="btns">
-                            <button onclick="additionclose">
-                              <i class="far fa-times-circle"></i>
-                            </button>
-                            <button onclick="location.href='https://sabae.furusato-direct.jp/cart'" class="gocart">寄附カートへ進む</button>
+                          <div class="addition">
+                            <div class="btns">
+                              <button onclick="additionclose">
+                                <i class="far fa-times-circle"></i>
+                              </button>
+                              <button onclick="location.href='https://sabae.furusato-direct.jp/cart'" class="gocart">寄附カートへ進む</button>
+                            </div>
                           </div>
-                        </div>
+                        </form>
                       </div>
 
                       <p class="cartbox-txt">※追加内容は、注文確定前であればカートでいつでも変更・削除可能です。<br />カートへの追加だけではご注文は確定しません。追加後、カートからご注文を確定させてください。</p>
-                    </div>
-                  </div>
-
-                  <script>
-                    function adjustDetailMargin() {
-                      const related = document.querySelector(".related-products");
-                      const detailwrap = document.querySelector(".Sprod-detailwrap");
-                      if (window.innerWidth > 1024 && related && detailwrap) {
-                        const relatedHeight = related.offsetHeight;
-                        detailwrap.style.marginTop = `-${relatedHeight + -360}px`;
-                      } else if (detailwrap) {
-                        detailwrap.style.marginTop = "20px";
-                      }
-                    }
-                    window.addEventListener("load", adjustDetailMargin);
-                    window.addEventListener("resize", adjustDetailMargin);
-                  </script>
-                  <div class="related-products">
-                    <p class="related-products__title">同一グループの返礼品</p>
-
-                    <div class="related-products__list">
-                      <a href="https://sabae.furusato-direct.jp/products/detail/1196" class="articles-prod-detail-link">
-                        <div class="articles-prod-detail">
-                          <div class="prod-detail-pic-wrap">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123348_68ae7c9c77893.jpg" class="prod-detail-pic" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy" />
-                          </div>
-                          <p class="prod-detail-txt">フラワーボウル　桑染（くわぞめ）</p>
-                        </div>
-                        <p class="pd-price">5,000<span>円</span></p>
-                      </a>
-                      <a href="https://sabae.furusato-direct.jp/products/detail/1194" class="articles-prod-detail-link">
-                        <div class="articles-prod-detail">
-                          <div class="prod-detail-pic-wrap">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123011_68ae7bc345a5d.jpg" class="prod-detail-pic" alt="フラワーボウル　錆御納戸（さびおなんど）" loading="lazy" />
-                          </div>
-                          <p class="prod-detail-txt">フラワーボウル　錆御納戸（さびおなんど）</p>
-                        </div>
-                        <p class="pd-price">5,000<span>円</span></p>
-                      </a>
-                      <a href="https://sabae.furusato-direct.jp/products/detail/1195" class="articles-prod-detail-link">
-                        <div class="articles-prod-detail">
-                          <div class="prod-detail-pic-wrap">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123255_68ae7c679678f.jpg" class="prod-detail-pic" alt="フラワーボウル　蕎麦切（そばぎり）" loading="lazy" />
-                          </div>
-                          <p class="prod-detail-txt">フラワーボウル　蕎麦切（そばぎり）</p>
-                        </div>
-                        <p class="pd-price">5,000<span>円</span></p>
-                      </a>
                     </div>
                   </div>
                 </div>
 
                 <div class="Sprod-detailwrap">
                   <div class="Sprod-detail-txt">
-                    <p class="Sprod-txt" style="font-family: 'Karla', 'Shippori Mincho', serif">
-                      <span style="font-size: 24px; font-weight: 600; color: #f2a0a1">フラワーボウル</span><br /><br />
+                    <p class="Sprod-txt" style="font-family: 'Karla', 'Shippori Mincho', serif;">
+                      <span style="font-size: 24px;font-weight: 600;">フラワーボウル</span><br /><br />
                       大きく波を打った広がりを見せるフラワー型のデザインが特徴の大きめの器です。<br />
                       サラダやパスタなど、振る舞う料理を盛り付けてセンターテーブルに置くのに最適です。<br />
                       また、軽量で積み重ねての収納も可能です。<br />
@@ -335,7 +566,7 @@
                           フラワーボウル　1個<br />
                           <br />
                           【色】<br />
-                          紅梅（こうばい）<br />
+                          4色からお選びください。<br />「錆御納戸（さびおなんど）」<br />「蕎麦切（そばぎり）」<br />「桑染（くわぞめ）」<br />「紅梅（こうばい）<br />
                           <br />
                           【サイズ】<br />
                           φ170mm×70mm<br />
