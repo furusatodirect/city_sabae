@@ -84,14 +84,7 @@
       }
 
       /*SKU GROUP*/
-      .sku-wrap {
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-        padding-top: 10px;
-        flex-wrap: wrap;
-      }
-
+      /*
       .selectWrap-sku {
         cursor: pointer;
         position: relative;
@@ -133,10 +126,99 @@
         padding: 0;
       }
 
-      .fav-on .favorite, .fav-off .favorite {
-    margin-top: 16px;
-}
+      .selectWrap-sku select#classcategory_id1:focus-visible {
+        border: 3px solid #000 !important;
+        outline: none !important;
+        box-shadow: 0 0 0 1px #000 inset !important;
+      }
+*/
+      /*SKU GROUP*/
+      .sku-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 10px;
+        flex-wrap: wrap;
+      }
+      .selectWrap-sku {
+        position: relative;
+        width: 100%;
+        font-family: "Shippori Mincho", sans-serif;
+      }
 
+      .custom-select {
+        position: relative;
+        user-select: none;
+      }
+
+      .custom-select-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        border: 2px solid #000;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        letter-spacing: 3px;
+        color: #000;
+      }
+
+      .custom-select-trigger::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        margin-top: 2;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 10px solid #000;
+        pointer-events: none;
+      }
+      .custom-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-right:2px solid #000;
+        border-bottom:2px solid #000;
+        border-left:2px solid #000;
+        background: #fff;
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+      }
+
+      .custom-select.opened .custom-options {
+        display: flex;
+      }
+
+      .custom-options .option {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        border-top: 1px solid #ccc;
+      }
+
+      .custom-options .option:first-child {
+        border-top: none;
+      }
+
+      .custom-options .option:hover {
+        background-color: #FFFDEB;
+      }
+
+      .fav-on .favorite,
+      .fav-off .favorite {
+        margin-top: 16px;
+      }
+
+      /*
       @media screen and (max-width: 1024px) {
         .selectWrap-sku {
           width: 100%;
@@ -178,8 +260,7 @@
           letter-spacing: 3px;
           padding: 0;
         }
-      }
-
+      }*/
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
@@ -306,6 +387,20 @@
 
                       <div class="ec-productRole__actions sku-wrap">
                         <div class="selectWrap-sku">
+                          <div class="custom-select" id="classcategory_id1">
+                            <div class="custom-select-trigger">色を選択してください</div>
+                            <ul class="custom-options">
+                              <li class="option" data-url="https://sabae.furusato-direct.jp/products/detail/1197">紅梅（こうばい）</li>
+                              <li class="option" data-url="https://sabae.furusato-direct.jp/products/detail/1196">桑染（くわぞめ）</li>
+                              <li class="option" data-url="https://sabae.furusato-direct.jp/products/detail/1195">蕎麦切（そばぎり）</li>
+                              <li class="option" data-url="https://sabae.furusato-direct.jp/products/detail/1194">錆御納戸（さびおなんど）</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!--
+                      <div class="ec-productRole__actions sku-wrap">
+                        <div class="selectWrap-sku">
                           <select id="classcategory_id1" name="classcategory_id1" class="form-control">
                             <option value="" data-url="https://sabae.furusato-direct.jp/products/detail/1197">色を選択してください</option>
                             <option value="4" data-url="https://sabae.furusato-direct.jp/products/detail/1197">紅梅（こうばい）</option>
@@ -315,7 +410,7 @@
                           </select>
                         </div>
                       </div>
-
+                    -->
                       <div class="fav-off">
                         <button id="favorite" class="favorite btn btn-outline-dark" onclick="addFavoriteProduct(58)">
                           <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_favorite.svg" class="icon_favorite" alt="" />
@@ -674,14 +769,33 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.15/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/user_data/assets/js/customize.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const select = document.querySelector('#classcategory_id1');
-        if (select) {
-          select.addEventListener('change', function () {
-            const url = this.options[this.selectedIndex].dataset.url;
+      document.addEventListener("DOMContentLoaded", () => {
+        const customSelect = document.querySelector(".custom-select");
+        const trigger = customSelect.querySelector(".custom-select-trigger");
+        const options = customSelect.querySelectorAll(".option");
+
+        // 開閉
+        trigger.addEventListener("click", () => {
+          customSelect.classList.toggle("opened");
+        });
+
+        // 選択
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            const text = option.textContent;
+            const url = option.dataset.url;
+            trigger.textContent = text;
+            customSelect.classList.remove("opened");
             if (url) window.location.href = url;
           });
-        }
+        });
+
+        // 外側クリックで閉じる
+        document.addEventListener("click", (e) => {
+          if (!customSelect.contains(e.target)) {
+            customSelect.classList.remove("opened");
+          }
+        });
       });
     </script>
   </body>
