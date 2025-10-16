@@ -84,198 +84,8 @@
       }
 
       /*SKU GROUP*/
-      /*
-      .selectWrap-sku {
-        cursor: pointer;
-        position: relative;
-      }
-      .selectWrap-sku::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 14px;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        margin-top: 2;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 10px solid #000;
-        pointer-events: none;
-      }
-      .selectWrap-sku:has(select:disabled)::after {
-        border-top: 10px solid #ccc;
-      }
-      .selectWrap-sku select {
-        border: 2px solid #000;
-        border-radius: 0 !important;
-        cursor: pointer;
-        color: #000 !important;
-        height: 48px;
-        width: 100%;
-        font-family: "Shippori Mincho";
-        font-size: 18px;
-        font-weight: 600;
-        padding-left: 0px;
-        text-align: center;
-        position: relative;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        letter-spacing: 3px;
-        padding: 0;
-      }
-
-      .selectWrap-sku select#classcategory_id1:focus-visible {
-        border: 3px solid #000 !important;
-        outline: none !important;
-        box-shadow: 0 0 0 1px #000 inset !important;
-      }
-*/
-      /*SKU GROUP*/
-      .sku-wrap {
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-        padding-top: 10px;
-        flex-wrap: wrap;
-      }
-      .selectWrap-sku {
-        position: relative;
-        width: 100%;
-        font-family: "Shippori Mincho", sans-serif;
-      }
-
-      .custom-select {
-        position: relative;
-        user-select: none;
-      }
-
-      .custom-select-trigger {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 48px;
-        border: 2px solid #000;
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-        letter-spacing: 3px;
-        color: #000;
-      }
-
-      .custom-select-trigger::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        margin-top: 2;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 10px solid #000;
-        pointer-events: none;
-      }
-      .custom-options {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        border-right: 2px solid #000;
-        border-bottom: 2px solid #000;
-        border-left: 2px solid #000;
-        background: #fff;
-        z-index: 10;
-        display: none;
-        flex-direction: column;
-      }
-
-      .custom-select.opened .custom-options {
-        display: flex;
-      }
-
-      .custom-options .option {
-        padding: 10px 0;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        border-top: 1px solid #ccc;
-      }
-
-      .custom-options .option:first-child {
-        border-top: none;
-      }
-
-      .custom-options .option:hover {
-        background-color: #fffdeb;
-      }
-
-      .fav-on .favorite,
-      .fav-off .favorite {
-        margin-top: 16px;
-      }
-
-      /*
-      @media screen and (max-width: 1024px) {
-        .selectWrap-sku {
-          width: 100%;
-          cursor: pointer;
-          position: relative;
-        }
-        .selectWrap-sku::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 14px;
-          transform: translateY(-50%);
-          width: 0;
-          height: 0;
-          margin-top: 2;
-          border-left: 6px solid transparent;
-          border-right: 6px solid transparent;
-          border-top: 10px solid #000;
-          pointer-events: none;
-        }
-        .selectWrap-sku select {
-          border: 2px solid #000;
-          border-radius: 0 !important;
-          cursor: pointer;
-          color: #000 !important;
-          height: 36px;
-          width: 100%;
-          font-family: "Shippori Mincho";
-          font-size: 16px;
-          font-weight: 600;
-          padding-left: 0px;
-          text-align: center !important;
-          text-align-last: center !important;
-          -moz-text-align-last: center;
-          position: relative;
-          appearance: none;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          letter-spacing: 3px;
-          padding: 0;
-        }
-      }*/
-
-      .Sproduct-itemsix-wrap {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 21.66px;
-        width: 100%;
-      }
-      @media screen and (max-width: 1024px) {
-        .Sproduct-itemsix-wrap {
-          grid-template-columns: repeat(2, 1fr);
-          column-gap: 8px;
-        }
-      } /*SKU GROUP*/
       .related-products__title {
-        padding-top: 0 !important;
+        padding: 2rem 0 0.5rem;
         font-family: "Shippori Mincho";
         font-weight: bold;
         margin-bottom: 15px;
@@ -347,7 +157,7 @@
             <section class="section-Sprod">
               <div class="Sprod-container">
                 <div class="Sprod-ttlwrap">
-                  <p class="Sprod-ttl">フラワーボウル　紅梅（こうばい）</p>
+                  <p class="Sprod-ttl">フラワーボウル　桑染（くわぞめ）</p>
                 </div>
 
                 <div class="Sprod-headwrap">
@@ -356,22 +166,22 @@
                       <div class="swiper pd_main pic-m">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123424_68ae7cc0dcbd0.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123348_68ae7c9c77893.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb611364.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c917efab.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb611f37.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c917fdb8.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb612b2b.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c9180745.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb613507.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c91810db.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb613eb0.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c9181a88.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                           </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -381,22 +191,22 @@
                         <div class="swiper pd_thumb pic-t">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123424_68ae7cc0dcbd0.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123348_68ae7c9c77893.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                             </div>
                             <div class="swiper-slide">
-                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb611364.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c917efab.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                             </div>
                             <div class="swiper-slide">
-                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb611f37.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c917fdb8.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                             </div>
                             <div class="swiper-slide">
-                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb612b2b.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c9180745.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                             </div>
                             <div class="swiper-slide">
-                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb613507.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c91810db.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                             </div>
                             <div class="swiper-slide">
-                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123414_68ae7cb613eb0.jpg" class="img-fluid w-100" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                              <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123337_68ae7c9181a88.jpg" class="img-fluid w-100" alt="フラワーボウル　桑染（くわぞめ）" loading="lazy"/>
                             </div>
                           </div>
                         </div>
@@ -413,31 +223,6 @@
                         <p class="price-prod">5,000<span class="price-yen">円</span></p>
                       </div>
 
-                      <div class="ec-productRole__actions sku-wrap">
-                        <div class="selectWrap-sku">
-                          <div class="custom-select" id="classcategory_id1">
-                            <div class="custom-select-trigger">紅梅（こうばい）</div>
-                            <ul class="custom-options">
-                              <li class="option" data-url="pre-sku_sabae2.html">桑染（くわぞめ）</li>
-                              <li class="option" data-url="pre-sku_sabae3.html">蕎麦切（そばぎり）</li>
-                              <li class="option" data-url="pre-sku_sabae4.html">錆御納戸（さびおなんど）</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <!--
-                      <div class="ec-productRole__actions sku-wrap">
-                        <div class="selectWrap-sku">
-                          <select id="classcategory_id1" name="classcategory_id1" class="form-control">
-                            <option value="" data-url="https://sabae.furusato-direct.jp/products/detail/1197">色を選択してください</option>
-                            <option value="4" data-url="https://sabae.furusato-direct.jp/products/detail/1197">紅梅（こうばい）</option>
-                            <option value="4" data-url="https://sabae.furusato-direct.jp/products/detail/1196">桑染（くわぞめ）</option>
-                            <option value="5" data-url="https://sabae.furusato-direct.jp/products/detail/1195">蕎麦切（そばぎり）</option>
-                            <option value="6" data-url="https://sabae.furusato-direct.jp/products/detail/1194">錆御納戸（さびおなんど）</option>
-                          </select>
-                        </div>
-                      </div>
-                    -->
                       <div class="fav-off">
                         <button id="favorite" class="favorite btn btn-outline-dark" onclick="">
                           <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_favorite.svg" class="icon_favorite" alt="" />
@@ -469,88 +254,124 @@
                     </div>
                   </div>
 
+                  <div class="related-products">
+                    <p class="related-products__title">このお礼品のバリエーション一覧</p>
+
+                    <div class="related-products__list">
+                      <a href="pre-sku_1.html" class="articles-prod-detail-link">
+                        <div class="articles-prod-detail">
+                          <div class="prod-detail-pic-wrap">
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123424_68ae7cc0dcbd0.jpg" class="prod-detail-pic" alt="フラワーボウル　紅梅（こうばい）" loading="lazy" />
+                          </div>
+                          <p class="prod-detail-txt">フラワーボウル　紅梅（こうばい）</p>
+                        </div>
+                        <p class="pd-price">5,000<span>円</span></p>
+                      </a>
+                      <a href="pre-sku_3.html" class="articles-prod-detail-link">
+                        <div class="articles-prod-detail">
+                          <div class="prod-detail-pic-wrap">
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123255_68ae7c679678f.jpg" class="prod-detail-pic" alt="フラワーボウル　蕎麦切（そばぎり）" loading="lazy" />
+                          </div>
+                          <p class="prod-detail-txt">フラワーボウル　蕎麦切（そばぎり）</p>
+                        </div>
+                        <p class="pd-price">5,000<span>円</span></p>
+                      </a>
+                      <a href="pre-sku_4.html" class="articles-prod-detail-link">
+                        <div class="articles-prod-detail">
+                          <div class="prod-detail-pic-wrap">
+                            <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0827123011_68ae7bc345a5d.jpg" class="prod-detail-pic" alt="フラワーボウル　錆御納戸（さびおなんど）" loading="lazy" />
+                          </div>
+                          <p class="prod-detail-txt">フラワーボウル　錆御納戸（さびおなんど）</p>
+                        </div>
+                        <p class="pd-price">5,000<span>円</span></p>
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="Sprod-detailwrap">
-                  <div class="Sprod-detail-txt">
-                    <p class="Sprod-txt" style="font-family: 'Karla', 'Shippori Mincho', serif">
-                      <span style="font-size: 24px; font-weight: 600; color: #f2a0a1">フラワーボウル</span><br /><br />
-                      大きく波を打った広がりを見せるフラワー型のデザインが特徴の大きめの器です。<br />
-                      サラダやパスタなど、振る舞う料理を盛り付けてセンターテーブルに置くのに最適です。<br />
-                      また、軽量で積み重ねての収納も可能です。<br />
-                      <br />
-                      ボディカラーは楽しい食卓演出してくれる優しいパステルカラーの4色をご用意しました。<br />
-                      カラー名の「錆御納戸（さびおなんど）」、「蕎麦切（そばぎり）」、「桑染（くわぞめ）」、「紅梅（こうばい）」は日本の伝統色を想起し、どこか華やかで洗練された印象に仕上げました。<br />
-                      <br />
-                      <br />
-                      【地場産品基準】<br />
-                      類型：3<br />
-                      鯖江市内の工房において、木地の製造・加工から中塗・上塗等の工程を行うことにより、相応の付加価値が生じているもの
-                    </p>
-                  </div>
 
-                  <div class="Sprod-detail-box">
-                    <p class="Sprod-box-ttl">お礼品について</p>
-                    <div class="part txtbase">
-                      <dl class="part">
-                        <dt>カテゴリー</dt>
-                        <dd class="linkcate-wrap"><a class="linkcateid" href="https://sabae.furusato-direct.jp/products/list?category_id=136&orderby=1">雑貨・その他</a> ＞ <a class="linkcateid" href="https://sabae.furusato-direct.jp/products/list?category_id=137&orderby=1">食器・グラス</a></dd>
-                      </dl>
-                      <dl>
-                        <dt>内容量</dt>
-                        <dd>
-                          【内容】<br />
-                          フラワーボウル　1個<br />
-                          <br />
-                          【色】<br />
-                          紅梅（こうばい）<br />
-                          <br />
-                          【サイズ】<br />
-                          φ170mm×70mm<br />
-                          <br />
-                          【重量】<br />
-                          270g<br />
-                          <br />
-                          【材質】<br />
-                          樹脂・ウレタン塗装<br />
-                          <br />
-                          【注意事項】<br />
-                          ・食器洗浄機や乾燥機には対応しておりません。<br />
-                          ・本製品は電子レンジ、蒸し器には使用しないでください。<br />
-                          ・強い衝撃は、破損、塗装剥離の原因となりますのでご注意ください。<br />
-                          ・直射日光でお色が焼けてしまうことがありますのでご注意ください。<br />
-                          ・パソコンやスマホによっては実際の色と多少異なる場合があります。
-                        </dd>
-                      </dl>
-                      <dl>
-                        <dt>事業者名</dt>
-                        <dd>
-                          越前漆器協同組合<br />
-                          <a class="glink" href="https://sabae.furusato-direct.jp/products/list?operator_name=%E8%B6%8A%E5%89%8D%E6%BC%86%E5%99%A8%E5%8D%94%E5%90%8C%E7%B5%84%E5%90%88&orderby=1">他のお礼品を見る <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_arrow_p.svg" class="icon_arrow_p" alt="" /></a>
-                        </dd>
-                      </dl>
+                <div class="Sprod-detailleftwrap">
+                  <div class="Sprod-detailwrap">
+                    <div class="Sprod-detail-txt">
+                      <p class="Sprod-txt" style="font-family: 'Karla', 'Shippori Mincho', serif">
+                        <span style="font-size: 24px; font-weight: 600; color: #f2a0a1">フラワーボウル</span><br /><br />
+                        大きく波を打った広がりを見せるフラワー型のデザインが特徴の大きめの器です。<br />
+                        サラダやパスタなど、振る舞う料理を盛り付けてセンターテーブルに置くのに最適です。<br />
+                        また、軽量で積み重ねての収納も可能です。<br />
+                        <br />
+                        ボディカラーは楽しい食卓演出してくれる優しいパステルカラーの4色をご用意しました。<br />
+                        カラー名の「錆御納戸（さびおなんど）」、「蕎麦切（そばぎり）」、「桑染（くわぞめ）」、「紅梅（こうばい）」は日本の伝統色を想起し、どこか華やかで洗練された印象に仕上げました。<br />
+                        <br />
+                        <br />
+                        【地場産品基準】<br />
+                        類型：3<br />
+                        鯖江市内の工房において、木地の製造・加工から中塗・上塗等の工程を行うことにより、相応の付加価値が生じているもの
+                      </p>
                     </div>
-                  </div>
 
-                  <div class="Sprod-detail-box">
-                    <p class="Sprod-box-ttl">お申込みについて</p>
-                    <div class="part txtbase">
-                      <dl>
-                        <dt>申込期日</dt>
-                        <dd>通年</dd>
-                      </dl>
-                      <dl>
-                        <dt>発送期日</dt>
-                        <dd>
-                          決済から14日前後で発送予定<br />
-                          ※在庫状況によっては最長2か月前後お待ちいただくことがございます。
-                        </dd>
-                      </dl>
+                    <div class="Sprod-detail-box">
+                      <p class="Sprod-box-ttl">お礼品について</p>
+                      <div class="part txtbase">
+                        <dl class="part">
+                          <dt>カテゴリー</dt>
+                          <dd class="linkcate-wrap"><a class="linkcateid" href="https://sabae.furusato-direct.jp/products/list?category_id=136&orderby=1">雑貨・その他</a> ＞ <a class="linkcateid" href="https://sabae.furusato-direct.jp/products/list?category_id=137&orderby=1">食器・グラス</a></dd>
+                        </dl>
+                        <dl>
+                          <dt>内容量</dt>
+                          <dd>
+                            【内容】<br />
+                            フラワーボウル　1個<br />
+                            <br />
+                            【色】<br />
+                            桑染（くわぞめ）<br />
+                            <br />
+                            【サイズ】<br />
+                            φ170mm×70mm<br />
+                            <br />
+                            【重量】<br />
+                            270g<br />
+                            <br />
+                            【材質】<br />
+                            樹脂・ウレタン塗装<br />
+                            <br />
+                            【注意事項】<br />
+                            ・食器洗浄機や乾燥機には対応しておりません。<br />
+                            ・本製品は電子レンジ、蒸し器には使用しないでください。<br />
+                            ・強い衝撃は、破損、塗装剥離の原因となりますのでご注意ください。<br />
+                            ・直射日光でお色が焼けてしまうことがありますのでご注意ください。<br />
+                            ・パソコンやスマホによっては実際の色と多少異なる場合があります。
+                          </dd>
+                        </dl>
+                        <dl>
+                          <dt>事業者名</dt>
+                          <dd>
+                            越前漆器協同組合<br />
+                            <a class="glink" href="https://sabae.furusato-direct.jp/products/list?operator_name=%E8%B6%8A%E5%89%8D%E6%BC%86%E5%99%A8%E5%8D%94%E5%90%8C%E7%B5%84%E5%90%88&orderby=1">他のお礼品を見る <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_arrow_p.svg" class="icon_arrow_p" alt="" /></a>
+                          </dd>
+                        </dl>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="btn-more-tproducts">
-                    <a href="https://sabae.furusato-direct.jp/products/list" class="more-box"> お礼品一覧ページへ戻る </a>
+                    <div class="Sprod-detail-box">
+                      <p class="Sprod-box-ttl">お申込みについて</p>
+                      <div class="part txtbase">
+                        <dl>
+                          <dt>申込期日</dt>
+                          <dd>通年</dd>
+                        </dl>
+                        <dl>
+                          <dt>発送期日</dt>
+                          <dd>
+                            決済から14日前後で発送予定<br />
+                            ※在庫状況によっては最長2か月前後お待ちいただくことがございます。
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+
+                    <div class="btn-more-tproducts">
+                      <a href="https://sabae.furusato-direct.jp/products/list" class="more-box"> お礼品一覧ページへ戻る </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -781,37 +602,61 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.15/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/user_data/assets/js/customize.js"></script>
+
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const customSelect = document.querySelector(".custom-select");
-        const trigger = customSelect.querySelector(".custom-select-trigger");
-        const options = customSelect.querySelectorAll(".option");
-
-        // 開閉
-        trigger.addEventListener("click", () => {
-          customSelect.classList.toggle("opened");
-        });
-
-        // 選択
-        options.forEach((option) => {
-          option.addEventListener("click", () => {
-            const text = option.textContent;
-            const url = option.dataset.url;
-            trigger.textContent = text;
-            customSelect.classList.remove("opened");
-            if (url) window.location.href = url;
-          });
-        });
-
-        // 外側クリックで閉じる
-        document.addEventListener("click", (e) => {
-          if (!customSelect.contains(e.target)) {
-            customSelect.classList.remove("opened");
+      document.addEventListener('DOMContentLoaded', function () {
+        const container = document.querySelector('.Sprod-container');
+        const headWrap = document.querySelector('.Sprod-headwrap');
+        const sticky = document.querySelector('.Sprod-head-sticky');
+        const detailLeftWrap = document.querySelector('.Sprod-detailleftwrap');
+      
+        let leftColumn = null;
+      
+        function rearrangeLayout() {
+          if (!container || !headWrap || !sticky || !detailLeftWrap) return;
+      
+          // PCレイアウト
+          if (window.innerWidth > 1024) {
+            if (!leftColumn) {
+              leftColumn = document.createElement('div');
+              leftColumn.classList.add('Sprod-leftcol');
+              // 左カラムの基本スタイル
+              leftColumn.style.flex = '1 1 60%';
+              leftColumn.style.maxWidth = '845px';
+              leftColumn.style.display = 'flex';
+              leftColumn.style.flexDirection = 'column';
+              leftColumn.style.rowGap = '0px';
+              leftColumn.style.alignSelf = 'flex-start'; // ★ 高さを中身に合わせる
+            }
+      
+            // .Sprod-leftcol がなければ追加
+            if (!container.contains(leftColumn)) {
+              container.insertBefore(leftColumn, sticky);
+            }
+      
+            // 中身を追加
+            if (!leftColumn.contains(headWrap)) leftColumn.appendChild(headWrap);
+            if (!leftColumn.contains(detailLeftWrap)) leftColumn.appendChild(detailLeftWrap);
           }
-        });
+      
+          // SPレイアウト
+          else {
+            if (leftColumn && container.contains(leftColumn)) {
+              container.insertBefore(headWrap, sticky);
+              container.insertBefore(sticky, detailLeftWrap);
+              container.insertBefore(detailLeftWrap, leftColumn.nextSibling);
+              leftColumn.remove();
+              leftColumn = null;
+            }
+          }
+        }
+      
+        window.addEventListener('load', rearrangeLayout);
+        window.addEventListener('resize', rearrangeLayout);
       });
-    </script>
-
+      </script>
+      
+    
 
   </body>
 </html>
