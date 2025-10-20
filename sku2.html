@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>preview | SKU鯖江市版</title>
+    <link rel="icon" href="https://sabae.furusato-direct.jp/html/user_data/assets/img/common/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://sabae.furusato-direct.jp/html/user_data/assets/img/common/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.15/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://sabae.furusato-direct.jp/html/user_data/assets/css/style.css" media="all" />
+    <link rel="stylesheet" href="https://sabae.furusato-direct.jp/html/user_data/assets/css/customize.css" media="all" />
+    <style>
+      .ec-layoutRole .ec-layoutRole__contents {
+        margin-right: initial;
+        margin-left: initial;
+        width: initial;
+        max-width: initial;
+        display: initial;
+        flex-wrap: initial;
+      }
+
+      .df_cart,
+      .floating_cart .form-group,
+      .addition {
+        display: none;
+      }
+      .area-pro-tbl .part dl dd {
+        flex-grow: initial;
+      }
+
+      dd.cplink + dd.cplink::before {
+        content: ">";
+        margin-right: 0.3rem;
+      }
+
+      .sw-bar-wrap {
+        position: relative;
+      }
+      .swiper-scrollbar {
+        bottom: -4px !important;
+        background-color: #ccc;
+      }
+      .swiper-scrollbar-drag {
+        background-color: #0095e1;
+      }
+      .pd_thumb.nogradient {
+        mask-image: none;
+        -webkit-mask-image: none;
+      }
+      .pd_thumb.gradient {
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      }
+      .pd_thumb.left-gradient {
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 100%);
+      }
+      .pd_thumb.right-gradient {
+        mask-image: linear-gradient(to right, black 0%, black 90%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, black 0%, black 90%, transparent 100%);
+      }
+      .form-group {
+        display: none;
+      }
+      .Sproduct-itemsix-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 21.66px;
+        width: 100%;
+      }
+      @media screen and (max-width: 1024px) {
+        .Sproduct-itemsix-wrap {
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 8px;
+        }
+      }
+
+      /*SKU GROUP*/
+      /*
+      .selectWrap-sku {
+        cursor: pointer;
+        position: relative;
+      }
+      .selectWrap-sku::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        margin-top: 2;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 10px solid #000;
+        pointer-events: none;
+      }
+      .selectWrap-sku:has(select:disabled)::after {
+        border-top: 10px solid #ccc;
+      }
+      .selectWrap-sku select {
+        border: 2px solid #000;
+        border-radius: 0 !important;
+        cursor: pointer;
+        color: #000 !important;
+        height: 48px;
+        width: 100%;
+        font-family: "Shippori Mincho";
+        font-size: 18px;
+        font-weight: 600;
+        padding-left: 0px;
+        text-align: center;
+        position: relative;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        letter-spacing: 3px;
+        padding: 0;
+      }
+
+      .selectWrap-sku select#classcategory_id1:focus-visible {
+        border: 3px solid #000 !important;
+        outline: none !important;
+        box-shadow: 0 0 0 1px #000 inset !important;
+      }
+*/
+      /*SKU GROUP*/
+      .sku-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 10px;
+        flex-wrap: wrap;
+      }
+      .selectWrap-sku {
+        position: relative;
+        width: 100%;
+        font-family: "Shippori Mincho", sans-serif;
+      }
+
+      .custom-select {
+        position: relative;
+        user-select: none;
+      }
+
+      .custom-select-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        border: 2px solid #000;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        letter-spacing: 3px;
+        color: #000;
+      }
+
+      .custom-select-trigger::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        margin-top: 2;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 10px solid #000;
+        pointer-events: none;
+      }
+      .custom-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
+        border-left: 2px solid #000;
+        background: #fff;
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+      }
+
+      .custom-select.opened .custom-options {
+        display: flex;
+      }
+
+      .custom-options .option {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        border-top: 1px solid #ccc;
+      }
+
+      .custom-options .option:first-child {
+        border-top: none;
+      }
+
+      .custom-options .option:hover {
+        background-color: #fffdeb;
+      }
+
+      .fav-on .favorite,
+      .fav-off .favorite {
+        margin-top: 16px;
+      }
+      @media screen and (max-width: 1024px) {
+        .custom-select-trigger {
+        font-size: 14px;
+      }
+      }
+      /*
+      @media screen and (max-width: 1024px) {
+        .selectWrap-sku {
+          width: 100%;
+          cursor: pointer;
+          position: relative;
+        }
+        .selectWrap-sku::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 14px;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          margin-top: 2;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 10px solid #000;
+          pointer-events: none;
+        }
+        .selectWrap-sku select {
+          border: 2px solid #000;
+          border-radius: 0 !important;
+          cursor: pointer;
+          color: #000 !important;
+          height: 36px;
+          width: 100%;
+          font-family: "Shippori Mincho";
+          font-size: 16px;
+          font-weight: 600;
+          padding-left: 0px;
+          text-align: center !important;
+          text-align-last: center !important;
+          -moz-text-align-last: center;
+          position: relative;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          letter-spacing: 3px;
+          padding: 0;
+        }
+      }*/
+
+      .Sproduct-itemsix-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 21.66px;
+        width: 100%;
+      }
+      @media screen and (max-width: 1024px) {
+        .Sproduct-itemsix-wrap {
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 8px;
+        }
+      } /*SKU GROUP*/
+      .related-products__title {
+        padding-top: 0 !important;
+        font-family: "Shippori Mincho";
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 17px;
+        letter-spacing: 2.6px;
+        line-height: clamp(24px, 3vw, 28px);
+      }
+      .related-products__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        list-style: none;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+
+  <body id="page_product_detail" class="product_page">
+    <div class="ec-layoutRole">
+      <nav class="navbar navbar-expand-lg scrolled">
+        <div class="header-wrap">
+          <a class="brand-name" href="https://furusato-sabae.jp/"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/common_logos.svg" class="sitelogo" alt="" /></a>
+          <div class="d-lg-none">
+            <a href="https://sabae.furusato-direct.jp/cart" class="navbar-icon"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_cart.svg" class="" alt="" /><span class="cart-badge">0</span></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_menu.svg" alt="メニュー" class="navbar-toggler-img" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav-logo d-lg-none">
+              <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/common_logo.svg" class="sitelogo" alt="" />
+            </div>
+            <ul class="navbar-nav ms-lg-auto rl-nav">
+              <li><a href="https://furusato-sabae.jp/#about" class="nav-item nav-link rl-nav-link sc-rnl">鯖江市のこと</a></li>
+              <li><a href="https://furusato-sabae.jp/feature/" class="nav-item nav-link rl-nav-link sc-rnl">お礼品ものがたり</a></li>
+              <li><a href="https://furusato-sabae.jp/usage/" class="nav-item nav-link rl-nav-link sc-rnl">寄附金の使い道</a></li>
+              <li><a href="https://furusato-sabae.jp/faq/" class="nav-item nav-link rl-nav-link sc-rnl">よくあるご質問</a></li>
+            </ul>
+            <ul class="navbar-nav ms-lg-auto rl-navs d-lg-none">
+              <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/furusatonozei.html" target="_blank">-ふるさと納税とは</a></li>
+              <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/OneStopTokurei.html" target="_blank">-ワンストップ特例制度について</a></li>
+              <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/kihuzyoukyo/index.html" target="_blank">-ふるさと納税寄附状況</a></li>
+              <li><a href="/help/tradelaw" class="">-特定商取引法の表示</a></li>
+              <li><a href="/help/privacy" class="">-プライバシーポリシー</a></li>
+            </ul>
+            <div class="navbar-nav header-icon-fixed">
+              <a href="https://sabae.furusato-direct.jp/mypage/login" class="">
+                <span class="navbar-box">
+                  <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_login.svg" class="" alt="" />
+                  会員登録 /ログイン
+                </span>
+              </a>
+              <a href="https://sabae.furusato-direct.jp/mymenu" class="">
+                <span class="navbar-boxs">
+                  <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_user.svg" class="" alt="" />
+                  マイページ
+                </span>
+              </a>
+
+              <a href="https://sabae.furusato-direct.jp/cart" class="navbar-icon"><img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_cart.svg" class="" alt="" /><span class="cart-badge">0</span></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="ec-layoutRole__contents">
+        <div class="ec-layoutRole__main">
+          <main>
+            <section class="section-Sprod">
+              <div class="Sprod-container">
+                <div class="Sprod-ttlwrap">
+                  <p class="Sprod-ttl">Apple Watch Series10対応モデル登場!!【新色追加】＼レビューキャンペーン／ Apple Watch 専用バンド 「Air bangle」</p>
+                </div>
+
+                <div class="Sprod-headwrap">
+                  <div class="Sprod-head-left">
+                    <div class="Sprod-head-swiper">
+                      <div class="swiper pd_main pic-m">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419-s_02.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419_5_01.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419_6_02.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419-01_02.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419-02_02.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419_a_01.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                          </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                      <div class="sw-bar-wrap">
+                        <div class="swiper pd_thumb pic-t">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419-s_02.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419_5_01.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419_6_02.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419-01_02.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419-02_02.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="https://image.rakuten.co.jp/f182079-sabae/cabinet/06460625/06897834/09731699/e-03419_a_01.jpg" class="img-fluid w-100" alt="" loading="lazy" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="Sprod-head-sticky">
+                  <div class="Sprod-head-cartbox">
+                    <div class="Sprod-cartbox">
+                      <div class="price-wrap">
+                        <p class="price-ttl">寄附額</p>
+                        <p class="price-prod">47,000<span class="price-yen">円</span></p>
+                      </div>
+
+                      <div class="ec-productRole__actions sku-wrap">
+                        <div class="selectWrap-sku">
+                          <div class="custom-select" id="classcategory_id1">
+                            <div class="custom-select-trigger">(規格1)バングルカラー</div>
+                            <ul class="custom-options">
+                              <li class="option">モザイクカラー</li>
+                              <li class="option">シックラデン</li>
+                              <li class="option">ピアノブラック</li>
+                              <li class="option">ステンドブルー</li>
+                              <li class="option">べっ甲カラー（ブラウン）</li>
+                              <li class="option">マロンチェック</li>
+                              <li class="option">シャイニング</li>
+                              <li class="option">ドリームカラー</li>
+                              <li class="option">グレーマーブル</li>
+                              <li class="option">クラシック（イエローブラウン）</li>
+                              <li class="option">カーボンパターン</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="ec-productRole__actions sku-wrap">
+                        <div class="selectWrap-sku">
+                          <div class="custom-select" id="classcategory_id2">
+                            <div class="custom-select-trigger">(規格2)AppleWatchモデル</div>
+                            <ul class="custom-options">
+                              <li class="option">41モデル</li>
+                              <li class="option">45モデル</li>
+                              <li class="option">Ultraモデル</li>
+                              <li class="option">Series10　42モデル</li>
+                              <li class="option">Series10　46モデル</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="fav-off">
+                        <button id="favorite" class="favorite btn btn-outline-dark" onclick="">
+                          <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_favorite.svg" class="icon_favorite" alt="" />
+                          <span>お気に入りに追加</span>
+                        </button>
+                      </div>
+
+                      <div id="sec_bt_cart">
+                        <form action="#" method="post" id="form1" name="form1">
+                          <div class="default">
+                            <button type="button" class="add-cart go-cart"><span class="icon_cart"></span><span>寄附カートに入れる</span></button>
+                          </div>
+                          <input type="hidden" id="product_id" name="product_id" value="58" /><input type="hidden" id="ProductClass" name="ProductClass" value="58" />
+                          <div class="form-group"><label for="quantity" class="required">Quantity</label><input type="number" id="quantity" name="quantity" required="required" min="1" maxlength="9" class="form-control" value="1" /></div>
+                          <input type="hidden" id="_token" name="_token" value="zcWi8SXkubMEzZ4kNqfPRINWzZG3xpx3btkqZSnwLZk" />
+                        </form>
+
+                        <div class="addition">
+                          <div class="btns">
+                            <button onclick="additionclose">
+                              <i class="far fa-times-circle"></i>
+                            </button>
+                            <button onclick="location.href='https://sabae.furusato-direct.jp/cart'" class="gocart">寄附カートへ進む</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class="cartbox-txt">※追加内容は、注文確定前であればカートでいつでも変更・削除可能です。<br />カートへの追加だけではご注文は確定しません。追加後、カートからご注文を確定させてください。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="Sprod-detailwrap">
+                  <div class="Sprod-detail-txt">
+                    <p class="Sprod-txt">
+                      <b
+                        >世界的なめがねフレーム産地で生まれたMADE IN SABAEの「Apple Watch」専用バングルです。<br />
+                        つけ心地、軽さ、デザイン、すべてに、めがねづくりの技が息づいています。</b
+                      ><br />
+                      <br />
+                      Apple Watch専用バングル「Air bangle（エアバングル）」は、福井県鯖江市の眼鏡づくりが100年培った技から生まれました。<br />
+                      つけていることを忘れてしまうような軽くやさしいつけ心地、手首にしっかりとホールドする安心感、そして美しい仕上がり。<br />
+                      エアバングルは、眼鏡づくりの歴史と職人たちの熟練の技なくしては作り上げることができませんでした。<br />
+                      <br />
+                      人を惹きつけるデザイン、片手でつけ外しできる独自の形状。<br />
+                      鯖江の眼鏡づくりの歴史と技から生まれたエアバングルには、思わず誰かに話したくなるようなストーリーがあります。<br />
+                      会話のきっかけをつくり、人と人とのコミュニケーションが生まれるのも魅力のひとつです。<br />
+                      <br />
+                      エアバングルは、腕時計である「鯖江バングルウォッチ」を開発・販売していく中で、多くのお客様から「アップルウォッチ用のものがほしい」とのご要望をいただき、4年の開発を経て誕生した製品です。<br />
+                      <br />
+                      ■バングルカラー<br />
+                      ●カーボンパターン<br />
+                      妥協を許さないスパルタンで重厚なカーボンの素材感を彷彿させる、「カーボンパターン」<br />
+                      光の当たり方や角度によって浮かび上がる精悍な表情は、時間が経つのを忘れていつまでも眺めていたくなるほどです。<br />
+                      <br />
+                      <b
+                        ><font color="red">【安心のアフターサービス】</font><br />
+                        装着してサイズが合わなかった場合、初回は送料無料でバングルのサイズを交換いたします。<br />
+                        （2回目以降は、送料のみご負担をいただきます。）<br />
+                        返礼品と同梱の「サイズ交換シート」と「（返送用）送り状」をご利用ください。</b
+                      ><br />
+                      <br />
+                      【地場産品基準】<br />
+                      類型：3<br />
+                      鯖江市内の工場において、眼鏡の素材を仕入れ、独自技術を活用して製品化することで相応の付加価値を生じているもの
+                    </p>
+                  </div>
+
+                  <div class="Sprod-detail-box">
+                    <p class="Sprod-box-ttl">お礼品について</p>
+                    <div class="part txtbase">
+                      <dl class="part">
+                        <dt>カテゴリー</dt>
+                        <dd class="linkcate-wrap"><a class="linkcateid" href="https://sabae.furusato-direct.jp/products/list?category_id=144&orderby=1">サングラス</a> ＞ <a class="linkcateid" href="https://sabae.furusato-direct.jp/products/list?category_id=289&orderby=1">子供用</a></dd>
+                      </dl>
+                      <dl>
+                        <dt>内容量</dt>
+                        <dd>
+                          【内容】<br />
+                          ・エアバングル（カーボンパターン）1個<br />
+                          　※ケースサイズ（Apple Watch）：Series10　42モデル用<br />
+                          　※Apple Watch Series10専用となっております。他シリーズへの装着は不可となっておりますのでご注意ください。<br />
+                          ・付属品：アダプタ　1個<br />
+                          ・サイズ交換シート（返送用送り状付き）1セット<br />
+                          ・保証書<br />
+                          <br />
+                          【原材料】<br />
+                          バングルベルト部分<br />
+                          　材質：アセテート樹脂 / ベータチタン<br />
+                          <br />
+                          -----------------------------------------------------------<br />
+                          ①手首サイズは5種類<br />
+                          ご寄附の際、備考欄に必ずご希望のサイズ番号をご記入ください。<br />
+                          01：12.5～14cm<br />
+                          02：14～15.5cm<br />
+                          03：15.5～17cm<br />
+                          04：17～18.5cm<br />
+                          05：18.5～20cm<br />
+                          <br />
+                          ②アダプタカラーは3種類<br />
+                          ブラック・シルバー・ゴールド<br />
+                          ご寄附の際、備考欄に必ずご希望のカラーをご記入ください。<br />
+                          <br />
+                          ※装着してサイズが合わなかった場合、初回無料にてサイズ交換いたします。<br />
+                          （2回目以降は、送料のみご負担をいただきます。）<br />
+                          -----------------------------------------------------------<br />
+                          <br />
+                          【注意事項】<br />
+                          ・素材の特性上、変形及び傷がつきやすいので取り扱いには注意してください。<br />
+                          ・60度を超える場所での使用保管及び、熱湯による洗浄は、素材の変形の原因になりますのでご注意ください。<br />
+                          ・小さな部品は誤飲等の恐れがあるので、お子様だけのご使用は避け、手の届かない所で保管してください。<br />
+                          ・バングルの特性上、衣類のポケット、バックなどに引っかかりやすいのでご注意ください。<br />
+                          ・バングル部分が緩んだままでのご使用は控えてください。落下の原因となります。<br />
+                          ・発疹やかゆみ等の症状があらわれた際は、使用を中止し皮膚科医師にご相談ください。<br />
+                          ・お使いの環境（モニター、ブラウザ等）の違いにより、色の見え方が実物と若干異なる場合がございます。予めご了承ください。
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>事業者名</dt>
+                        <dd>
+                          株式会社 サンユー<br />
+                          <a class="glink" href="https://sabae.furusato-direct.jp/products/list?operator_name=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%20%E3%82%B5%E3%83%B3%E3%83%A6%E3%83%BC&orderby=1">他のお礼品を見る <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/icon_arrow_p.svg" class="icon_arrow_p" alt="" /></a>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="Sprod-detail-box">
+                    <p class="Sprod-box-ttl">お申込みについて</p>
+                    <div class="part txtbase">
+                      <dl>
+                        <dt>申込期日</dt>
+                        <dd>通年</dd>
+                      </dl>
+                      <dl>
+                        <dt>発送期日</dt>
+                        <dd>決済から14日後以降に発送</dd>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="btn-more-tproducts">
+                    <a href="https://sabae.furusato-direct.jp/products/list" class="more-box"> お礼品一覧ページへ戻る </a>
+                  </div>
+                </div>
+              </div>
+
+              <script type="text/javascript">
+                const apiAddFavoriteProductUrl = "https://sabae.furusato-direct.jp/api/add_favorite/0";
+
+                function addFavoriteProduct(id) {
+                  const requestURL = apiAddFavoriteProductUrl.replace(/0$/, id);
+                  $.ajax({
+                    url: requestURL,
+                    type: "post",
+                    dataType: "json",
+                  })
+                    .then((data) => {
+                      console.log(data);
+                      window.location.reload();
+                    })
+                    .fail((error) => {
+                      if (error.status === 406) {
+                        window.location = "https://sabae.furusato-direct.jp/mypage/login";
+                      }
+                    });
+                }
+              </script>
+            </section>
+
+            <section class="section-Sprodblock">
+              <div class="Sproduct-containerbottom">
+                <p class="Sprodblock-ttl">人気のお礼品</p>
+                <div class="Sproduct-itemsix-wrap">
+                  <a href="https://sabae.furusato-direct.jp/products/detail/28" class="articles-prod-detail-link">
+                    <div class="articles-prod-detail">
+                      <div class="prod-detail-pic-wrap">
+                        <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0625100006_685b4a16aec18.jpg" class="prod-detail-pic" alt="金子眼鏡 全国直営店で使える 眼鏡引換券 Bronze （3万円相当）" loading="lazy" />
+                      </div>
+                      <p class="prod-detail-txt">金子眼鏡 全国直営店で使える 眼鏡引換券 Bronze （3万円相当）</p>
+                    </div>
+                    <p class="pd-price">100,000<span>円</span></p>
+                  </a>
+                  <a href="https://sabae.furusato-direct.jp/products/detail/31" class="articles-prod-detail-link">
+                    <div class="articles-prod-detail">
+                      <div class="prod-detail-pic-wrap">
+                        <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0625105627_685b574b1d1a0.jpg" class="prod-detail-pic" alt="999.9/フォーナインズ 対象店舗で使える眼鏡引換券（3万円相当）Bronze" loading="lazy" />
+                      </div>
+                      <p class="prod-detail-txt">999.9/フォーナインズ 対象店舗で使える眼鏡引換券（3万円相当）Bronze</p>
+                    </div>
+                    <p class="pd-price">100,000<span>円</span></p>
+                  </a>
+                  <a href="https://sabae.furusato-direct.jp/products/detail/47" class="articles-prod-detail-link">
+                    <div class="articles-prod-detail">
+                      <div class="prod-detail-pic-wrap">
+                        <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0626172025_685d02c9b5e3f.jpg" class="prod-detail-pic" alt="『鯖江産　高級めがね引換券：ブロンズ（2万円相当）』" loading="lazy" />
+                      </div>
+                      <p class="prod-detail-txt">『鯖江産　高級めがね引換券：ブロンズ（2万円相当）』</p>
+                    </div>
+                    <p class="pd-price">70,000<span>円</span></p>
+                  </a>
+                  <a href="https://sabae.furusato-direct.jp/products/detail/26" class="articles-prod-detail-link">
+                    <div class="articles-prod-detail">
+                      <div class="prod-detail-pic-wrap">
+                        <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0624180501_685a6a3d981f2.jpg" class="prod-detail-pic" alt="【9月中旬以降 順次発送予定】美顔のためのホームケア用品 Face Pointer2 フェイスポインター2（リニューアル品）" loading="lazy" />
+                      </div>
+                      <p class="prod-detail-txt">【9月中旬以降 順次発送予定】美顔のためのホームケア用品 Face Pointer2 フェイスポインター2（リニューアル品）</p>
+                    </div>
+                    <p class="pd-price">80,000<span>円</span></p>
+                  </a>
+                  <a href="https://sabae.furusato-direct.jp/products/detail/545" class="articles-prod-detail-link">
+                    <div class="articles-prod-detail">
+                      <div class="prod-detail-pic-wrap">
+                        <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0716151807_6877441f6d0e5.jpg" class="prod-detail-pic" alt="鮭・鯖・カレイ 骨なし冷凍切り身3種セット（各600g×3種）合計1.8kg" loading="lazy" />
+                      </div>
+                      <p class="prod-detail-txt">鮭・鯖・カレイ 骨なし冷凍切り身3種セット（各600g×3種）合計1.8kg</p>
+                    </div>
+                    <p class="pd-price">19,000<span>円</span></p>
+                  </a>
+                  <a href="https://sabae.furusato-direct.jp/products/detail/549" class="articles-prod-detail-link">
+                    <div class="articles-prod-detail">
+                      <div class="prod-detail-pic-wrap">
+                        <img src="https://sabae.furusato-direct.jp/html/upload/save_image/0716153919_687749175a03d.jpg" class="prod-detail-pic" alt="日本酒（梵）の純米大吟醸セット（ ゴールド・吟撰）" loading="lazy" />
+                      </div>
+                      <p class="prod-detail-txt">日本酒（梵）の純米大吟醸セット（ ゴールド・吟撰）</p>
+                    </div>
+                    <p class="pd-price">16,000<span>円</span></p>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+
+      <div class="ec-layoutRole__contentBottom"></div>
+
+      <div id="sentinel" style="height: 1px"></div>
+      <div class="ec-layoutRole__footer">
+        <footer class="section-footer">
+          <div class="footer-wrap">
+            <div class="footer-wrap1">
+              <div class="toplogof">
+                <a href="https://furusato-sabae.jp/">
+                  <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/common_logo.svg" class="sitelogo-f" alt="" />
+                </a>
+              </div>
+              <div class="ad-wrapft">
+                <p class="ad-t13">お問い合わせ窓口：</p>
+                <p class="ad-t18">一般社団法人SOEふるさと納税事業部</p>
+                <p class="ad-t13">
+                  住所：〒916-8666 鯖江市西山町13番1号<br />
+                  TEL：050-1731-6099（平日10:00-17:00対応）<br />
+                  MAIL：furusato-sabae@soe.or.jp
+                </p>
+                <p class="ad-t11">※お電話及びメールは、一般社団法人SOEがご対応いたします。</p>
+              </div>
+              <div class="topmenulist-wrap">
+                <div class="topfmenulist">
+                  <ul class="vertical-fmenu">
+                    <li><a href="https://furusato-sabae.jp/#about" class="l-nav-link">鯖江市のこと</a></li>
+                    <li><a href="https://furusato-sabae.jp/feature/" class="l-nav-link">お礼品ものがたり</a></li>
+                    <li><a href="https://furusato-sabae.jp/usage/" class="l-nav-link">寄附金の使い道</a></li>
+                    <li><a href="https://furusato-sabae.jp/faq/" class="l-nav-link">よくあるご質問</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-wrap2">
+              <ul class="footer-wrap2-links">
+                <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/furusatonozei.html" target="_blank" class="nav-link">ふるさと納税とは</a></li>
+                <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/OneStopTokurei.html" target="_blank" class="nav-link">ワンストップ特例制度について</a></li>
+                <li><a href="https://www.city.sabae.fukui.jp/about_city/kekaku_torikumi/furusatonozei/kihuzyoukyo/index.html" target="_blank" class="nav-link">ふるさと納税寄附状況</a></li>
+                <li><a href="https://sabae.furusato-direct.jp/help/tradelaw" class="nav-link">特定商取引法の表示</a></li>
+                <li><a href="https://sabae.furusato-direct.jp/help/privacy" class="nav-link">プライバシーポリシー</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-wrap3">
+              <ul class="f-linkbnr">
+                <li>
+                  <a id="bnr_rakuten" href="https://www.rakuten.co.jp/f182079-sabae/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_rakuten.svg" class="" alt="楽天ふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_choice" href="https://www.furusato-tax.jp/city/product/18207" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_choice.svg" class="" alt="ふるさとチョイス" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_satofull" href="https://www.satofull.jp/city-sabae-fukui/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_satofull.svg" class="" alt="さとふる" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_furunavi" href="https://furunavi.jp/municipal_single.aspx?municipalid=793" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_furunavi.svg" class="" alt="ふるなび" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_ana" href="https://furusato.ana.co.jp/donation/c/c18207/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_ana.svg" class="" alt="ANAふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_jal" href="https://furusato.jal.co.jp/municipality/182079" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_jal.svg" class="" alt="JALふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_furulabo" href="https://furusato.asahi.co.jp/city/detail/182079" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_furulabo.svg" class="" alt="ふるラボ" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_mitsukoshi" href="https://mifurusato.jp/j/182079.html" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_mitsukoshi.svg" class="" alt="三越伊勢丹ふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_amazon" href="https://www.amazon.co.jp/fmc/furusato/region/%E4%B8%AD%E9%83%A8/%E7%A6%8F%E4%BA%95%E7%9C%8C%E9%AF%96%E6%B1%9F%E5%B8%82/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_amazon.svg" class="" alt="amazonふるさと納税" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_jremall" href="https://furusato.jreast.co.jp/furusato/prd/reg4/pre18/mak17570/" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_jremall.svg" class="linkbnr_bnr" alt="JRE MALL" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_yahoo" href="https://furusato.yahoo.co.jp/prefectures/municipalities/182079?sc_i=shopping_pc_web_detail_storepref_muni_lst_intr_lnk" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_yahoo.svg" class="linkbnr_bnr" alt="Yahoo" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_aupay" href="https://furusato.wowma.jp/products/list.php?municipality_code=182079" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_aupay.svg" class="linkbnr_bnr" alt="au PAY" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_saison" href="https://furusato.saisoncard.co.jp/city.php?n=182079" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_saison.svg" class="linkbnr_bnr" alt="セゾン" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_kabuand" href="https://kabuand.com/furusato/areas/18/cities/v8aaej8zmge4br9r069ja8mjq0" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_kabu&amp;.svg" class="linkbnr_bnr" alt="KABUand" />
+                  </a>
+                </li>
+                <li>
+                  <a id="bnr_t-mall" href="https://t-mall.tsite.jp/category/108/sort_condition/3?3" target="_blank">
+                    <img src="https://sabae.furusato-direct.jp/html/user_data/assets/img/sabae/bnr_t-mall.svg" class="linkbnr_bnr" alt="Vポイントモール" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-wrap4">
+              <p class="copyright-text">© Sabae City. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/template/default/assets/js/function.js"></script>
+    <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/template/default/assets/js/eccube.js"></script>
+    <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/user_data/assets/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.15/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://sabae.furusato-direct.jp/html/user_data/assets/js/customize.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const customSelects = document.querySelectorAll(".custom-select");
+
+        customSelects.forEach((select) => {
+          const trigger = select.querySelector(".custom-select-trigger");
+          const options = select.querySelectorAll(".option");
+
+          // 開閉トグル
+          trigger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            // 他を閉じる
+            customSelects.forEach((s) => s !== select && s.classList.remove("opened"));
+            select.classList.toggle("opened");
+          });
+
+          // 選択時
+          options.forEach((option) => {
+            option.addEventListener("click", (e) => {
+              e.stopPropagation();
+              const text = option.textContent;
+              const url = option.dataset.url;
+              trigger.textContent = text;
+              select.classList.remove("opened");
+              if (url) window.location.href = url;
+            });
+          });
+        });
+
+        // 外側クリックで全て閉じる
+        document.addEventListener("click", () => {
+          customSelects.forEach((select) => select.classList.remove("opened"));
+        });
+      });
+    </script>
+  </body>
+</html>
