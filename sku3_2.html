@@ -307,10 +307,15 @@
         flex-direction: column;
         justify-content: flex-start;
         flex: 1;
+        padding: 2px;
       }
 
       .RelatedSwiper .prod-detail-pic-wrap {
         flex-shrink: 0;
+      }
+      .RelatedSwiper .swiper-button-next,
+      .RelatedSwiper .swiper-button-prev{
+        top:33%;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -907,18 +912,51 @@
       });
     </script>
 
-    <script>
-      var swiper = new Swiper(".RelatedSwiper", {
-        slidesPerView: 1.3,
-        spaceBetween: 10,
-        grabCursor: true,
-        loop: false,
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          hide: true,
-          draggable: true,
-        },
-      });
-    </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 画面幅で分岐
+    const isMobile = window.matchMedia("(max-width: 1024px)").matches;
+
+    // スクロールバー・ボタンの表示制御
+    const scrollbarEl = document.querySelector(".RelatedSwiper .swiper-scrollbar");
+    const nextBtn = document.querySelector(".RelatedSwiper .swiper-button-next");
+    const prevBtn = document.querySelector(".RelatedSwiper .swiper-button-prev");
+
+    if (isMobile) {
+      // SP → ボタン非表示・スクロールバー有効
+      if (nextBtn) nextBtn.style.display = "none";
+      if (prevBtn) prevBtn.style.display = "none";
+      if (scrollbarEl) scrollbarEl.style.display = "block";
+    } else {
+      // PC → ボタン表示・スクロールバー非表示
+      if (nextBtn) nextBtn.style.display = "block";
+      if (prevBtn) prevBtn.style.display = "block";
+      if (scrollbarEl) scrollbarEl.style.display = "none";
+    }
+
+    // Swiper初期化
+    const relatedSwiper = new Swiper(".RelatedSwiper", {
+      slidesPerView: isMobile ? 1.3 : 1,
+      spaceBetween: 10,
+      grabCursor: true,
+      loop: false,
+      // モバイル：スクロールバーのみ
+      ...(isMobile
+        ? {
+            scrollbar: {
+              el: ".RelatedSwiper .swiper-scrollbar",
+              hide: true,
+              draggable: true,
+            },
+          }
+        : {
+            navigation: {
+              nextEl: ".RelatedSwiper .swiper-button-next",
+              prevEl: ".RelatedSwiper .swiper-button-prev",
+            },
+          }),
+    });
+  });
+</script>
   </body>
 </html>
